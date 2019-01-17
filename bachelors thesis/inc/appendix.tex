@@ -1,0 +1,197 @@
+\section{Appendix}
+\label{sec:appendix}
+
+
+%\begin{listing}[H]
+%%\begin{perlcode}
+%\begin{minted}[linenos, bgcolor=light-gray, fontsize=\scriptsize]{perl}
+%#!/usr/bin/perl
+%
+%use strict;
+%use warnings;
+%use POSIX;
+%
+%# University of Kaiserslautern 2014
+%# Matthias Jung 
+%# Christian Weis
+%# Peter Ehses
+%# programm call: perl error_detecta.pl input output
+%
+%my $input   = $ARGV[0];
+%my $id      = "022804e800";
+%my $pattern = hex("FFFFFFFF");  # data pattern can be changed to AAAAAAAA or 55555555
+%my $errors  = 0;
+%my $i = 1;
+%my $addr = 0;                   # DRAM address in hex
+%my $addrb = 0;                  # 23 bit in binary
+%my $addroffset = 536870912;     # offset for the address in hex 0x20000000
+%my $bank =0;                    # 2 bits for the bank
+%my $bankshift =21;              # shiftoperator
+%my $bankand = 6291456;          # 2^22+2^21
+%my $row =0;                     # 12 bits for the row
+%my $rowshift =9;                # shiftoperator
+%my $rowand = 2096640;           # 2^20+...+2^9
+%my $column =0;                  # 9 bits for the column
+%my $columnand = 511;            # 2^8+...+2^0
+%
+%open(IFH, $input);
+%open(out_file, ">errorout_$ARGV[1]");
+%
+%printf out_file ("The following table shows the addresses ");
+%printf out_file ("from the errors in the wideIO SDRAM.\n");
+%printf out_file ("Addresses in binary \t\t\t Addresses in hexadecimal\n");
+%printf out_file ("bank \t row \t\t column \t SDRAM address \t data value\n");
+%
+%while(<IFH>)
+%{
+%  unless($_ =~ /\[.*\]/ || $_ =~ /$id/)
+%  {
+%    my $value = $_;
+%    chop($value);
+%    $value = substr( $value , 2);
+%    my $result = sprintf("%0b", (hex($value) ^ $pattern));
+%    for(my $j = 0; $j < length($result); $j ++)
+%    {
+%      if(substr( $result, $j , 1 ) eq "1")
+%      {
+%        $errors++;
+%        $addrb = $i-((ceil($i/11))*3);
+%        $addr = $addrb + $addroffset;
+%        $bank = ($addrb & $bankand) >> $bankshift;
+%        $row = ($addrb & $rowand) >> $rowshift;
+%        $column = ($addrb & $columnand);
+%        printf out_file ("%02b\t %012b\t %09b\t %#8x\t $value\n", $bank, $row, $column, $addr);
+%      }
+%    }
+%  }
+%  $i++;
+%}
+%
+%close(out_file);
+%print "Errors = ".$errors."\n";
+%close(IFH);
+%%\end{perlcode}
+%\end{minted}
+%\caption{Perl script to find errors for data pattern F, A or 5}
+%\label{lis:5af}
+%\end{listing}
+
+\pagebreak
+Pagebreak and linebreak has to be done manually with pygmentize, this feature is
+not yet implemented. Open the appendix.tex file and see the source code
+afterwards how the pagebreak is done. For that the appendix.tex has to be
+written with pagebreaks, so that the layout of the pages is done manually.
+
+Linebreaks are easier to do, just check that the lines are in the box of the pdf
+file, otherwise make a linebreak yourself.
+\pagebreak
+
+%%\begin{listing}[H]
+%\begin{minted}[linenos, bgcolor=light-gray, fontsize=\scriptsize]{perl}
+%#!/usr/bin/perl
+%
+%use strict;
+%use warnings;
+%use POSIX;
+%use Chart::Gnuplot;
+%
+%# University of Kaiserslautern 2014
+%# Matthias Jung 
+%# Christian Weis
+%# Peter Ehses
+%# call programm: perl plotreffff_0xf.pl dfile1 dfile2 dfile3
+%
+%my $i = 0;
+%my $line = 3;
+%my $addr = 0;           # DRAM address in hex
+%my $bankb;              # 2 bits for the bank
+%my $rowb;               # 12 bits for the row
+%my $columnb;            # 9 bits for the column
+%my $bank;               # banknumber in decimal
+%my $row;                # rownumber in decimal
+%my $column;             # columnnumber in decimal
+%my $value;
+%my @ytics = [0, 25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500];
+%my @xtics = [0,250,500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000,3250,3500,3750,4000];
+%
+%# set terminal to svg format
+%my $terminal = 'svg mouse jsdir '.'"http://gnuplot.sourceforge.net/demo_svg"';
+%sub bin2dec {return unpack("N", pack("B32", substr("0" x 32 . shift, -33)));}
+%
+%my @row_array;
+%my @column_array;
+%
+%foreach my $argnum (0 .. $#ARGV)
+%{
+%  open(IFH, $ARGV[$argnum]);
+%  $i = 0;
+%  while(<IFH>)
+%  { 
+%    chomp;
+%    $i++;
+%    if ($i > $line)
+%    {
+%      ($bankb, $rowb, $columnb, $addr, $value) = split("\t");	
+%      $bank = (bin2dec($bankb));
+%      $row = (bin2dec($rowb));
+%      $column = (bin2dec($columnb));
+%      if ($argnum == 0)
+%      {
+%        push(@{$row_array[$bank]}, $row);
+%        push(@{$column_array[$bank]}, $column);
+%      }
+%      if ($argnum == 1)
+%      {
+%        push(@{$row_array[$bank+4]}, $row);
+%        push(@{$column_array[$bank+4]}, $column);
+%      }
+%      if ($argnum == 2)
+%      {
+%        push(@{$row_array[$bank+8]}, $row);
+%        push(@{$column_array[$bank+8]}, $column);
+%      }
+%    }
+%  }
+%  close(IFH);
+%}
+%for (my $count = 1; $count < 5; $count++)
+%{
+%  $bank = $count -1;
+%\end{minted}
+
+%%here is a pagebreak, and the next line of the code is starting with 70, has to be specified with minted like below.
+%\begin{listing}[H]
+%\begin{minted}[linenos, bgcolor=light-gray, fontsize=\scriptsize, firstnumber=70]{perl}
+%  my $plot1 = Chart::Gnuplot->new(
+%  terminal => $terminal, output => "plot_ref202ms_0xf_b_$count.svg",
+%  title => "Errors channel 3 of SDRAM, bank $count, data pattern 0xffffffff and refresh 202 ms",
+%  imagesize => '1024, 768', xlabel => "row address", ylabel => "column address", yrange=>[0, 511],
+%  xrange=>[0, 4095], ytics => {labels => @ytics}, xtics => {labels => @xtics},
+%  legend => {position => "outside center bottom", order =>"horizontal reverse",
+%  border => "on", align => "left"}
+%  );
+%  my $dataSet1 = Chart::Gnuplot::DataSet->new(
+%  xdata => \@{$row_array[$bank]}, ydata => \@{$column_array[$bank]},
+%  color => "blue", pointtype => 6, pointsize => 1.75, width => 2,
+%  title => "95 degree C"
+%  );
+%  my $dataSet2 = Chart::Gnuplot::DataSet->new(
+%  xdata => \@{$row_array[$bank+4]}, ydata => \@{$column_array[$bank+4]},
+%  color => "red", pointtype => 8, pointsize => 1.25, width => 2,
+%  title => "100 degree C"
+%  );
+%  my $dataSet3 = Chart::Gnuplot::DataSet->new(
+%  xdata => \@{$row_array[$bank+8]}, ydata => \@{$column_array[$bank+8]},
+%  color => "dark-green", pointtype => 10, pointsize => 1.25, width => 2,
+%  title => "105 degree C"
+%  );
+%  
+%  if (@{$row_array[$bank]}){$plot1->plot2d($dataSet1, $dataSet2, $dataSet3);}
+%  if (!@{$row_array[$bank]}){$plot1->plot2d($dataSet2, $dataSet3);}
+%  if (!@{$row_array[$bank]} && !@{$row_array[$bank+4]}){$plot1->plot2d($dataSet3);}
+%}
+%\end{minted}
+%\caption{Perl script for scatter plot of different refresh periods}
+%\label{lis:plotref}
+%\end{listing}
+

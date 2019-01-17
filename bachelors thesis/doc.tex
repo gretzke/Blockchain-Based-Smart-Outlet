@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inlucudings:                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
+\documentclass[11pt,english,a4paper,chapterprefix]{scrartcl}
+%\usepackage[T1]{fontenc}
+\usepackage[bigcaptions]{listing}
+%\usepackage[latin1]{inputenc}
+\usepackage[small,bf,hang]{caption}
+\usepackage[english]{babel}
+%\usepackage{epsfig}
+\usepackage{wrapfig}
+%\usepackage{caption}
+\usepackage{psfrag}
+\usepackage[rflt]{floatflt}
+\usepackage[usenames]{color}
+\usepackage{graphicx}
+\emergencystretch = 10pt
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+%\usepackage{calc}
+\usepackage{tocloft}
+\usepackage{listing}
+\usepackage{listings}
+\usepackage{trsym}
+\usepackage{trfsigns}
+%\usepackage{minted}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{nomencl}
+\usepackage{todonotes}
+%\usepackage{float}
+\usepackage{subfig}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{listings}
+%\input{subsections.sty}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5} 
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
+% New Commands and Configurations:  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
+%\setkomafont{section}{\Large\rmfamily}
+%\setkomafont{subsection}{\large\rmfamily}
+%\setkomafont{subsubsection}{\normalsize\rmfamily}
+\setkomafont{paragraph}{\footnotesize}
+\numberwithin{table}{section}
+\numberwithin{listing}{section}
+\setlength\textheight{24cm}
+\definecolor{orange}{rgb}{1 , 0.5 , 0}
+\definecolor{blue}{rgb}{0, 0 , 1}
+\definecolor{green}{rgb}{0, 1 ,0}
+\newcommand{\cb}{\textcolor{blue}}
+\newcommand{\subsubsubsection}{\paragraph}
+\newcommand{\subsubsubsubsection}{\subparagraph}
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+\parindent0pt % No Indent
+\makenomenclature
+% Document Head
+\begin{document}
+%\restylefloat{figure}
+\pagestyle{fancy}
+\rhead{} 
+
+\definecolor{light-gray}{gray}{0.90}
+
+%\lstset{ %
+%language=C,                % choose the language of the code
+%basicstyle=\small\ttfamily
+%,       % the size of the fonts that are used for the code
+%%numbers=left,                   % where to put the line-numbers
+%numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+%stepnumber=2,                   % the step between two line-numbers. If it's 1 each line 
+%                                % will be numbered
+%numbersep=5pt,                  % how far the line-numbers are from the code
+%backgroundcolor=\color{light-gray},  % choose the background color. You must add \usepackage{color}
+%showspaces=false,               % show spaces adding particular underscores
+%showstringspaces=false,         % underline spaces within strings
+%showtabs=false,                 % show tabs within strings adding particular underscores
+%frame=single,                   % adds a frame around the code
+%rulecolor= \color{light-gray},
+%tabsize=2,                      % sets default tabsize to 2 spaces
+%captionpos=b,                   % sets the caption-position to bottom
+%breaklines=true,                % sets automatic line breaking
+%breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+%title=\lstname,                 % show the filename of files included with \lstinputlisting;
+%                                % also try caption instead of title
+%escapeinside={\%*}{*)},         % if you want to add a comment within your code
+%xleftmargin=1cm,
+%xrightmargin=1cm,
+%morekeywords={*,...}            % if you want to add more keywords to the set
+%}
+%
+
+%\newminted{perl}{linenos, bgcolor=light-gray, fontsize=\scriptsize}
+%\newminted{cpp}{bgcolor=light-gray, fontsize=\scriptsize}
+%\newminted{tcl}{bgcolor=light-gray, fontsize=\scriptsize}
+%\newminted{sh}{bgcolor=light-gray, fontsize=\scriptsize}
+%\newminted{basemake}{bgcolor=light-gray, fontsize=\scriptsize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
+% fancy nomenclautur:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
+%\setlength{\nomlabelwidth}{.20\hsize}
+%\renewcommand{\nomlabel}[1]{#1 \dotfill}
+
+%<*sample05>
+\def\@@@nomenclature[#1]#2#3{%
+ \def\@tempa{#2}\def\@tempb{#3}%
+ \protected@write\@nomenclaturefile{}%
+  {\string\nomenclatureentry{#1\nom@verb\@tempa @[{\nom@verb\@tempa}]%
+    |nompageref{\begingroup\nom@verb\@tempb\protect\nomeqref{\theequation}}}%
+    {\thepage}}%
+ \endgroup
+ \@esphack}
+%\def\nompageref#1#2{%
+%  \if@printpageref\pagedeclaration{#2}\else\null\fi
+%  \linebreak#1\nomentryend\endgroup}
+\def\pagedeclaration#1{\dotfill\nobreakspace ~#1}
+%\def\nomentryend{.}
+\def\nomlabel#1{\textbf{#1}\hfil}
+\makeatletter 
+\renewcommand*\dotfill{\leavevmode% 
+  \leaders\hbox{$\m@th 
+  \mkern \@dotsep mu\hbox{.}\mkern \@dotsep 
+  mu$}\hfill\kern\z@} 
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
+% Abbr Commands!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
+\newcommand{\abbr}[2]{\textit{#2} (#1)\nomenclature{#1}{#2 \nomrefpage}}
+\newcommand{\shortabbr}[2]{\nomenclature{#1}{#2 \nomrefpage}}
+\newcommand{\revabbr}[2]{#1 (\textit{#2})\nomenclature{#1}{#2 \nomrefpage}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
+% Titlepage                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
+\input{inc/0.titlepage}
+\newpage
+
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+\newpage
+\input{inc/abstract_english}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+\newpage
+\input{inc/abstract_deutsch}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
+% Table of Contents                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
+\tableofcontents
+\newpage
+\setcounter{page}{1}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
+% Chapters                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
+%\onehalfspacing % Stelle 1.5er Abstand ein
+%\setstretch{1.1} 
+\input{inc/1.introduction}
+\newpage
+\clearpage
+%\input{2.usw.usw}
+%\newpage
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
+% Appendix                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
+\newpage
+\clearpage
+
+%clear headers
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[CO, CE] {\thepage}
+
+%\section{Appendix}
+
+%%%%%%%%%%%%%%%% >INSERT YOUR APPENDIX HERE>
+\input{inc/appendix}
+\newpage
+\clearpage
+%\addcontentsline{toc}{section}{Appendix}
+%List of Figures
+\vspace{-20pt}
+\begingroup
+    \addcontentsline{toc}{subsection}{List of Figures}
+    \setlength{\cftparskip}{10pt}
+    \listoffigures 
+\endgroup
+\newpage
+\clearpage
+%List of Tables
+\begingroup
+    \addcontentsline{toc}{subsection}{List of Tables}
+    \setlength{\cftparskip}{10pt}
+    \listoftables
+\endgroup
+\newpage
+\clearpage
+%List of Listings
+%\renewcommand{\lstlistlistingname}{Verzeichnis der Quellcodes}
+\begingroup
+    \addcontentsline{toc}{subsection}{List of Listings}
+      \setlength{\itemsep}{20pt}
+  \setlength{\parskip}{10pt}
+    \renewcommand{\listlistingname}{List of Listings}
+    \listoflistings 
+\endgroup
+\newpage
+\clearpage
+%List of Abbreviations
+\begingroup
+    \addcontentsline{toc}{subsection}{List of Abbreviations}
+    \renewcommand{\nomname}{List of Abbreviations}
+    \renewcommand{\nompreamble}{\vspace{10pt}}
+    %\setlength{\nomitemsep}{8pt}
+    \printnomenclature[2cm]
+\endgroup
+\newpage
+\clearpage
+%Literatur:
+\addcontentsline{toc}{subsection}{References}
+\bibliographystyle{unsrt}
+\bibliography{doc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
+\end{document}
