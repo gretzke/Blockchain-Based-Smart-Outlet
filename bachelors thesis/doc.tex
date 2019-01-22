@@ -40,6 +40,17 @@
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 
+% -------------------------------------------
+%% glossaries package for list of abbreviations and list of symbols
+\usepackage{datatool} % package needed by glossaries
+\usepackage[acronym]{glossaries} % *after* hyperref
+\newglossary[symlog]{symbol}{symi}{symo}{Symbols}
+\makeglossaries
+\glstoctrue
+\loadglsentries[\acronymtype]{Abbreviations/abbreviations}  % TODO: CAREFUL HERE!!
+% -------------------------------------------
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
 % New Commands and Configurations:  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
@@ -133,9 +144,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
 % Abbr Commands!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%{{{%
-\newcommand{\abbr}[2]{\textit{#2} (#1)\nomenclature{#1}{#2 \nomrefpage}}
-\newcommand{\shortabbr}[2]{\nomenclature{#1}{#2 \nomrefpage}}
-\newcommand{\revabbr}[2]{#1 (\textit{#2})\nomenclature{#1}{#2 \nomrefpage}}
+% \newcommand{\abbr}[2]{\textit{#2} (#1)\nomenclature{#1}{#2 \nomrefpage}}
+% \newcommand{\shortabbr}[2]{\nomenclature{#1}{#2 \nomrefpage}}
+% \newcommand{\revabbr}[2]{#1 (\textit{#2})\nomenclature{#1}{#2 \nomrefpage}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}%
@@ -216,13 +227,13 @@
 \newpage
 \clearpage
 %List of Abbreviations
-\begingroup
-    \addcontentsline{toc}{subsection}{List of Abbreviations}
-    \renewcommand{\nomname}{List of Abbreviations}
-    \renewcommand{\nompreamble}{\vspace{10pt}}
-    %\setlength{\nomitemsep}{8pt}
-    \printnomenclature[2cm]
-\endgroup
+% \begingroup
+%     \addcontentsline{toc}{subsection}{List of Abbreviations}
+%     \renewcommand{\nomname}{List of Abbreviations}
+%     \renewcommand{\nompreamble}{\vspace{10pt}}
+%     %\setlength{\nomitemsep}{8pt}
+%     \printnomenclature[2cm]
+% \endgroup
 \newpage
 \clearpage
 %Literatur:
