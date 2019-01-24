@@ -8,6 +8,10 @@ U8G2_SSD1306_128X32_UNIVISION_F_SW_I2C u8g2(U8G2_R0, 5, 4, 16);
 #include <WiFiClientSecure.h>
 HTTPClient http;
 
+
+// import credentials file
+#include "credentials.h"
+
 // cryptography libraries
 #include "keccak.h"
 Keccak keccak256;
@@ -17,9 +21,9 @@ Keccak keccak256;
 
 // wifi credentials
 // SSID of your Wifi Router
-const char* ssid = "";
+const char* ssid;
 // Password of your Wifi Router
-const char* password = "";
+const char* wifipass = credentials.wifipass;
 
 // node and contract address, calldata and fingerprint for https requests
 char nodeAddr[] = "https://rinkeby.infura.io/";
@@ -34,14 +38,14 @@ void setup() {
     u8g2.enableUTF8Print();
     u8g2.setFont(u8g2_font_helvR12_tr);
     u8g2.setFontDirection(0);
-
     // setup wifi
     Serial.begin(115200);
     delay(20);
-
+    ssid = credentials.ssid;
+    wifipass = credentials.wifipass;
     printToDisplay("Connecting WiFi", true);
     // Connect to Wi-Fi network
-    WiFi.begin(ssid, password);
+    WiFi.begin(ssid, wifipass);
     while (WiFi.status() != WL_CONNECTED) {
         printLoading();
         delay(250);
