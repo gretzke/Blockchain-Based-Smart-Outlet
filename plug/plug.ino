@@ -8,12 +8,14 @@ U8G2_SSD1306_128X32_UNIVISION_F_SW_I2C u8g2(U8G2_R0, 5, 4, 16);
 #include <WiFiClientSecure.h>
 HTTPClient http;
 
-
 // import credentials file
 #include "credentials.h"
 
-// cryptography libraries
+// cryptography libraries and define ecdsa curve
 #include "keccak.h"
+#include <uECC.h>
+#include <uECC_vli.h>
+#include <types.h>
 Keccak keccak256;
 
 // utility libraries and variables
@@ -38,6 +40,8 @@ void setup() {
     u8g2.enableUTF8Print();
     u8g2.setFont(u8g2_font_helvR12_tr);
     u8g2.setFontDirection(0);
+    // setup rng for ecdsa
+    uECC_set_rng(&RNG);
     // setup wifi
     Serial.begin(115200);
     delay(20);
@@ -68,6 +72,8 @@ void setup() {
     const char* hash = calculateHash(bytearray, sizeof(bytearray));
 
     Serial.println(hash);
+
+    signMessage(hash);
 }
 
 void loop() {
@@ -186,4 +192,48 @@ void hexStringToBytes(const char* hexString, unsigned char* byteArray) {
  */
 const char* calculateHash(unsigned char* bytearray, int bytesize) {
     return keccak256.operator()(bytearray, bytesize).c_str();
+}
+
+void signMessage(const char* hashString) {
+  Serial.println(credentials.privkey);  
+  Serial.println(hashString);  
+  uint8_t privateKey[32];
+  uint8_t hash[32];
+  hexStringToBytes(credentials.privkey, privateKey);
+  hexStringToBytes(hashString, hash);
+  uint8_t signature[64];
+  const struct uECC_Curve_t * curves[1];
+  curves[0] = uECC_secp256k1();
+  int res = uECC_sign(privateKey, hash, 32, signature, curves[0]);
+  
+  Serial.printf("%i", res);
+  for (int i = 0; i < 64; i++) {
+    Serial.printf("%x", signature[i]);
+  }
+}
+
+static int RNG(uint8_t *dest, unsigned size) {
+  // Use the least-significant bits from the ADC for an unconnected pin (or connected to a source of 
+  // random noise). This can take a long time to generate random data if the result of analogRead(0) 
+  // doesn't change very frequently.
+  while (size) {
+    uint8_t val = 0;
+    for (unsigned i = 0; i < 8; ++i) {
+      int init = analogRead(0);
+      int count = 0;
+      while (analogRead(0) == init) {
+        ++count;
+      }
+      
+      if (count == 0) {
+         val = (val << 1) | (init & 0x01);
+      } else {
+         val = (val << 1) | (count & 0x01);
+      }
+    }
+    *dest = val;
+    ++dest;
+    --size;
+  }
+  return 1;
 }
