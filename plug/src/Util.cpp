@@ -191,7 +191,7 @@ vector<uint8_t> Util::RlpEncodeItemWithVector(vector<uint8_t> input) {
             tmp = (uint32_t)(tmp / 256);
         }
         tmp_header.push_back((uint8_t)(tmp));
-        uint8_t len = tmp_header.size() + 1;
+        uint8_t len = tmp_header.size();
         tmp_header.insert(tmp_header.begin(), 0xb7 + len);
 
         // fix direction for header
@@ -229,7 +229,7 @@ vector<uint8_t> Util::ConvertNumberToVector(uint32_t val) {
 
 vector<uint8_t> Util::ConvertCharStrToVector(const uint8_t *in) {
     uint32_t ret = 0;
-    uint8_t tmp[256];
+    uint8_t tmp[2048];
     strcpy((char *)tmp, (char *)in);
     vector<uint8_t> out;
 
