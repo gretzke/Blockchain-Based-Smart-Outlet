@@ -1,0 +1,84 @@
+\section{Theory}
+The purpose of this chapter is to explain the most important terms about blockchain and the key underlying components of the technology. Most explanations will be kept superficial, as the technological implementation is too complex to deal with it in a few sentences.
+\\
+
+\subsection{Hash}
+The cryptographic hash function is a mathematical function that usually fulfills the following requirements\cite{hash}:
+\begin{enumerate}
+    \item determinism: the same input always produces the same output
+    \item preimage resistance: it’s nearly impossible to get the input from the output
+    \item second-preimage resistance: it’s nearly impossible to find a second input that produces the same output as the first input
+\end{enumerate}
+The output of this function is called hash. Bitcoin uses the SHA-256\cite{bitcoin-whitepaper}, Ethereum uses the Keccak-256\cite{ethereum-yellow-paper} hashing algorithm which produces an output hash with a length of 32 bytes.
+\\
+
+\subsection{Public Key Cryptography}
+Public key cryptography\cite{public-key-cryptography} is the backbone of the blockchain technology and consists of a key pair – a private and a public key. As the name suggests the private key needs to be secret and the public key can be shared with anyone. A message can be signed using the private key resulting in a signature. This signature can then be verified using the public key to prove that the message was, in fact, signed by the corresponding private key. Bitcoin and Ethereum use the \abbr{Elliptic Curve Digital Signature Algorithm}{ECDSA} for signatures. They are used to prove that transactions were really sent by a specific account and not manipulated.
+\\
+
+\subsection{Wallet}
+Everything that’s needed to send and/or receive cryptocurrencies is a private key\cite{bitcoin-whitepaper}, meaning a private key is a wallet in it’s simplest form. More complex forms of a wallet encrypt a private private key with a password or store it on a dedicated hardware device.
+\\
+
+\subsection{Address}
+An address is used to identify participants on the blockchain and usually is the public key belonging to the private key of the account or is generated fromm the public key, e.g. Ethereum  uses the right most 20 bytes of the hash of the public key as the address\cite{ethereum-yellow-paper}.
+\\
+
+\subsection{Ledger}
+The equivalent of a traditional Record of all addresses and their balances. Every participant of the network has a copy of this Ledger.
+\\
+
+\subsubsection{Node}
+A node is a participant on the blockchain. When a new node joins the network, it downloads the ledger, currently accepted by the majority. A so-colled full node has the entire history of the ledger – from the first block, to the latest.
+\\
+
+\subsection{Transaction}
+A transaction updates the Ledger, e.g. reducing the balance of an address by a specific amount and adding it to the balance of another account.
+\\
+
+\subsection{Blockchain}
+A list of transactions is bundled together into a block. Also included in this block is the hash of the previous block, which contains the hash of the previous block, and so on and creates a chain of blocks\cite{bitcoin-whitepaper} which always point to their predecessor, thus the name blockchain. This is also the reason why a blockchain is considered immutable: modifying any information in a block would automatically change the hashes of every block after it and would be rejected by the network.
+\\
+
+\subsection{Miner / Validator}
+A participant of the network whose task it is to secure the network and validate / mine new transactions and blocks.
+\\
+
+\subsection{Proof of Work}
+There are different approaches to reach consensus over which block should be added next to the network, \abbr{Proof of Work}{PoW} is one of them and is used by most cryptocurrencies. A \abbr{number used once}{nonce} is included in the block which is adjusted by a validator. Every different nonce produces a different block hash. The goal is to find a nonce that is numerically lower than a certain threshold value (also called difficulty). A validator who finds this number can submit their block to the network. All miners race to find the nonce as fast as possible, so their block will be accepted by all other participants in the network and considered valid. The fastest submission gets a so-colled block reward, a reward minted by the protocol to the fastest miner and all transaction fees from that block.
+\\
+
+\subsection{Block Time}
+The time it takes to add a new block to the network is called block time. On the Bitcoin network the block time is 10 minutes\cite{bitcoin-whitepaper}, Ethereum wants to archive a block time of 12 seconds\cite{ethereum-blocktime}, realistically its averaging at about 15 seconds\cite{ethereum-blocktime-chart}. The difficulty is adjusted automatically to keep the block time roughly the same, no matter how much computing power is currently mining.
+\\
+
+\subsection{Confirmation Time}
+The time it takes until a transaction is mined. The higher the transaction fee the faster transaction is confirmed.
+\\
+
+\subsection{Ethereum Virtual Machine}
+The \abbr{Ethereum Virtual Machine}{EVM} is a turing complete virtual machine that can execute computer code on the Ethereum Blockchain. As a result the Ethereum network acts like a decentralized computer with all the features of a blockchain: the storage is entirely public and every computation or code execution is recorded on the blockchain.
+\\
+
+\subsection{Smart Contract}
+Smart contracts are written in special programming languages, the most popular being called "Solidity", and are compiled into bytecode afterwards. This bytecode is then publicly stored on the blockchain and can be executed by everyone. The advantage of smart contracts is, that the code is public to everyone and immutable, thus can theoretically be used as a binding, programmable contract that can control monetary value on its own. As a drawback every computational step and byte stored on the blockchain costs money in form of transaction cost.
+\\
+
+\subsection{DApp / Web3}
+DApp stands for decentralized application. Web3 is also called the decentralized web, where websites are powered by smart contracts and DApps. 
+\\
+
+\subsection{Account}
+There are two types of accounts on the Ethereum Blockchain: An \abbr{externally owned account}{EOA} and a contract account. Each of those accounts has a transaction count and a balance\cite{ethereum-yellow-paper} associated with them. An EOA is controlled by a private key, whereas a contract account has code and storage associated with it.
+\\
+
+\subsection{Off-chain Transactions / Payment Channels}
+For every transaction on the blockchain fees have to be paid. One way to save transaction costs is to have multiple transactions that are not recorded on the blockchain, so-colled off-chain transactions, and settle them on the blockchain, once the payment process is finished.
+\\
+
+\subsection{Ether - Gwei - Wei}
+Ether is the currency used on the Ethereum network. It can be divided into smaller fractions. The most important are Wei and GWei. Wei is the smallest unit: 1 Ether equals \(10^{18}\) Wei\cite{ethereum-yellow-paper}. Gwei is primarily used for calculations of transaction costs: 1 Ether equals \(10^{9}\) Gwei, 1 Gwei equals \(10^{9}\) Wei. Ether is always used in Wei format in Smart Contracts.
+\\
+
+\subsection{Mainnet / Testnet}
+The main network of a blockchain is called the Mainnet. Testnets are blockchain networks that behave the same way as the Mainnet. This allows developers to develop smart contracts without the risk of losing any monetary value. Additionaly, improvements to the Mainnet are often tested on a Testnet prior to their official implementation.

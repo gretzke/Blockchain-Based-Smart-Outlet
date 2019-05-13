@@ -1,0 +1,198 @@
+\begin{thebibliography}{10}
+
+\bibitem{ethereum-fee}
+ETH~Gas Station.
+\newblock Fees.
+\newblock \url{https://ethgasstation.info/}, 2019.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{bitcoinTPS}
+blockchain.com.
+\newblock 7 day average chart.
+\newblock
+  \url{https://www.blockchain.com/de/charts/transactions-per-second?daysAverageString=7}.
+\newblock [Online; accessed: 2019-05-06].
+
+\bibitem{visa}
+Visa.
+\newblock Annual report 2018.
+\newblock
+  \url{https://s1.q4cdn.com/050606653/files/doc_financials/annual/2018/Visa-2018-Annual-Report-FINAL.pdf}.
+\newblock [Online; accessed: 2019-01-05].
+
+\bibitem{hash}
+Shrimpton~T. Rogaway~P.
+\newblock Cryptographic hash-function basics: Definitions, implications, and
+  separations for preimage resistance, second-preimage resistance, and
+  collision resistance.
+\newblock {\em Roy B., Meier W. (eds) Fast Software Encryption. FSE 2004.
+  Lecture Notes in Computer Science, vol 3017. Springer, Berlin, Heidelberg},
+  (2004).
+
+\bibitem{bitcoin-whitepaper}
+Satoshi Nakamoto.
+\newblock Bitcoin white paper.
+\newblock \url{https://bitcoin.org/bitcoin.pdf}, 2008.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{ethereum-yellow-paper}
+Dr.~Gavin Wood.
+\newblock Ethereum yellow paper.
+\newblock \url{https://ethereum.github.io/yellowpaper/paper.pdf}, 2019.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{public-key-cryptography}
+Scott~Vansto Don~Johnson, Alfred~Menezes.
+\newblock The elliptic curve digital signature algorithm (ecdsa).
+\newblock
+  \url{https://web.archive.org/web/20170921160141/http://cs.ucsb.edu/~koc/ccs130h/notes/ecdsa-cert.pdf}.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{ethereum-blocktime}
+Vitalik Buterin.
+\newblock Toward a 12-second block time.
+\newblock
+  \url{https://blog.ethereum.org/2014/07/11/toward-a-12-second-block-time/},
+  2014.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{ethereum-blocktime-chart}
+etherscan.io.
+\newblock Ethereum average block time chart.
+\newblock \url{https://etherscan.io/chart/blocktime}, 2019.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{paypal-fees}
+Paypal.
+\newblock Fees for micro transactions.
+\newblock \url{https://www.paypal.com/de/webapps/mpp/paypal-fees}, 2019.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{btc-conf-time}
+blockchain.com.
+\newblock Average confirmation time.
+\newblock
+  \url{https://www.blockchain.com/en/charts/avg-confirmation-time?timespan=all&daysAverageString=7}.
+\newblock [Online; accessed: 2019-05-12].
+
+\bibitem{tangle}
+Serguei Popov.
+\newblock The tangle.
+\newblock
+  \url{https://assets.ctfassets.net/r1dr6vzfxhev/2t4uxvsIqk0EUau6g2sw0g/45eae33637ca92f85dd9f4a3a218e1ec/iota1_4_3.pdf},
+  2018.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{iota-time}
+The~Tangle Monitor.
+\newblock Average confirmation time.
+\newblock \url{https://tanglemonitor.com/}, 2019.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{nano-stress-test}
+Brian Pugh.
+\newblock Stress testing the raiblocks network: Part ii.
+\newblock
+  \url{https://medium.com/@bnp117/stress-testing-the-raiblocks-network-part-ii-def83653b21f},
+  2018.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{nano-confirmation-time}
+Repnode.org.
+\newblock Block propagation and confirmation times.
+\newblock \url{ http://repnode.org/network/propagation-confirmation}, 2019.
+\newblock [Online; accessed: 2019-02-22, 14:54].
+
+\bibitem{nano-white-paper}
+Colin LeMahieu.
+\newblock Nano: A feeless distributed cryptocurrency network.
+\newblock \url{https://nano.org/en/whitepaper}.
+\newblock [Online; accessed 2019-05-06].
+
+\bibitem{acs712}
+Allegro~MicroSystems Inc.
+\newblock Fully integrated, hall effect-based linear current sensor.
+\newblock \url{https://www.sparkfun.com/datasheets/BreakoutBoards/0712.pdf}.
+\newblock [Online; accessed: 2019-05-11].
+
+\bibitem{vcp-drivers}
+Silicon Labs.
+\newblock Cp210x usb to uart bridge vcp drivers.
+\newblock
+  \url{https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers}.
+\newblock [Online; accessed: 2019-05-12].
+
+\bibitem{websockets}
+Links2004.
+\newblock Websocket server and client for arduino.
+\newblock \url{https://github.com/Links2004/arduinoWebSockets}.
+\newblock [Online; accessed: 2019-05-12].
+
+\bibitem{micro-ecc}
+Kenneth MacKay.
+\newblock micro-ecc.
+\newblock \url{https://github.com/kmackay/micro-ecc}.
+\newblock [Online; accessed: 2019-01-15].
+
+\bibitem{geth}
+Ethereum Foundation.
+\newblock Go ethereum.
+\newblock \url{https://github.com/ethereum/go-ethereum}.
+\newblock [Online; accessed: 2019-05-11].
+
+\bibitem{geth-instructions}
+Ethereum Foundation.
+\newblock Installing geth.
+\newblock \url{https://github.com/ethereum/go-ethereum/wiki/Installing-Geth}.
+\newblock [Online; accessed: 2019-05-12].
+
+\bibitem{cli-options}
+Ethereum Foundation.
+\newblock Command line options.
+\newblock
+  \url{https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options}.
+\newblock [Online; accessed: 2019-05-12].
+
+\bibitem{json-rpc}
+Ethereum Foundation.
+\newblock Json rpc.
+\newblock \url{https://github.com/ethereum/wiki/wiki/JSON-RPC}.
+\newblock [Online; accessed: 2019-05-12].
+
+\bibitem{management-apis}
+Ethereum Foundation.
+\newblock Management apis.
+\newblock \url{https://github.com/ethereum/go-ethereum/wiki/Management-APIs}.
+\newblock [Online; accessed: 2019-05-13].
+
+\bibitem{javascript-0.20}
+Ethereum Foundation.
+\newblock Javascript ethereum api 0.2x.x.
+\newblock \url{https://github.com/ethereum/wiki/wiki/JavaScript-API}.
+\newblock [Online; accessed: 2019-05-13].
+
+\bibitem{javascript-1.0}
+Ethereum Foundation.
+\newblock Javascript ethereum api 1.0.
+\newblock \url{https://web3js.readthedocs.io/en/1.0/}.
+\newblock [Online; accessed: 2019-05-13].
+
+\bibitem{metamask}
+Metamask.
+\newblock Wallet browser extension.
+\newblock \url{https://metamask.io/}.
+\newblock [Online; accessed: 2019-05-13].
+
+\bibitem{bip39}
+Bitcoin.
+\newblock Bip39 mnemonic phrases.
+\newblock \url{https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki}.
+\newblock [Online; accessed: 2019-05-13].
+
+\bibitem{bip44}
+Bitcoin.
+\newblock Private key derivation.
+\newblock \url{https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki}.
+\newblock [Online; accessed: 2019-05-13].
+
+\end{thebibliography}
