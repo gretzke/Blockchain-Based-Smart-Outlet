@@ -212,7 +212,7 @@ Visit the MetaMask\cite{metamask} website and download the browser extension. A 
   short heavy hidden anger nephew tragic
   fade dad renew finger among tiny
 \end{lstlisting}
-This phrase translates to the following private key:
+This phrase translates to the following seed:
 \begin{lstlisting}[language=bash]
   b7b36d9ca1e105045344ecb7ca7b9449bfc0889139c9719876d03cf7b5814
   86137e905b9e94e50c03ca22871937ae3c754dea1427eede8198c6774d90f
@@ -242,3 +242,21 @@ and so on. This means that the single mnemonic phrase will act as a backup phras
 After MetaMask was set up create a second account and set the network to Rinkeby.
 \paragraph{Getting Ether}
 The next step would be to get Ethers on the Rinkeby network to interact with the Blockchain, via the website faucet.rinkeby.io. A public Facebook post or Twitter tweet containing the desired destination address has to be provided to receive the Ethers.
+
+\paragraph{IDE}
+The Smart Contract was developed using the Remix. It’s an online IDE including a compiler for the language Solidity, various debugging and testing tools and can be found under remix.ethereum.org.
+\\
+First a compiler has to be set inside the "Compile" tab. Because the programming language was designed especially for Ethereum, it is still under very heavy development with frequent updates coming out. The documentation for each specific version can be found under
+\\
+\url{https://solidity.readthedocs.io/en/v0.5.8/}
+\\
+while replacing "0.5.8" (the latest stable version at the time of writing) with the desired compiler version.
+\\\\
+Inside the "Run" tab the connection to the blockchain can be chosen under "Environment". The most important options are:
+\begin{itemize}
+    \item JavaScript VM: A personal Ethereum blockchain implemented in JavaScript that runs locally. It comes with 5 accounts which are preloaded with 100 Ether. It’s suited for early development stages, unit testing, and all in all quick tests, as there are no transaction times.
+    \item Injected Web3: As mentioned before, MetaMask injects Web3 into websites. When choosing this option, the currently active account and the chosen network in MetaMask are used for development.
+\end{itemize}
+Underneath the Smart Contract can be chosen and deployed to the blockchain. Next to the deploy button, constructor arguments can be passed. Optionally an existing Smart Contract can be loaded from an address.
+\\\\
+After a Contract has been deployed or loaded, all functions and public variables will be listed under the "Deployed Contracts" section. This will be the main way to interact with the Smart Contract.
