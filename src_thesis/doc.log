@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  14 MAY 2019 02:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  14 MAY 2019 03:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1323,28 +1323,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 <img/S20_open.png, id=291, 741.972pt x 572.3784pt>
 File: img/S20_open.png Graphic file (type png)
 <use img/S20_open.png>
-Package pdftex.def Info: img/S20_open.png  used on input line 34.
+Package pdftex.def Info: img/S20_open.png  used on input line 35.
 (pdftex.def)             Requested size: 418.25555pt x 322.65202pt.
 [18 <./img/S20_open.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
 <img/serial_port.png, id=298, 907.9521pt x 728.4816pt>
 File: img/serial_port.png Graphic file (type png)
 <use img/serial_port.png>
-Package pdftex.def Info: img/serial_port.png  used on input line 61.
+Package pdftex.def Info: img/serial_port.png  used on input line 62.
 (pdftex.def)             Requested size: 418.25555pt x 335.58359pt.
 [19 <./img/serial_port.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 70.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
 
-Overfull \hbox (0.36519pt too wide) in paragraph at lines 70--71
+Overfull \hbox (0.36519pt too wide) in paragraph at lines 71--72
 []\OT1/cmr/m/n/10.95 Enter []$\OT1/cmtt/m/n/10.95 http : / / arduino . esp8266 
 . com / stable / package _ esp8266com _ index . json$[]
  []
@@ -1352,40 +1352,40 @@ Overfull \hbox (0.36519pt too wide) in paragraph at lines 70--71
 <img/heltec.jpg, id=307, 3082.51625pt x 1795.70876pt>
 File: img/heltec.jpg Graphic file (type jpg)
 <use img/heltec.jpg>
-Package pdftex.def Info: img/heltec.jpg  used on input line 88.
+Package pdftex.def Info: img/heltec.jpg  used on input line 89.
 (pdftex.def)             Requested size: 418.25555pt x 243.64323pt.
 <img/acs712.jpg, id=309, 3834.325pt x 2271.48625pt>
 File: img/acs712.jpg Graphic file (type jpg)
 <use img/acs712.jpg>
-Package pdftex.def Info: img/acs712.jpg  used on input line 96.
+Package pdftex.def Info: img/acs712.jpg  used on input line 97.
 (pdftex.def)             Requested size: 418.25555pt x 247.75pt.
 [20 <./img/heltec.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
 [21 <./img/acs712.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 132--145
+Underfull \hbox (badness 10000) in paragraph at lines 133--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--145
+Underfull \hbox (badness 10000) in paragraph at lines 133--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--145
+Underfull \hbox (badness 10000) in paragraph at lines 133--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--145
+Underfull \hbox (badness 10000) in paragraph at lines 133--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--150
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
 
  []
 
@@ -1395,29 +1395,29 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-Overfull \hbox (2.22882pt too wide) in paragraph at lines 166--167
+Overfull \hbox (2.22882pt too wide) in paragraph at lines 167--168
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 183.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 184.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 183.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 184.
  [23]
-Underfull \hbox (badness 10000) in paragraph at lines 199--201
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 247--256
+Underfull \hbox (badness 10000) in paragraph at lines 248--257
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 260--175
+Underfull \hbox (badness 10000) in paragraph at lines 261--175
 
  []
 
@@ -1518,7 +1518,7 @@ ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
 al/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loca
 l/texlive/2019/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on doc.pdf (33 pages, 30202123 bytes).
+Output written on doc.pdf (33 pages, 30202252 bytes).
 PDF statistics:
  707 PDF objects out of 1000 (max. 8388607)
  621 compressed objects within 7 object streams
