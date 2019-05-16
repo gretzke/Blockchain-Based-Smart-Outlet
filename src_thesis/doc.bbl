@@ -195,4 +195,36 @@ Bitcoin.
 \newblock \url{https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki}.
 \newblock [Online; accessed: 2019-05-13].
 
+\bibitem{doc-oriented}
+Ethereum Foundation.
+\newblock The solidity contract-oriented programming language.
+\newblock \url{https://solidity.readthedocs.io/en/v0.1.5/README.html}.
+\newblock [Online; accessed: 2019-05-14].
+
+\bibitem{doc-types}
+Ethereum Foundation.
+\newblock Types.
+\newblock \url{https://solidity.readthedocs.io/en/v0.5.3/types.html}.
+\newblock [Online; accessed: 2019-05-16].
+
+\bibitem{doc-pragma}
+Ethereum Foundation.
+\newblock Layout of a solidity source file.
+\newblock
+  \url{https://solidity.readthedocs.io/en/v0.5.8/layout-of-source-files.html}.
+\newblock [Online; accessed: 2019-05-14].
+
+\bibitem{doc-constructor}
+Ethereum Foundation.
+\newblock Constructor.
+\newblock \url{https://solidity.readthedocs.io/en/v0.5.8/contracts.html}.
+\newblock [Online; accessed: 2019-05-15].
+
+\bibitem{doc-modifiers}
+Ethereum Foundation.
+\newblock Modifiers.
+\newblock
+  \url{https://solidity.readthedocs.io/en/v0.5.8/miscellaneous.html#function-visibility-specifiers}.
+\newblock [Online; accessed: 2019-05-15].
+
 \end{thebibliography}

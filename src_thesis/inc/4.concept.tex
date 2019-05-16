@@ -76,9 +76,9 @@ Both, the socket and the plug, will be programmed using the Arduino IDE. The fol
 After connecting the FTDI converter to the computer, it should appear under Tools $\rightarrow$ Port. To successfully flash code to the S20 the following settings have to be set:
 
 \begin{itemize}
-    \item Board: "Generic ESP8266 Module"
-    \item CPU Frequency: "80 MHz"
-    \item Flash Size: "1M (no SPIFFS)"
+    \item \textit{Board}: "Generic ESP8266 Module"
+    \item \textit{CPU Frequency}: "80 MHz"
+    \item \textit{Flash Size}: "1M (no SPIFFS)"
 \end{itemize}
 \leavevmode
 
@@ -123,9 +123,9 @@ After a successful driver installation, the board should be found under Tools $\
 The following settings are required to ensure a successful flash of the Heltec WiFi Kit:
 
 \begin{itemize}
-    \item Board: "NodeMCU 1.0 (ESP-12E Module)"
-    \item CPU Frequency: "160 MHz"
-    \item Flash Size: "4M (3M SPIFFS)"
+    \item \textit{Board}: "NodeMCU 1.0 (ESP-12E Module)"
+    \item \textit{CPU Frequency}: "160 MHz"
+    \item \textit{Flash Size}: "4M (3M SPIFFS)"
 \end{itemize}
 \leavevmode
 
@@ -169,12 +169,12 @@ To interact with the Ethereum Blockchain the entire chain history has to be down
 
 The launch options have the following purposes\cite{cli-options}:
 \begin{itemize}
-    \item rinkeby: synchronizes the Rinkeby testnet
-    \item rpc: enables the HTTP-RPC server, allows to receive JSON RPC requests
-    \item rpcapi: exposed APIs, listing of all APIs can be found under "References"\cite{json-rpc}\cite{management-apis}
-    \item rpcaddr: IP address of RPC interface, replace "X.X.X.X" with the IP address of the server, defaults to "localhost". Exposing the RPC interface without any restrictions is not advisable, especially on the mainnet, as it’s a severe security concern.
-    \item rpcport: listening port of the RPC server
-    \item cache: memory allocated in MB, a minimum of 1024 MB is advisable for a faster synchronization
+    \item \textit{rinkeby}: synchronizes the Rinkeby testnet
+    \item \textit{rpc}: enables the HTTP-RPC server, allows to receive JSON RPC requests
+    \item \textit{rpcapi}: exposed APIs, listing of all APIs can be found under "References"\cite{json-rpc}\cite{management-apis}
+    \item \textit{rpcaddr}: IP address of RPC interface, replace "X.X.X.X" with the IP address of the server, defaults to "localhost". Exposing the RPC interface without any restrictions is not advisable, especially on the mainnet, as it’s a severe security concern.
+    \item \textit{rpcport}: listening port of the RPC server
+    \item \textit{cache}: memory allocated in MB, a minimum of 1024 MB is advisable for a faster synchronization
 \end{itemize}
 The console parameter starts a JavaScript console, allowing to interact with the blockchain using the web3 library. Geth currently comes with web3 version 0.20.1\cite{javascript-0.20} but might be upgraded to version 1.0\cite{javascript-1.0} soon. The links to the documentation of both versions can be found under "References".
 \\
@@ -255,9 +255,145 @@ while replacing "0.5.8" (the latest stable version at the time of writing) with 
 \\\\
 Inside the "Run" tab the connection to the blockchain can be chosen under "Environment". The most important options are:
 \begin{itemize}
-    \item JavaScript VM: A personal Ethereum blockchain implemented in JavaScript that runs locally. It comes with 5 accounts which are preloaded with 100 Ether. It’s suited for early development stages, unit testing, and all in all quick tests, as there are no transaction times.
-    \item Injected Web3: As mentioned before, MetaMask injects Web3 into websites. When choosing this option, the currently active account and the chosen network in MetaMask are used for development.
+    \item \textit{JavaScript VM}: A personal Ethereum blockchain implemented in JavaScript that runs locally. It comes with 5 accounts which are preloaded with 100 Ether. It’s suited for early development stages, unit testing, and all in all quick tests, as there are no transaction times.
+    \item \textit{Injected Web3}: As mentioned before, MetaMask injects Web3 into websites. When choosing this option, the currently active account and the chosen network in MetaMask are used for development.
 \end{itemize}
 Underneath the Smart Contract can be chosen and deployed to the blockchain. Next to the deploy button, constructor arguments can be passed. Optionally an existing Smart Contract can be loaded from an address.
 \\\\
 After a Contract has been deployed or loaded, all functions and public variables will be listed under the "Deployed Contracts" section. This will be the main way to interact with the Smart Contract.
+
+\paragraph{Solidity}
+This paragraph will explain the basics and key features of the Solidity programming language.
+A solidity source file has the ".sol" file extension. The language has a C++ style syntax and works very similarly to object-oriented programming and is also called contract-oriented\cite{doc-oriented}. Contracts can be viewed as classes and also work with interfaces and inheritance.
+\\
+See \ref{lis:sc_basic_ref} for an example of a minimalistic smart contract, which demonstrates the general syntax as well as some of the features listed below.
+\\\\
+\textbf{General notice}\\
+There are a few important aspects in how certain things behave during smart contract programming and execution:
+\begin{itemize}
+  \item Solidity does not implement floats at the time of writing. This is especially important for calculations using Ether. Therefore it’s important to remember that Ether is always assumed as Wei by Smart Contract functions.
+  \item When a function throws, all changes to the state that were made up to this point are reverted and the transaction is marked as failed.
+  \item \textit{undefined} and \textit{null} does not exist in Solidity, variables rather have a default type, e.g. 0 for integers\cite{doc-types}.
+\end{itemize}
+\leavevmode
+\\
+\textbf{Types}\\
+The most important data types in Solidity are\cite{doc-types}:
+\begin{itemize}
+  \item \textit{bool}: The possible values are "true" and "false".
+  \item \textit{integer}: There are signed (\textit{int}) and unsigned (\textit{uint}) integers in Solidity. \textit{uint} is an alias for \textit{uint256}. The smallest size for an integer is 8 bit (e.g. \textit{uint8}), the sizes grow by 8 up to 256 bit. The same applies to signed integers as well.
+  \item \textit{address}: The address variable stores 20 bytes.
+  \item \textit{address payable}: The address payable variable stores 20 bytes as well. Additionally it holds the members \textit{transfer} and \textit{send} to send Ether to that address.
+  \item \textit{bytes32}: Holds 32 bytes of data.
+  \item \textit{bytes[]}: Dynamically-sized byte array.
+  \item \textit{string}: Dynamically-sized UTF-8 encoded string.
+\end{itemize}
+\leavevmode
+\newpage
+\textbf{Pragma}\\
+The first line of a solidity file defines the compiler version\cite{doc-pragma}:
+\begin{lstlisting}[language=C++]
+  pragma solidity ^0.5.4;
+\end{lstlisting}
+The \^{} symbol means that the code can be compiled by a compiler with the versions 0.5.4 and above, but below 0.6.0. Without the \^{} symbol only the compiler version 0.5.4 can compile the source code.
+\\\\
+\textbf{Important variables and functions}
+Solidity features some global units, variables and functions which can be very useful, if not necessary for Smart Contract programming:
+\begin{itemize}
+  \item \textit{ether}: The ether unit multiplies the current value by \(10^{18}\), e.g. 3 ether equals 3000000000000000000.
+  \item \textit{time units}: The following time units are available: "seconds", "minutes", "hours", "days", "weeks". 1 seconds equals 1, 1 minutes equals 60 seconds or 60, 1 hours equals 60 minutes or 3600 and so on.
+  \item \textit{now}: An alias for \textit{block.timestamp}, a \textit{uint256} variable as seconds since unix epoch. The variable is set by the miner during validation so it should not be used for random number generation as the number can be varied by $\pm$ up to 15 seconds, because the timestamp of a block has to be higher than the one of the previous block.
+  \item \textit{msg.sender}: Of type \textit{address payable} and contains the sender of the current message. If a function is called directly by an EOA and not by a Smart Contract, \textit{msg.sender} will contain the sender of the transaction.
+  \item \textit{msg.value}: Of type \textit{uint256} and contains the number of Wei sent with the current message.
+  \item \textit{$<$address payable$>$.transfer(uint256 value)/$<$address payable$>$.send(uint256 value)}: Both functions send "value" in Wei to the payable address. Transfer throws, send returns false on failure.
+  \item \textit{function ()}: A function declared without any name is also called the fallback function. This function is called, when no matching function identifier is provided. Usually this function is triggered, when a simple transaction is sent to the smart contract, that’s why the fallback function can often be seen with the \textit{payable} modifier.
+  \item \textit{require(bool condition, string memory message)}: The require function throws if the condition is not met and provides the custom error message.
+  \item \textit{keccak256(bytes memory) returns (bytes32)}: Computes the Keccak-256 hash of an input.
+  \item \textit{ecrecover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) returns (address)}: For a given message and r, s, v values of a ECDSA signature the function returns the address associated with the public key from the signature.
+\end{itemize}
+\leavevmode
+\textbf{Constructor}\\
+A constructor function is optional and can be used to execute code directly when the Smart Contract is written to the blockchain\cite{doc-constructor}.
+\\\\
+\textbf{Modifiers}\\
+A function can have multiple different modifiers, that make it behave in different ways\cite{doc-modifiers}.
+First, there is the visibility modifier, which manages the access to functions and variables:
+\begin{itemize}
+  \item \textit{public}: The public modifier makes a function visible from inside and outside the smart contract. Adding the modifier to a variable automatically generates a getter function with the same name as the variable.
+  \item \textit{external}: The external modifier is only applicable for functions. It makes them only visible from outside the smart contract. To call the function from inside the smart contract it has to be called via "this.func()" instead of "func()".
+  \item \textit{internal}: The internal modifier makes a function or variable only visible internally. This means they can only be accessed from the contract and all derived contracts.
+  \item \textit{private}: The private modifier makes a function or variable only visible from the contract itself. It’s important to notice that although a variable might be private, it still can be read, since all data stored on the blockchain is public.
+\end{itemize} 
+\leavevmode
+\\
+Reading from the blockchain does not require mining or involve transaction fees. Therefore functions that do not write to storage can be marked as such via a modifier:
+\begin{itemize}
+  \item \textit{view}: If a function has a view modifier, it cannot write to storage, only read from it.
+  \item \textit{pure}: If a function has a pure modifier, it cannot modify storage. Additionally it cannot read state, e.g. read from variables. It’s primarily used for computations.
+\end{itemize}
+\leavevmode
+\\
+The \textit{payable} modifier allows a function to receive Ether. If Ether is included in a function call that doesn’t have the \textit{payable} modifier, it throws.
+\\\\
+It’s also possible to write custom modifiers. The example \ref{lis:sc_basic_ref} will show the function of a custom modifier through a commonly used \textit{onlyOwner} modifier, which only allows the owner of a smart contract to call the function.
+\\\\
+\textbf{Events}\\
+Events are an important part of Smart Contract programming for 2 key reasons:
+\begin{enumerate}
+  \item With a complex Smart Contract handling thousands of transactions, it can get confusing to keep track of all changes made to the state of the Smart Contract. Events are a good way to sort these changes into different categories and make them searchable by specific filters.
+  \item Some time passes until a transaction was mined, therefore the return value of a function is not returned to the sender of the transaction. Events can be used to act as a return value. A computer system or a frontend can then scan for these events and act accordingly, e.g. show updates to the user.  
+\end{enumerate}
+See \ref{lis:sc_basic_ref} for an example of an event.
+\\\\
+\begin{listing}[H]
+\begin{minted}[linenos, bgcolor=light-gray, fontsize=\scriptsize]{cpp}
+pragma solidity 0.5.8;
+
+contract ModifierExample{
+    // variable to store the owner of the smart contract
+    address owner;
+    // number to demonstrate the view function
+    uint256 public num;
+    
+    // definition of an event
+    // the indexed keyword allows to use the parameter as a filter
+    event ownerChanged(address indexed oldOwner, address indexed newOwner);
+    
+    // the constructor gets called after contract creation
+    // arguments can be passed to the constructor
+    constructor(uint256 _num) public {
+        // set owner to the sender of the transaction
+        owner = msg.sender;
+        // set the number to the passed argument
+        num = _num;
+    }
+    
+    // custom modifier
+    modifier onlyOwner() {
+        // throws if sender of call is unequal to value stored in owner variable
+        require(owner == msg.sender, "sender is not owner");
+        // _; defines where the code of the function, the modifier is used on, runs
+        _;
+    }
+    
+    // function to change the address of the smart contract
+    function changeOwner(address _owner) external onlyOwner {
+        // emits the ownerChanged event
+        emit ownerChanged(owner, _owner);
+        // sets the owner variable to the passed argument
+        owner = _owner;
+    }
+    
+    // the function will execute the code and return the calculated number
+    // because of the view modifier no state is modified and no transaction has to be sent
+    function calculatedNum() public view returns(uint256) {
+        return num * 2;
+    }
+    
+}
+\end{minted}
+\caption{Basic structure of a smart contract}
+\label{lis:sc_basic_ref}
+\end{listing}
+
+
