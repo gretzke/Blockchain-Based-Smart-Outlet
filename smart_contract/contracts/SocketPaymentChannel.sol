@@ -85,7 +85,7 @@ contract SocketPaymentChannel {
     // use nonces to avoid replay attacks
     mapping(address => uint256) public customerNonces;
 
-    event InitializedPaymentChannel(address indexed customer, uint256 indexed start, uint256 indexed maxValue ,uint256 end);
+    event InitializedPaymentChannel(address indexed customer, uint256 indexed start, uint256 indexed maxValue, uint256 end);
     event ClosedPaymentChannel(address indexed sender, uint256 indexed value, bool indexed expired, uint256 duration);
     event PriceChanged(uint256 indexed oldPrice, uint256 indexed newPrice);
     event Withdrawal(address indexed sender, uint256 indexed amount);
