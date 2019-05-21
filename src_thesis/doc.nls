@@ -6,8 +6,11 @@
   \item [{externally owned account}]\begingroup EOA \nomrefpage \nomeqref {2.0}\nompageref{11}
   \item [{machine to machine}]\begingroup M2M \nomrefpage \nomeqref {1.0}\nompageref{7}
   \item [{number used once}]\begingroup nonce \nomrefpage \nomeqref {2.0}\nompageref{9}
+  \item [{number used once}]\begingroup nonce \nomrefpage \nomeqref {4.0}\nompageref{31}
   \item [{peer to peer}]\begingroup P2P \nomrefpage \nomeqref {1.0}\nompageref{6}
+  \item [{proof of authority}]\begingroup POA \nomrefpage \nomeqref {4.0}\nompageref{32}
   \item [{Proof of Work}]\begingroup PoW \nomrefpage \nomeqref {2.0}\nompageref{9}
+  \item [{Recursive Length Prefix}]\begingroup RLP \nomrefpage \nomeqref {4.0}\nompageref{32}
   \item [{transactions per second}]\begingroup TPS \nomrefpage \nomeqref {1.0}\nompageref{6}
   \item [{Virtual Private Server}]\begingroup VPS \nomrefpage \nomeqref {4.0}\nompageref{22}
 

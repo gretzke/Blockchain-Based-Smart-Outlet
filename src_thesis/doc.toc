@@ -4,10 +4,6 @@
 \contentsline {section}{\numberline {3}Analysis of different payment methods}{12}{section.3}% 
 \contentsline {section}{\numberline {4}Concept, Setup \& Implementation}{17}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}Concept}{17}{subsection.4.1}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Socket}{17}{subsubsection.4.1.1}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Plug}{17}{subsubsection.4.1.2}% 
-\contentsline {subsubsection}{\numberline {4.1.3}Server}{17}{subsubsection.4.1.3}% 
-\contentsline {subsubsection}{\numberline {4.1.4}Smart Contract}{17}{subsubsection.4.1.4}% 
 \contentsline {subsection}{\numberline {4.2}Setup}{18}{subsection.4.2}% 
 \contentsline {subsubsection}{\numberline {4.2.1}Socket}{18}{subsubsection.4.2.1}% 
 \contentsline {subsubsection}{\numberline {4.2.2}Plug}{20}{subsubsection.4.2.2}% 
@@ -18,9 +14,14 @@
 \contentsline {paragraph}{\numberline {4.2.5.2}Getting Ether}{25}{paragraph.4.2.5.2}% 
 \contentsline {paragraph}{\numberline {4.2.5.3}IDE}{25}{paragraph.4.2.5.3}% 
 \contentsline {paragraph}{\numberline {4.2.5.4}Solidity}{26}{paragraph.4.2.5.4}% 
-\contentsline {section}{\numberline {5}Appendix}{31}{section.5}% 
-\contentsline {subsection}{List of Figures}{32}{section.5}% 
-\contentsline {subsection}{List of Tables}{33}{section.5}% 
-\contentsline {subsection}{List of Listings}{34}{section.5}% 
-\contentsline {subsection}{List of Abbreviations}{35}{section*.10}% 
-\contentsline {subsection}{References}{36}{section*.11}% 
+\contentsline {subsection}{\numberline {4.3}Implementation}{31}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Microcontrollers}{31}{subsubsection.4.3.1}% 
+\contentsline {paragraph}{\numberline {4.3.1.1}Transactions}{31}{paragraph.4.3.1.1}% 
+\contentsline {paragraph}{\numberline {4.3.1.2}State Machine}{35}{paragraph.4.3.1.2}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Smart Contract}{35}{subsubsection.4.3.2}% 
+\contentsline {section}{\numberline {5}Appendix}{39}{section.5}% 
+\contentsline {subsection}{List of Figures}{40}{section.5}% 
+\contentsline {subsection}{List of Tables}{41}{section.5}% 
+\contentsline {subsection}{List of Listings}{42}{section.5}% 
+\contentsline {subsection}{List of Abbreviations}{43}{section*.14}% 
+\contentsline {subsection}{References}{44}{section*.15}% 

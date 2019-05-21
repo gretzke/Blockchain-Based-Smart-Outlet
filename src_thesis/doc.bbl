@@ -155,7 +155,7 @@ Ethereum Foundation.
 
 \bibitem{json-rpc}
 Ethereum Foundation.
-\newblock Json rpc.
+\newblock Json rpc api.
 \newblock \url{https://github.com/ethereum/wiki/wiki/JSON-RPC}.
 \newblock [Online; accessed: 2019-05-12].
 
@@ -226,5 +226,43 @@ Ethereum Foundation.
 \newblock
   \url{https://solidity.readthedocs.io/en/v0.5.8/miscellaneous.html#function-visibility-specifiers}.
 \newblock [Online; accessed: 2019-05-15].
+
+\bibitem{json-rpc-spec}
+JSON RPC~Google Group.
+\newblock Json rpc 2.0.
+\newblock \url{https://www.jsonrpc.org/specification}.
+\newblock [Online; accessed: 2019-05-19].
+
+\bibitem{design-rationale}
+Ethereum Foundation.
+\newblock Design rationale.
+\newblock \url{https://github.com/ethereum/wiki/wiki/Design-Rationale}.
+\newblock [Online; accessed: 2019-05-19].
+
+\bibitem{eip-155}
+Ethereum Foundation.
+\newblock Eip 155.
+\newblock \url{https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md}.
+\newblock [Online; accessed: 2019-05-19].
+
+\bibitem{rlp-lib}
+Takahiro Okada.
+\newblock Rlp c++ implementation.
+\newblock
+  \url{https://github.com/kopanitsa/web3-arduino/blob/master/src/Util.cpp}.
+\newblock [Online; accessed: 2019-05-21].
+
+\bibitem{packed-spec}
+Ethereum Foundation.
+\newblock Packed encoding.
+\newblock
+  \url{https://solidity.readthedocs.io/en/v0.4.24/abi-spec.html#abi-packed-mode}.
+\newblock [Online; accessed: 2019-05-21].
+
+\bibitem{keccak-source}
+Aleksey Kravchenko.
+\newblock Keccak-256 c implementation.
+\newblock \url{https://github.com/firefly/wallet}.
+\newblock [Online; accessed: 2019-05-21].
 
 \end{thebibliography}

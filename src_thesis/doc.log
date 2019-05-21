@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  16 MAY 2019 03:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 MAY 2019 03:48
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1335,13 +1335,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--82
  []
 
 ) [11] (./inc/3.analysis.tex
-<img/average-confirmation-time.png, id=175, 1205.50375pt x 608.2725pt>
+<img/average-confirmation-time.png, id=177, 1205.50375pt x 608.2725pt>
 File: img/average-confirmation-time.png Graphic file (type png)
 <use img/average-confirmation-time.png>
 Package pdftex.def Info: img/average-confirmation-time.png  used on input line 
 45.
 (pdftex.def)             Requested size: 418.25555pt x 211.04227pt.
-<img/nano-confirmation-time.pdf, id=183, 1140.31857pt x 650.46346pt>
+<img/nano-confirmation-time.pdf, id=185, 1140.31857pt x 650.46346pt>
 File: img/nano-confirmation-time.pdf Graphic file (type pdf)
 <use img/nano-confirmation-time.pdf>
 Package pdftex.def Info: img/nano-confirmation-time.pdf  used on input line 57.
@@ -1408,14 +1408,34 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14 <./img/average-confirmation-time.png>] [15 <./img/nano-confirmation-time.pd
-f>]) [16] (./inc/4.concept.tex [17
+f>]) [16] (./inc/4.concept.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--25
+
+ []
+
+[17
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-<img/S20_open.png, id=253, 741.972pt x 572.3784pt>
+<img/S20_open.png, id=255, 741.972pt x 572.3784pt>
 File: img/S20_open.png Graphic file (type png)
 <use img/S20_open.png>
 Package pdftex.def Info: img/S20_open.png  used on input line 35.
@@ -1425,7 +1445,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-<img/serial_port.png, id=261, 907.9521pt x 728.4816pt>
+<img/serial_port.png, id=263, 907.9521pt x 728.4816pt>
 File: img/serial_port.png Graphic file (type png)
 <use img/serial_port.png>
 Package pdftex.def Info: img/serial_port.png  used on input line 62.
@@ -1444,12 +1464,12 @@ Overfull \hbox (0.36519pt too wide) in paragraph at lines 71--72
 . com / stable / package _ esp8266com _ index . json$[]
  []
 
-<img/heltec.jpg, id=270, 3082.51625pt x 1795.70876pt>
+<img/heltec.jpg, id=272, 3082.51625pt x 1795.70876pt>
 File: img/heltec.jpg Graphic file (type jpg)
 <use img/heltec.jpg>
 Package pdftex.def Info: img/heltec.jpg  used on input line 89.
 (pdftex.def)             Requested size: 418.25555pt x 243.64323pt.
-<img/acs712.jpg, id=272, 3834.325pt x 2271.48625pt>
+<img/acs712.jpg, id=274, 3834.325pt x 2271.48625pt>
 File: img/acs712.jpg Graphic file (type jpg)
 <use img/acs712.jpg>
 Package pdftex.def Info: img/acs712.jpg  used on input line 97.
@@ -1506,22 +1526,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
+
+ []
+
 [24]
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 248--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--264
+Underfull \hbox (badness 10000) in paragraph at lines 261--265
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 261--265
+
+ []
+
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 266--273
 
  []
 
-[25] [26] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+[26] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1586,34 +1626,138 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--397
 
  []
 
-[29]) [30]
+[29] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 412--419
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 428--434
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 447--450
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--462
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 476--482
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--482
+
+ []
+
+[34]
+<img/Plug-Socket-pairing_process.pdf, id=459, 436.5108pt x 427.5975pt>
+File: img/Plug-Socket-pairing_process.pdf Graphic file (type pdf)
+<use img/Plug-Socket-pairing_process.pdf>
+Package pdftex.def Info: img/Plug-Socket-pairing_process.pdf  used on input lin
+e 489.
+(pdftex.def)             Requested size: 418.25555pt x 409.71902pt.
+<img/Plug-Socket-verification_process.pdf, id=460, 476.74109pt x 490.71327pt>
+File: img/Plug-Socket-verification_process.pdf Graphic file (type pdf)
+<use img/Plug-Socket-verification_process.pdf>
+Package pdftex.def Info: img/Plug-Socket-verification_process.pdf  used on inpu
+t line 496.
+(pdftex.def)             Requested size: 418.25555pt x 430.52615pt.
+<img/Plug-Socket-payment_process.pdf, id=461, 434.58359pt x 462.76888pt>
+File: img/Plug-Socket-payment_process.pdf Graphic file (type pdf)
+<use img/Plug-Socket-payment_process.pdf>
+Package pdftex.def Info: img/Plug-Socket-payment_process.pdf  used on input lin
+e 503.
+(pdftex.def)             Requested size: 418.25555pt x 445.39699pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--509
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/Plug-Socket-settlement_process.pdf, id=462, 466.62328pt x 312.20638pt>
+File: img/Plug-Socket-settlement_process.pdf Graphic file (type pdf)
+<use img/Plug-Socket-settlement_process.pdf>
+Package pdftex.def Info: img/Plug-Socket-settlement_process.pdf  used on input 
+line 511.
+(pdftex.def)             Requested size: 418.25555pt x 279.85884pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [35 <./img/Plug-Socket-pairing_process.pdf
+
+pdfTeX warning: pdflatex (file ./img/Plug-Socket-pairing_process.pdf): PDF incl
+usion: invalid other resource which is no dict (key 'ProcSets', type <array>); 
+ignored.
+>] [36 <./img/Plug-Socket-verification_process.pdf
+
+pdfTeX warning: pdflatex (file ./img/Plug-Socket-verification_process.pdf): PDF
+ inclusion: invalid other resource which is no dict (key 'ProcSets', type <arra
+y>); ignored.
+>] [37 <./img/Plug-Socket-payment_process.pdf
+
+pdfTeX warning: pdflatex (file ./img/Plug-Socket-payment_process.pdf): PDF incl
+usion: invalid other resource which is no dict (key 'ProcSets', type <array>); 
+ignored.
+>] [38 <./img/Plug-Socket-settlement_process.pdf
+
+pdfTeX warning: pdflatex (file ./img/Plug-Socket-settlement_process.pdf): PDF i
+nclusion: invalid other resource which is no dict (key 'ProcSets', type <array>
+); ignored.
+>]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 186.
 
-(./inc/appendix.tex) [31
+(./inc/appendix.tex) [39
 
 
 ] (./doc.lof)
 \tf@lof=\write10
 \openout10 = `doc.lof'.
 
- [32
+ [40
 
 ] (./doc.lot)
 \tf@lot=\write11
 \openout11 = `doc.lot'.
 
- [33
+ [41
 
 ] (./doc.lol)
 \tf@lol=\write12
 \openout12 = `doc.lol'.
 
 
-[34
+[42
 
-] (./doc.nls) [35
+] (./doc.nls) [43
 
 ] (./doc.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 79--85
@@ -1627,7 +1771,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--99
 rt-[]ii-[]def83653b21f$[]\OT1/cmr/m/n/10.95 ,
  []
 
-[36
+[44
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 119--124
@@ -1653,7 +1797,13 @@ Underfull \hbox (badness 2990) in paragraph at lines 175--179
 OT1/cmtt/m/n/10.95 https : / / web3js .
  []
 
-[37]) [38]
+[45]
+Underfull \hbox (badness 2318) in paragraph at lines 231--235
+[]\OT1/cmr/m/n/10.95 JSON RPC Google Group.  Json rpc 2.0.  []$\OT1/cmtt/m/n/10
+.95 https : / / www . jsonrpc . org /
+ []
+
+) [46]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
  (./doc.aux)
@@ -1664,10 +1814,10 @@ Package rerunfilecheck Info: File `doc.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 24635 strings out of 492623
- 448376 string characters out of 6129553
- 810379 words of memory out of 5000000
- 27826 multiletter control sequences out of 15000+600000
+ 24698 strings out of 492623
+ 449782 string characters out of 6129553
+ 810749 words of memory out of 5000000
+ 27854 multiletter control sequences out of 15000+600000
  13276 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,11n,99p,9111b,1323s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1686,10 +1836,10 @@ l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/tex
 live/2019/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on doc.pdf (38 pages, 30235399 bytes).
+Output written on doc.pdf (46 pages, 30476726 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 587 compressed objects within 6 object streams
- 171 named destinations out of 1000 (max. 500000)
- 350 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 861 PDF objects out of 1000 (max. 8388607)
+ 728 compressed objects within 8 object streams
+ 202 named destinations out of 1000 (max. 500000)
+ 378 words of extra memory for PDF output out of 10000 (max. 10000000)
 

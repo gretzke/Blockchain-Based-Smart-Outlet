@@ -1,7 +1,7 @@
 \section{Concept, Setup \& Implementation}
 
 \subsection{Concept}
-To build a functioning prototype, which implements the payment channel described in the previous chapter the following components are required:
+To build a functioning prototype, which implements the payment channel described in the previous chapter, the following components are required:
 \begin{enumerate}
     \item A supplier in form of a socket
     \item A customer in form of a plug
@@ -10,17 +10,17 @@ To build a functioning prototype, which implements the payment channel described
 \end{enumerate}
 All components will communicate with each other over a Wifi connection and TCP.
 The following section will summarize all requirements each component of the prototype has to meet. An in depth explanation of the setup and technical implementation will follow in the next section.
-
-\subsubsection{Socket}
+\\\\
+\textbf{Socket}\\
 An AC electrical socket is required. A microcontroller, which can be placed between the electrical circuit and the socket, needs two additional components: a WiFi module to communicate with the web and the plug and a relay to switch the current on and off.
-
-\subsubsection{Plug}
+\\\\
+\textbf{Plug}\\
 An AC electrical plug is required, e.g. a short extension cord, that can be connected to any electronic device. A hall effect-based current meter can be attached to the hot wire to measure the current. This current meter needs to be attached to a microcontroller which also has a WiFi module to communicate with the socket and make http requests to the server.
-
-\subsubsection{Server}
+\\\\
+\textbf{Server}\\
 The server will run an Ethereum node. This node has to be reachable from the outside, so the microcontrollers can send http requests to it.
-
-\subsubsection{Smart Contract}
+\\\\
+\textbf{Smart Contract}\\
 The Smart Contract acts as a trustee, managing the money during the exchange. It has to be programmed in a way that guarantees that no party can steal from the other.
 
 \newpage
@@ -28,7 +28,7 @@ The Smart Contract acts as a trustee, managing the money during the exchange. It
 This section will focus on the technical setup of the hardware components and the installation and setup of all required software.
 \\
 \subsubsection{Socket}
-The Sonoff S20 smart socket was used for the technical implementation of the concept, as it meets all requirements listed in the section above. A microcontroller is automatically powered by the socket it’s plugged into. The S20 also has a WiFi module and a relay, which can be switched on and off by said microcontroller. Lastly the microcontroller can be reprogrammed via a serial port.
+The Sonoff S20 smart socket was used for the technical implementation of the concept, as it meets all requirements listed in the section above. A microcontroller is automatically powered by the socket it's plugged into. The S20 also has a WiFi module and a relay, which can be switched on and off by said microcontroller. Lastly the microcontroller can be reprogrammed via a serial port.
 To program the Sonoff S20, the screws, as seen in the image below, have to be unscrewed first, revealing the logic board with the relay and the serial port.
 \\
 \begin{figure}[h]
@@ -91,7 +91,7 @@ The device to control the measurement of current in the plug and handle the comm
     \label{fig:heltec}
 \end{figure}
 
-The ACS712 20A current meter is used to measure the current. It’s hall effect-based and provides galvanic isolation up to a minimum of 2.1 kV (RMS)\cite{acs712}. To connect the current meter, a part of the hot wire leading to the plug has to be cut and stripped. Both ends have to be inserted into the screw terminal of the ACS712. The current from the plug will now be redirected underneath the hall sensor.
+The ACS712 20A current meter is used to measure the current. It's hall effect-based and provides galvanic isolation up to a minimum of 2.1 kV (RMS)\cite{acs712}. To connect the current meter, a part of the hot wire leading to the plug has to be cut and stripped. Both ends have to be inserted into the screw terminal of the ACS712. The current from the plug will now be redirected underneath the hall sensor.
 \\
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{img/acs712.jpg}
@@ -145,7 +145,7 @@ Ethereum relies on the Elliptic Curve Digital Signature Algorithm, although ther
 \\
 
 \subsubsection{Server}
-A server is mandatory to act as a gateway to the Ethereum blockchain. Geth is the official "Golang implementation of the Ethereum protocol"\cite{geth} and is used to run a full node. After the installation it will be used to send transactions and make smart contract calls.
+A server is mandatory to act as a gateway to the Ethereum blockchain. Geth is the official "Golang implementation of the Ethereum protocol"\cite{geth} and is used to run a full node. After the installation it will be used to send transactions and make Smart Contract calls.
 \\\\
 A \abbr{Virtual Private Server}{VPS} was used for this implementation running Ubuntu 18.04. The server has a six core CPU, 16 GB of RAM, 400GB SSD and 400 MBit/s unlimited traffic. The following instructions can be used to install the program under Ubuntu. For other environments the link to the instructions can be found under "References"\cite{geth-instructions}.
 \newpage
@@ -169,10 +169,10 @@ To interact with the Ethereum Blockchain the entire chain history has to be down
 
 The launch options have the following purposes\cite{cli-options}:
 \begin{itemize}
-    \item \textit{rinkeby}: synchronizes the Rinkeby testnet
+    \item \textit{rinkeby}: synchronizes the Rinkeby Testnet
     \item \textit{rpc}: enables the HTTP-RPC server, allows to receive JSON RPC requests
     \item \textit{rpcapi}: exposed APIs, listing of all APIs can be found under "References"\cite{json-rpc}\cite{management-apis}
-    \item \textit{rpcaddr}: IP address of RPC interface, replace "X.X.X.X" with the IP address of the server, defaults to "localhost". Exposing the RPC interface without any restrictions is not advisable, especially on the mainnet, as it’s a severe security concern.
+    \item \textit{rpcaddr}: IP address of RPC interface, replace "X.X.X.X" with the IP address of the server, defaults to "localhost". Exposing the RPC interface without any restrictions is not advisable, especially on the Mainnet, as it's a severe security concern.
     \item \textit{rpcport}: listening port of the RPC server
     \item \textit{cache}: memory allocated in MB, a minimum of 1024 MB is advisable for a faster synchronization
 \end{itemize}
@@ -203,8 +203,7 @@ returns the block number of the latest synchronized block, which is the amount o
   > eth.syncing
 \end{lstlisting}
 returns the current block number and the highest block number. As soon as the client is synchronized it returns "false"\cite{javascript-0.20}.
-
-
+\\
 \subsubsection{Smart Contract}
 \paragraph{Wallet}
 The first thing needed to start programming smart contracts is an Ethereum wallet. MetaMask is a browser extension for Chrome, Firefox and Opera, that not only allows to manage multiple accounts on multiple test chains, it also injects the web3.js library into websites allowing to interact with the Ethereum blockchain and smart contracts on web pages.
@@ -241,11 +240,12 @@ with the corresponding address
 \end{lstlisting}
 and so on. This means that the single mnemonic phrase will act as a backup phrase for all accounts that will be created inside the MetaMask wallet.
 After MetaMask was set up create a second account and set the network to Rinkeby.
+\\
 \paragraph{Getting Ether}
 The next step would be to get Ethers on the Rinkeby network to interact with the Blockchain, via the website faucet.rinkeby.io. A public Facebook post or Twitter tweet containing the desired destination address has to be provided to receive the Ethers.
-
+\\
 \paragraph{IDE}
-The Smart Contract was developed using the Remix. It’s an online IDE including a compiler for the language Solidity, various debugging and testing tools and can be found under remix.ethereum.org.
+The Smart Contract was developed using the Remix. It's an online IDE including a compiler for the language Solidity, various debugging and testing tools and can be found under remix.ethereum.org.
 \\
 First a compiler has to be set inside the "Compile" tab. Because the programming language was designed especially for Ethereum, it is still under very heavy development with frequent updates coming out. The documentation for each specific version can be found under
 \\
@@ -255,23 +255,23 @@ while replacing "0.5.8" (the latest stable version at the time of writing) with 
 \\\\
 Inside the "Run" tab the connection to the blockchain can be chosen under "Environment". The most important options are:
 \begin{itemize}
-    \item \textit{JavaScript VM}: A personal Ethereum blockchain implemented in JavaScript that runs locally. It comes with 5 accounts which are preloaded with 100 Ether. It’s suited for early development stages, unit testing, and all in all quick tests, as there are no transaction times.
+    \item \textit{JavaScript VM}: A personal Ethereum blockchain implemented in JavaScript that runs locally. It comes with 5 accounts which are preloaded with 100 Ether. It's suited for early development stages, unit testing, and all in all quick tests, as there are no transaction times.
     \item \textit{Injected Web3}: As mentioned before, MetaMask injects Web3 into websites. When choosing this option, the currently active account and the chosen network in MetaMask are used for development.
 \end{itemize}
-Underneath the Smart Contract can be chosen and deployed to the blockchain. Next to the deploy button, constructor arguments can be passed. Optionally an existing Smart Contract can be loaded from an address.
+Underneath, the Smart Contract can be chosen and deployed to the blockchain. Next to the deploy button, constructor arguments can be passed. Optionally an existing Smart Contract can be loaded from an address.
 \\\\
 After a Contract has been deployed or loaded, all functions and public variables will be listed under the "Deployed Contracts" section. This will be the main way to interact with the Smart Contract.
-
+\\
 \paragraph{Solidity}
 This paragraph will explain the basics and key features of the Solidity programming language.
 A solidity source file has the ".sol" file extension. The language has a C++ style syntax and works very similarly to object-oriented programming and is also called contract-oriented\cite{doc-oriented}. Contracts can be viewed as classes and also work with interfaces and inheritance.
 \\
-See \ref{lis:sc_basic_ref} for an example of a minimalistic smart contract, which demonstrates the general syntax as well as some of the features listed below.
+See \ref{lis:sc_basic_ref} for an example of a minimalistic Smart Contract, which demonstrates the general syntax as well as some of the features listed below.
 \\\\
 \textbf{General notice}\\
-There are a few important aspects in how certain things behave during smart contract programming and execution:
+There are a few important aspects in how certain things behave during Smart Contract programming and execution:
 \begin{itemize}
-  \item Solidity does not implement floats at the time of writing. This is especially important for calculations using Ether. Therefore it’s important to remember that Ether is always assumed as Wei by Smart Contract functions.
+  \item Solidity does not implement floats at the time of writing. This is especially important for calculations using Ether. Therefore it's important to remember that Ether is always assumed as Wei by Smart Contract functions.
   \item When a function throws, all changes to the state that were made up to this point are reverted and the transaction is marked as failed.
   \item \textit{undefined} and \textit{null} does not exist in Solidity, variables rather have a default type, e.g. 0 for integers\cite{doc-types}.
 \end{itemize}
@@ -300,13 +300,13 @@ The \^{} symbol means that the code can be compiled by a compiler with the versi
 \textbf{Important variables and functions}
 Solidity features some global units, variables and functions which can be very useful, if not necessary for Smart Contract programming:
 \begin{itemize}
-  \item \textit{ether}: The ether unit multiplies the current value by \(10^{18}\), e.g. 3 ether equals 3000000000000000000.
+  \item \textit{ether}: The ether unit multiplies the current value by \(10^{18}\), e.g. 3 ether equals 3,000,000,000,000,000,000.
   \item \textit{time units}: The following time units are available: "seconds", "minutes", "hours", "days", "weeks". 1 seconds equals 1, 1 minutes equals 60 seconds or 60, 1 hours equals 60 minutes or 3600 and so on.
-  \item \textit{now}: An alias for \textit{block.timestamp}, a \textit{uint256} variable as seconds since unix epoch. The variable is set by the miner during validation so it should not be used for random number generation as the number can be varied by $\pm$ up to 15 seconds, because the timestamp of a block has to be higher than the one of the previous block.
+  \item \textit{now}: An alias for \textit{block.timestamp}, a \textit{uint256} variable as seconds since unix epoch. The variable is set by the miner during validation so it should not be used for random number generation as the number can be varied by up to $\pm$ 15 seconds, because the timestamp of a block has to be higher than the one of the previous block.
   \item \textit{msg.sender}: Of type \textit{address payable} and contains the sender of the current message. If a function is called directly by an EOA and not by a Smart Contract, \textit{msg.sender} will contain the sender of the transaction.
   \item \textit{msg.value}: Of type \textit{uint256} and contains the number of Wei sent with the current message.
   \item \textit{$<$address payable$>$.transfer(uint256 value)/$<$address payable$>$.send(uint256 value)}: Both functions send "value" in Wei to the payable address. Transfer throws, send returns false on failure.
-  \item \textit{function ()}: A function declared without any name is also called the fallback function. This function is called, when no matching function identifier is provided. Usually this function is triggered, when a simple transaction is sent to the smart contract, that’s why the fallback function can often be seen with the \textit{payable} modifier.
+  \item \textit{function ()}: A function declared without any name is also called the fallback function. This function is called, when no matching function identifier is provided. Usually this function is triggered, when a simple transaction is sent to the Smart Contract, that's why the fallback function can often be seen with the \textit{payable} modifier.
   \item \textit{require(bool condition, string memory message)}: The require function throws if the condition is not met and provides the custom error message.
   \item \textit{keccak256(bytes memory) returns (bytes32)}: Computes the Keccak-256 hash of an input.
   \item \textit{ecrecover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) returns (address)}: For a given message and r, s, v values of a ECDSA signature the function returns the address associated with the public key from the signature.
@@ -319,23 +319,23 @@ A constructor function is optional and can be used to execute code directly when
 A function can have multiple different modifiers, that make it behave in different ways\cite{doc-modifiers}.
 First, there is the visibility modifier, which manages the access to functions and variables:
 \begin{itemize}
-  \item \textit{public}: The public modifier makes a function visible from inside and outside the smart contract. Adding the modifier to a variable automatically generates a getter function with the same name as the variable.
-  \item \textit{external}: The external modifier is only applicable for functions. It makes them only visible from outside the smart contract. To call the function from inside the smart contract it has to be called via "this.func()" instead of "func()".
+  \item \textit{public}: The public modifier makes a function visible from inside and outside the Smart Contract. Adding the modifier to a variable automatically generates a getter function with the same name as the variable.
+  \item \textit{external}: The external modifier is only applicable for functions. It makes them only visible from outside the Smart Contract. To call the function from inside the Smart Contract it has to be called via "this.func()" instead of "func()".
   \item \textit{internal}: The internal modifier makes a function or variable only visible internally. This means they can only be accessed from the contract and all derived contracts.
-  \item \textit{private}: The private modifier makes a function or variable only visible from the contract itself. It’s important to notice that although a variable might be private, it still can be read, since all data stored on the blockchain is public.
+  \item \textit{private}: The private modifier makes a function or variable only visible from the contract itself. It's important to notice that although a variable might be private, it still can be read, since all data stored on the blockchain is public.
 \end{itemize} 
 \leavevmode
 \\
 Reading from the blockchain does not require mining or involve transaction fees. Therefore functions that do not write to storage can be marked as such via a modifier:
 \begin{itemize}
   \item \textit{view}: If a function has a view modifier, it cannot write to storage, only read from it.
-  \item \textit{pure}: If a function has a pure modifier, it cannot modify storage. Additionally it cannot read state, e.g. read from variables. It’s primarily used for computations.
+  \item \textit{pure}: If a function has a pure modifier, it cannot modify storage. Additionally it cannot read state, e.g. read from variables. It's primarily used for computations.
 \end{itemize}
 \leavevmode
 \\
-The \textit{payable} modifier allows a function to receive Ether. If Ether is included in a function call that doesn’t have the \textit{payable} modifier, it throws.
+The \textit{payable} modifier allows a function to receive Ether. If Ether is included in a function call that doesn't have the \textit{payable} modifier, it throws.
 \\\\
-It’s also possible to write custom modifiers. The example \ref{lis:sc_basic_ref} will show the function of a custom modifier through a commonly used \textit{onlyOwner} modifier, which only allows the owner of a smart contract to call the function.
+It's also possible to write custom modifiers. The example \ref{lis:sc_basic_ref} will show the function of a custom modifier through a commonly used \textit{onlyOwner} modifier, which only allows the owner of a Smart Contract to call the function.
 \\\\
 \textbf{Events}\\
 Events are an important part of Smart Contract programming for 2 key reasons:
@@ -350,7 +350,7 @@ See \ref{lis:sc_basic_ref} for an example of an event.
 pragma solidity 0.5.8;
 
 contract ModifierExample{
-    // variable to store the owner of the smart contract
+    // variable to store the owner of the Smart Contract
     address owner;
     // number to demonstrate the view function
     uint256 public num;
@@ -376,7 +376,7 @@ contract ModifierExample{
         _;
     }
     
-    // function to change the address of the smart contract
+    // function to change the address of the Smart Contract
     function changeOwner(address _owner) external onlyOwner {
         // emits the ownerChanged event
         emit ownerChanged(owner, _owner);
@@ -392,8 +392,125 @@ contract ModifierExample{
     
 }
 \end{minted}
-\caption{Basic structure of a smart contract}
+\caption{Basic structure of a Smart Contract}
 \label{lis:sc_basic_ref}
 \end{listing}
 
 
+\newpage
+\subsection{Implementation}
+\subsubsection{Microcontrollers}
+\paragraph{Transactions}
+As both, the plug and the socket, implement transactions, the following section will explain the generation of on- and off-chain transactions on a microcontroller. The process of sending a transaction, no matter of what kind, can be broken down into the following steps:
+\begin{enumerate}
+    \item Gather data
+    \item Encode data
+    \item Hash data
+    \item Sign hash
+    \item Submit signature
+\end{enumerate}
+\leavevmode
+\\
+\textbf{JSON RPC}\\
+As previously mentioned, the node was set up to accept and handle http requests, which follow the JSON-RPC 2.0 specification\cite{json-rpc-spec}. The implementation heavily relies on the API, as it is used to not only fetch data from the blockchain, but also to send transactions and make Smart Contract calls\cite{json-rpc}\cite{management-apis}.
+\\\\
+\textbf{1. Gather Data}\\
+The following information is necessary to send an on-chain transaction on the Ethereum Blockchain:
+\begin{enumerate}
+  \item \textit{to}: Receiving address of the transaction.
+  \item \textit{value}: Value of the transaction in Wei.
+  \item \textit{data}: Hexadezimal data passed with the transaction.
+  \item \textit{nonce}: The \abbr{number used once}{nonce} is important, as it protects a user against replay attacks. The nonce starts at zero and increments by one after a transaction was sent. This means the nonce always equals to the total amount of transactions sent by an account. Without said nonce an attacker could resubmit a transaction, that was already mined, over and over again to drain the balance of a victim.
+  \item \textit{gas price}: The fee of a transaction that gets paid out to a miner in Wei. The higher the fee, the faster the transaction will be mined. The RPC-API method "eth\_gasPrice" returns the current gas price. Websites like ethgasstation.info can be used for a more accurate estimation of the gas price, as multiple past blocks are taken into consideration and even average confirmation times for different prices can be estimated. The Rinkeby Testnet uses a \abbr{proof of authority}{POA} mining algorithm, which only allows a few accounts to act as validators, as in a test environment without monetary incentives stability is more important than decentralization. Therefore there are no competing miners and high transaction costs are not really relevant. A transaction with a gas price of 1 GWei will be usually included in the next block resulting in a confirmation time of $<$ 15 seconds.
+  \item \textit{gas limit}: The gas limit specifies how much code can be executed with a transaction. The base limit of any transaction, whether it's a Smart Contract call or not, is 21,000 gas – it covers the storage of the transaction on the blockchain as well as the elliptic curve operation to recover the sender of the transaction\cite{design-rationale}. Each additional computational step costs more gas, e.g. an addition (opcode: ADD) costs 3 gas, loading a variable from storage (opcode: SLOAD) costs 200 gas and even goes as far as 20,000 gas if a storage value (variable stored on the blockchain) is set from zero to non-zero. As it can be seen, storing data on the blockchain is one of the most expensive operations to disencourage storing vast amounts of information on-chain. If the gas limit is set too low and there is not enough gas to finish the Smart Contract execution, the transaction is unsuccessful and reverts any changes made. If the limit was set too high, any unused gas is refunded to the sender. Using the "eth\_estimateGas" RPC-API method the gas usage of a Smart Contract call is returned. It's important to note that the node then simulates the Smart Contract call against its own copy of the ledger at the current time. Thus side effects through global variables or different senders can alter the amount of gas that a function requires to execute. The total transaction fee is calculated by multiplying the gas price with the gas limit.
+  \item \textit{chain ID}: Each Ethereum Blockchain has a unique chain ID to differentiate different chains. For example the Mainnet uses the ID 1 and the Rinkeby Testnet uses the ID 4. With the Ethereum Improvement Proposal 155 (EIP-155)\cite{eip-155} the chain ID should be included into a transaction to prevent so-called cross chain replay attacks, where a transaction on one Ethereum chain can be resubmitted to another Ethereum chain.
+\end{enumerate}
+\leavevmode
+\\
+The off-chain transactions require the following data – the current value of the entire transaction, a nonce and the address of the Smart Contract that is managing the payment channel. The reasoning why these informations were chosen for the off-chain transactions will be explained later in detail.
+\\\\
+\textbf{2. Encode Data}\\
+On-chain transactions are encoded with the \abbr{Recursive Length Prefix}{RLP}\cite{ethereum-yellow-paper}. Before the data listed above can be hashed, it's converted into hexadecimal and therefore byte-arrays. RLP was especially designed for Ethereum to efficiently encode these values with the following rules: 
+\begin{itemize}
+  \item If a single byte is in the range of 0x00 and 0x7f, the byte is its own encoding.
+  \item If a byte array is 0 to 55 bytes long, the byte array is prefixed with a single byte with the value 0x80 plus the length of the byte array.
+  \item If a byte array is longer than 55 bytes, its encoded by a first byte that has the value 0xf7 plus the length of the length prefix of the byte array, followed by the bytes describing the length of the byte array and finally the byte array itself.
+  \item A list of byte arrays can be encoded as well, as it's required for the transaction data. All items are encoded individually first and then encoded again as a total byte array. This allows to encode data, no matter how nested the information is.
+\end{itemize}
+For the implementation a RLP C++ library was used, written by Takahiro Okada\cite{rlp-lib}. It had to be modified to make it work for the prototype though:
+\begin{itemize}
+  \item The library was rewritten, to implement encoding of transactions into one utility library.
+  \item The library now supports the EIP-155\cite{eip-155}, when encoding transactions with the chain ID.
+  \item A bug was fixed that would incorrectly encode byte arrays that are longer than 55 bytes.
+  \item A bug was fixed that would throw an out of memory exception. 
+\end{itemize}
+The modified library is included with the source code of this bachelor's thesis.
+\\\\
+Before hashing data in a Smart Contract, which is required for validating off-chain transactions, it has to be encoded in so-called packed mode\cite{packed-spec}. To ensure consistency, the microcontrollers implement the same encoding. The rules are a whole lot simpler than RLP encoding:
+\begin{itemize}
+  \item all variables are converted to bytes and concatenated together
+  \item "types shorter than 32 bytes are neither zero padded nor sign extended"
+  \item "dynamic types are encoded in-place and without the length"
+\end{itemize}
+\leavevmode
+\\
+\textbf{3. Hash data}
+The encoded data of both, on- and off-chain transactions, is hashed using the Keccak-256 hashing algorithm. The implementation relies on a library that was written by Aleksey Kravchenko and was found in the source code of the firefly DIY hardware wallet\cite{keccak-source}. The library is also included with the source code of this bachelor's thesis.
+\\\\
+\textbf{4. Sign data}
+Although Ethereum relies on ECDSA elliptic curve signatures, there are some additional rules and features that differ the signature process from its standard implementation:
+\begin{itemize}
+  \item Additionally to the $r$ \& $s$ values of a ECDSA signature a third value $v$, also called the \textit{recovery ID} is calculated. According to the Ethereum yellow paper\cite{ethereum-yellow-paper} "the recovery identifier is a 1 byte value specifying the parity and finiteness of the coordinates of the curve point for which r is the x-value". Therefore the recovery ID is used to recover the address of the sender from a signature and is determined during the signature process by looking at the y value on the elliptic curve. The recovery ID is determined by the following formula, which is implemented for off-chain transactions:
+\\
+$v = 27 + (y \% 2)$
+\\
+i.e. if y is even the recovery ID equals to 27, if it's odd, it equals to 28. The implementation of the aforementioned EIP-155, which secures transactions against cross-chain replay attacks, is optional and uses the following formula, which is implemented for on-chain transactions:
+\\
+$v = chain\_id * 2 + 35 + (y \% 2)$
+\\
+This means that for transactions on the Rinkeby network the recovery ID is either 43 or 44.
+  \item According to the Ethereum yellow paper\cite{ethereum-yellow-paper} the $s$ part of the signature has to be less or equal than half of the numeric value of the elliptic curve $n$, which equals to 
+  $0x7FFFFFFFFFFFFFFFFFFFFFFFFFFF
+  \\FFFF5D576E7357A4501DDFE92F46681B20A0$
+\end{itemize}
+As previously mentioned the micro-ecc ECDSA library by Kenneth MacKay was used for the implementation. As the library only covers the standard application of the ECDSA algorithm, the library had to be extended, implementing the Ethereum specific signatures. This extended library is included in the source code of this bachelor’s thesis.
+\\\\
+\textbf{5. Submit signature}\\
+To submit an on-chain transaction, the transaction data and the signature has to be RLP encoded again. The resulting byte array can then be submitted to the Ethereum network using the "eth\_sendRawTransaction" RPC-API method.
+\\\\
+Both, the plug and the socket, know all transaction data, therefore when the plug is submitting an off-chain transaction, it simply sends the signature to the socket via the websockets connection.
+\newpage
+
+\paragraph{State Machine}
+\leavevmode
+\\
+\textbf{Pairing Process}\\
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{img/Plug-Socket-pairing_process.pdf}
+    \caption{Pairing process}
+    \label{fig:pairing_process}
+\end{figure}
+\\\\
+\textbf{Verification Process}\\
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{img/Plug-Socket-verification_process.pdf}
+    \caption{Verification process}
+    \label{fig:verification_process}
+\end{figure}
+\\\\
+\textbf{Payment Process}\\
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{img/Plug-Socket-payment_process.pdf}
+    \caption{Payment process}
+    \label{fig:payment_process}
+\end{figure}
+\\\\
+\textbf{Settlement Process}\\
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{img/Plug-Socket-settlement_process.pdf}
+    \caption{Settlement process}
+    \label{fig:settlement_process}
+\end{figure}
+
+\subsubsection{Smart Contract}
