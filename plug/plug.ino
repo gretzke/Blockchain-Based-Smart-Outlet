@@ -574,7 +574,7 @@ String web3Call(char methodName[], char params[]) {
 /**
    @notice packs message arguments according to the solidity specification
            https://solidity.readthedocs.io/en/develop/abi-spec.html?highlight=encodepacked#non-standard-packed-mode
-   @param
+   @param encodedPack pointer to the target variable
 */
 void encodePacked(char* encodedPack) {
   // encodes value of the transaction, address of the smart contract and customer nonce inside smart contract
