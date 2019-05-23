@@ -37,27 +37,29 @@ Cryptocurrency payments have some major advantages over the previously analyzed 
 \\\\
 Over a thousand different cryptocurrencies exist and every one of them has their own rules that can drastically differ from the next one. Each underlying blockchain technology has their benefits and drawbacks. In the next paragraph some of these digital currencies will be evaluated whether or not they are suitable to reach the set goals.
 \\\\
-Because Bitcoin is the earliest cryptocurrency, it suffers from problems other cryptocurrencies could improve upon. As demonstrated in the chart on the next page, scalability is one of these issues. The block time is 10 minutes\cite{bitcoin-whitepaper} and during peak times the average confirmation time can take more than two hours. Thus bitcoin should not be considered for this use case.
+Because Bitcoin is the earliest cryptocurrency, it suffers from problems other cryptocurrencies could improve upon. As demonstrated in figure \ref{fig:BitcoinConfirmationTime}, scalability is one of these issues. The block time is 10 minutes\cite{bitcoin-whitepaper} and during peak times the average confirmation time can take more than two hours. Thus bitcoin should not be considered for this use case.
 \\\\
 Ethereum has a block time of 15 seconds. At the time of writing the fee to be included in the next block is 0.01\euro\cite{ethereum-fee}. In this case the transaction would be fast enough to meet the goal of 4 transactions per minute, but the transaction cost would exceed the payment, raising the total price as much as 143\%.
 \\\\
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/average-confirmation-time.png}
     \caption{Average confirmation time of a transaction on the Bitcoin blockchain\cite{btc-conf-time}}
     \label{fig:BitcoinConfirmationTime}
 \end{figure}
+\leavevmode
 \\\\
 As mentioned above there are some cryptocurrencies that work without any fees that are worth to be considered. One of these currencies is IOTA. It was designed especially with M2M payments in mind and the underlying technology, called Tangle, differs from traditional blockchains. The way it works is that before someones transaction can be validated, they need to validate other transactions first\cite{tangle}. In theory, this makes the network scale especially well — the more transactions are broadcasted, the shorter the transaction times get. In practice, transaction times are at 2.6 minutes at the time of writing\cite{iota-time}.
 \\\\
-Another feeless cryptocurrency is called Nano, formerly known as RaiBlocks. It's built upon a technology called block-lettuce. Each account on the network is an independent blockchain which can update itself asynchronously from the rest of the accounts. This makes nano not only have zero transaction costs but also allows it to have transaction times of less than a second. It can also handle way more TPS than Bitcoin and Ethereum, namely around 100 TPS over a longer period of time with peaks up to 300 TPS\cite{nano-stress-test}.
+Another feeless cryptocurrency is called Nano, formerly known as RaiBlocks. It's built upon a technology called block-lettuce. Each account on the network is an independent blockchain which can update itself asynchronously from the rest of the accounts. This makes Nano not only have zero transaction costs but also allows it to have transaction times of less than a second. It can also handle way more TPS than Bitcoin and Ethereum, namely around 100 TPS over a longer period of time with peaks up to 300 TPS\cite{nano-stress-test}.
 \\
-Unfortunately, at the time of development of the prototype, the Nano network faced some issues which resulted in transaction times in up to 20 seconds. After the V18 update these problems were solved and the transaction times returned back to less than a second\cite{nano-confirmation-time}.
+Unfortunately, at the time of development of the prototype, the Nano network faced some issues which resulted in transaction times in up to 20 seconds, as seen in figure \ref{fig:NanoConfirmationTime}. After the V18 update these problems were solved and the transaction times returned back to less than a second\cite{nano-confirmation-time}.
 \\
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/nano-confirmation-time.pdf}
     \caption{Improvements of transaction times after the update to V18 on February 22nd, 2019}
     \label{fig:NanoConfirmationTime}
 \end{figure}
+\leavevmode
 \\
 Although increased transaction times did play a role, the main reason Nano was not chosen for the implementation is that it wasn't built with M2M transactions in mind. To prevent spamming, i.e. attacking the network through congesting it with transactions, PoW needs to be generated in order to send or receive transactions. According to the Nano white paper\cite{nano-white-paper} an Intel Core i7-4790K processor with 4.00 GHz can handle up to 0.33 TPS. A microcontroller would not be able to generate the PoW required for the transactions in a reasonable amount of time. Instead, a dedicated server would be required for each supplier and customer, which would store the private keys and handle the transmission and reception of transactions. The micro controllers would merely communicate with said servers.
 \\\\
@@ -74,4 +76,4 @@ Ethereum was chosen for the implementation of this prototype, as it is Turing co
 \end{enumerate}
 With payment channels, the risk of the supplier is minimal, as electricity must only be provided when a valid payment was received and the customer only risks losing one transaction for the initialization of the payment channel and one off-chain transaction if no electricity is provided in return (with the values above this adds up to 0.017\euro).
 \\
-In total, only 4 transactions have to be made, one for the payment channel initialization, one for the settlement, and one by each party to withdraw the balances totaling all transaction costs at a couple cents.
+In total, only 4 transactions have to be made. One for the payment channel initialization, one for the settlement, and one by each party to withdraw the balances totaling all transaction costs at a couple cents.
