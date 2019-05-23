@@ -31,7 +31,7 @@ This section will focus on the technical setup of the hardware components and th
 The Sonoff S20 smart socket was used for the technical implementation of the concept, as it meets all requirements listed in the section above. A microcontroller is automatically powered by the socket it's plugged into. The S20 also has a WiFi module and a relay, which can be switched on and off by said microcontroller. Lastly the microcontroller can be reprogrammed via a serial port.
 To program the Sonoff S20, the screws, as seen in the image below, have to be unscrewed first, revealing the logic board with the relay and the serial port.
 \\
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/S20_open.png}
     \caption{Sonoff S20}
     \label{fig:S20}
@@ -58,7 +58,7 @@ To program the microcontroller with a computer a FTDI USB to serial converter is
 \\
 It's important to notice that the FTDI converter must operate at 3.3V entirely. Caution: some converters only switch the TX and RX pin to 3.3V while the VCC remains at 5V. This can fry the internals of the S20. To program the microcontroller, the button has to be pressed before plugging the pins into the serial port to put it in programming mode. After the pins have been inserted, the button can be released shortly after.
 \\
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/serial_port.png}
     \caption{Serial ports of the Sonoff S20}
     \label{fig:S20_serial}
@@ -85,7 +85,7 @@ After connecting the FTDI converter to the computer, it should appear under Tool
 \subsubsection{Plug}
 The device to control the measurement of current in the plug and handle the communication with the socket is the Heltec WiFi Kit 8, which is based on an ESP8266 as well and has a 0.91 inch OLED display.
 \\
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/heltec.jpg}
     \caption{Heltec WiFi Kit 8}
     \label{fig:heltec}
@@ -93,7 +93,7 @@ The device to control the measurement of current in the plug and handle the comm
 
 The ACS712 20A current meter is used to measure the current. It's hall effect-based and provides galvanic isolation up to a minimum of 2.1 kV (RMS)\cite{acs712}. To connect the current meter, a part of the hot wire leading to the plug has to be cut and stripped. Both ends have to be inserted into the screw terminal of the ACS712. The current from the plug will now be redirected underneath the hall sensor.
 \\
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/acs712.jpg}
     \caption{ACS712 current meter connected to plug}
     \label{fig:acs712}
@@ -206,7 +206,7 @@ returns the current block number and the highest block number. As soon as the cl
 \\
 \subsubsection{Smart Contract}
 \paragraph{Wallet}
-The first thing needed to start programming smart contracts is an Ethereum wallet. MetaMask is a browser extension for Chrome, Firefox and Opera, that not only allows to manage multiple accounts on multiple test chains, it also injects the web3.js library into websites allowing to interact with the Ethereum blockchain and smart contracts on web pages.
+The first thing needed to start programming Smart Contracts is an Ethereum wallet. MetaMask is a browser extension for Chrome, Firefox and Opera, that not only allows to manage multiple accounts on multiple test chains, it also injects the web3.js library into websites allowing to interact with the Ethereum blockchain and Smart Contracts on web pages.
 Visit the MetaMask\cite{metamask} website and download the browser extension. A new account will be generated using a mnemonic phrase, defined in the BIP39 (Bitcoin improvement proposal)\cite{bip39}. It usually consists of 12 words which represent a private key, essentially creating an easy way to remember / write down private keys. An example for a mnemonic phrase is:
 \begin{lstlisting}[language=bash]
   short heavy hidden anger nephew tragic
@@ -478,39 +478,73 @@ As previously mentioned the micro-ecc ECDSA library by Kenneth MacKay was used f
 \textbf{5. Submit signature}\\
 To submit an on-chain transaction, the transaction data and the signature has to be RLP encoded again. The resulting byte array can then be submitted to the Ethereum network using the "eth\_sendRawTransaction" RPC-API method.
 \\\\
-Both, the plug and the socket, know all transaction data, therefore when the plug is submitting an off-chain transaction, it simply sends the signature to the socket via the websockets connection.
+Both, the plug and the socket, know all transaction data, therefore when the plug is submitting an off-chain transaction, it simply sends the signature to the socket via the WebSockets connection.
 \newpage
 
 \paragraph{State Machine}
-\leavevmode
-\\
-\textbf{Pairing Process}\\
-\begin{figure}[h]
+The microcontrollers were implemented as finite state machines. The following states with the according IDs were implemented:
+\begin{enumerate}[start=0, label=\arabic*:]
+  \item disconnected
+  \item connected\_P
+  \item connected\_S
+  \item initialized\_P
+  \item initialized\_S
+  \item active\_P
+  \item active\_S
+  \item closed
+\end{enumerate}
+According to the different states, different code is executed – the suffix \textit{\_P} means that the plug is currently executing code and the socket is expecting a message from the plug, \textit{\_S} means the opposite. The following paragraph will explain the entire payment execution with the help of some flowcharts visualizing the state machine.
+\newpage
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/Plug-Socket-pairing_process.pdf}
     \caption{Pairing process}
     \label{fig:pairing_process}
 \end{figure}
-\\\\
-\textbf{Verification Process}\\
-\begin{figure}[h]
+\begin{enumerate}[start=0, label=\arabic*:]
+\item Both, the customer in form of the plug and the supplier in form of the socket start in the \textit{disconnected} state. 
+  \item When the plug connects to the websocket server of the supplier, both devices enter the \textit{connected\_P} state. The customer then sends information about itself to the socket in form of its Ethereum address and changes the state to \textit{connected\_S}.
+  \item As soon as the socket receives the customer information from the socket, it changes the state to \textit{connected\_S} as well. The supplier can now optionally validate the received data, e.g. check the address against black- or whitelists. If the customer is accepted, the socket sends the address of the Smart Contract, which manages the payment channel, to the plug and changes the state to \textit{initialized\_P}.
+  \item As soon as the plug receives the Smart Contract address, it changes the state to \textit{initialized\_P} as well. The customer will now fetch data from the Smart Contract, verify information and initialize the payment channel. These steps will be explained in detail in the next section. If the initialization of the payment channel was successful, the socket is notified and the state is changed to \textit{initialized\_S}.
+  \item As soon as the socket receives the notification from the plug, it changes the state to \textit{initialized\_S} and verifies the initialization of the payment channel. Again, the verification will be explained later. If the initialization is confirmed, the socket is ready to receive payments, changes its state to \textit{active\_P} and notifies the plug.
+  \item As soon as the plug receives the notification that the socket is ready to receive payments, it changes its state to \textit{active\_P} and the payment process begins.
+\end{enumerate}
+\leavevmode
+\\
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/Plug-Socket-verification_process.pdf}
     \caption{Verification process}
     \label{fig:verification_process}
 \end{figure}
+This section will describe the verification and initialization processes that were skipped in the previous section. The flowchart \ref{fig:verification_process} can be inserted into the blue sections of the flowchart of the pairing process \ref{fig:pairing_process}.
 \\\\
-\textbf{Payment Process}\\
-\begin{figure}[h]
+\textit{Verification – Customer}\\
+The payment information is publicly available on the Smart Contract. After the plug received the address of said Smart Contract, it can fetch all data e.g. the address of the owner (supplier), the price per second, a minimum deposit amount, et cetera. The customer can then either accept or decline the price of the electricity. If the price is accepted, the payment channel can be initialized, through a Smart Contract call. A transaction, containing the maximum value the customer is willing to spend, is sent to the Smart Contract calling the \textit{initializePaymentChannel()} function. The Smart Contract acts as a trustee managing the value and making sure no party can scam the other. After the transaction was sent, the plug has to wait until the transaction was mined, which will take approximately 15 seconds on the Rinkeby Testnet. The RPC-API method "eth\_getTransactionReceipt" can be used to check whether a transaction was mined yet. If the payment channel was set up successfully, the Smart Contract will emit the \textit{InitializedPaymentChannel} event.
+\\\\
+\textit{Verification – Supplier}\\
+After the plug notified the socket about the successful payment channel initialization, the supplier should verify the initialization, e.g. fetch the maximum value of the transaction and make sure the customer address stored on the Smart Contract actually matches the customer address transmitted during \textit{connected\_P}.
+\newpage
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/Plug-Socket-payment_process.pdf}
     \caption{Payment process}
     \label{fig:payment_process}
 \end{figure}
+The payment process starts when the customer sends the first signature, i.e. off-chain transaction to the supplier. The value of the transaction is calculated as follows:
+\\
+$value = number\_of\_transactions * price\_per\_second * seconds\_between\_transactions$
+\\
+With the assumed values from chapter 3 (a total price of 18\euro{} over a duration of 11 hours) roughly 0.007\euro{} are transmitted with each off-chain transaction. With the formula above, this means that the value hashed and signed is 0.007\euro{} for the first transaction, 0.014\euro{} for the second, and so on. This means that each time a new transaction is sent it contains the entire value and the last transaction becomes invalid. As the Smart Contract operates on Ether and not \euro, the values are converted to Wei first. When the socket receives an off-chain transaction, it should verify that the payment is actually valid. The Smart Contract implements a helper function \textit{verifySignature(uint256 \_value, bytes memory \_signature)} which takes the signature from the off-chain transaction and the value as a parameter and returns true, if the sender of the transaction equals to the channel customer stored in the Smart Contract, in other words the transaction is valid. If the transaction is valid, the socket opens the relay for a specific number of seconds, in this case 15.
 \\\\
-\textbf{Settlement Process}\\
-
-\begin{figure}[h]
+To ensure that the socket doesn’t deliver more electricity than the plug can pay for, the supplier should now check whether the maximum value, that was deposited into the Smart Contract, was reached. In that case the channel is closed, as described in the next section.
+\\\\
+After the plug sends a transaction that pays for $n$ amount of seconds, it should start measuring the current and as soon as it is detected, start a timer and wait an appropriate amount of time to send the next transaction. In the implementation, a new transaction is sent to the socket when there is just 5 seconds of paid electricity left to ensure a steady flow without interruptions. On the other hand if the socket closes the relay and no current is measured, the socket can immediately interrupt the payment process, by closing the payment channel, without losing another payment. 
+\\\\
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/Plug-Socket-settlement_process.pdf}
     \caption{Settlement process}
     \label{fig:settlement_process}
 \end{figure}
+As soon as a party wants to stop the payment process, e.g. the battery of the customer is fully charged or the socket received an invalid signature, it can notify the other party about it. The latest valid off-chain transaction, which contains the total value spent by the plug up to this point, is then submitted to the Smart Contract closing the payment channel, in other words settling the transaction on the blockchain. The \textit{closeChannel(uint256 \_value, bytes memory \_signature)} function verifies the submitted signature and pays out the amounts accordingly.
+\\
+As it is in the interest of the supplier to close the channel with the latest signature, containing the highest value, it’s the sockets task to settle the transaction. The Smart Contract also protects the customer – if the supplier fails to submit a valid signature in a certain amount of time, the deposited amount can be withdrawn again.
 
 \subsubsection{Smart Contract}
