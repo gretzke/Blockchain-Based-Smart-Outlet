@@ -182,7 +182,6 @@ contract SocketPaymentChannel {
         return true;
     }
 
-
     /// @notice function to timeout a payment channel, refunds entire deposited amount to customer
     /// @return true on success, false on failure
     function timeOutChannel() public returns (bool) {
