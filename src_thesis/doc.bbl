@@ -265,4 +265,10 @@ Aleksey Kravchenko.
 \newblock \url{https://github.com/firefly/wallet}.
 \newblock [Online; accessed: 2019-05-21].
 
+\bibitem{prefix}
+Ethereum Foundation.
+\newblock Signature prefix.
+\newblock \url{https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign}.
+\newblock [Online; accessed: 2019-05-23].
+
 \end{thebibliography}

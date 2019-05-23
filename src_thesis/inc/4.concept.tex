@@ -150,19 +150,19 @@ A server is mandatory to act as a gateway to the Ethereum blockchain. Geth is th
 A \abbr{Virtual Private Server}{VPS} was used for this implementation running Ubuntu 18.04. The server has a six core CPU, 16 GB of RAM, 400GB SSD and 400 MBit/s unlimited traffic. The following instructions can be used to install the program under Ubuntu. For other environments the link to the instructions can be found under "References"\cite{geth-instructions}.
 \newpage
 To install geth add the repository first:
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, numbers=none]
   $ sudo add-apt-repository -y ppa:ethereum/ethereum
 \end{lstlisting}
 
 Next, install geth:
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, numbers=none]
   $ sudo apt-get update
   $ sudo apt-get install ethereum
 \end{lstlisting}
 \leavevmode
 \\
 To interact with the Ethereum Blockchain the entire chain history has to be downloaded first. This can take up to 40 GB of disk space and will take several hours of synchronizing. Geth will be started via this console command:
-\begin{lstlisting}[language=bash, showstringspaces=false]
+\begin{lstlisting}[language=bash, showstringspaces=false, numbers=none]
   $ geth console --rinkeby --rpc --rpcapi="db,eth,net,web3,
   personal,txpool" --rpcaddr X.X.X.X --rpcport 8545 --cache=1024
 \end{lstlisting}
@@ -180,26 +180,26 @@ The console parameter starts a JavaScript console, allowing to interact with the
 \\
 The version of the web3 library can be checked using:
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, numbers=none]
   > web3.version
 \end{lstlisting}
 
 The output of the synchronization could hamper the ability to properly read the output of the JavaScript console. The verbosity can be set via the following command:
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, numbers=none]
   > debug.verbosity(x)
 \end{lstlisting}
 
 Replace x with 0 for silent, 1 for error, 2 for warn, 3 for info, 4 for debug and 5 for detail. The verbosity defaults to info\cite{cli-options}.
 \newpage
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, numbers=none]
   > eth.blockNumber
 \end{lstlisting}
 
 returns the block number of the latest synchronized block, which is the amount of all previous blocks. The first block, the also called the genesis block, starts with the block number 0. The current block number can be checked through so-called block explorers, e.g. {rinkeby.etherscan.io}.
 \\
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, numbers=none]
   > eth.syncing
 \end{lstlisting}
 returns the current block number and the highest block number. As soon as the client is synchronized it returns "false"\cite{javascript-0.20}.
@@ -208,34 +208,30 @@ returns the current block number and the highest block number. As soon as the cl
 \paragraph{Wallet}
 The first thing needed to start programming Smart Contracts is an Ethereum wallet. MetaMask is a browser extension for Chrome, Firefox and Opera, that not only allows to manage multiple accounts on multiple test chains, it also injects the web3.js library into websites allowing to interact with the Ethereum blockchain and Smart Contracts on web pages.
 Visit the MetaMask\cite{metamask} website and download the browser extension. A new account will be generated using a mnemonic phrase, defined in the BIP39 (Bitcoin improvement proposal)\cite{bip39}. It usually consists of 12 words which represent a private key, essentially creating an easy way to remember / write down private keys. An example for a mnemonic phrase is:
-\begin{lstlisting}[language=bash]
-  short heavy hidden anger nephew tragic
-  fade dad renew finger among tiny
+\begin{lstlisting}[language=bash, numbers=none]
+  short heavy hidden anger nephew tragic fade dad renew finger among tiny
 \end{lstlisting}
 This phrase translates to the following seed:
-\begin{lstlisting}[language=bash]
-  b7b36d9ca1e105045344ecb7ca7b9449bfc0889139c9719876d03cf7b5814
-  86137e905b9e94e50c03ca22871937ae3c754dea1427eede8198c6774d90f
-  c1a1f4
+\begin{lstlisting}[language=bash, numbers=none]
+  b7b36d9ca1e105045344ecb7ca7b9449bfc0889139c9719876d03cf7b5814861
+  37e905b9e94e50c03ca22871937ae3c754dea1427eede8198c6774d90fc1a1f4
 \end{lstlisting}
 
 Using the BIP44\cite{bip44} standard an unlimited amount of private keys can be derived from the seed. For example the first private key derived from this seed would be:
-\begin{lstlisting}[language=bash]
-  0xfb8502c03ea336344dc44b66b1a3c01e
-    2917138e92bfa93c54725166394cd46b
+\begin{lstlisting}[language=bash, numbers=none]
+  0xfb8502c03ea336344dc44b66b1a3c01e2917138e92bfa93c54725166394cd46b
 \end{lstlisting}
 with the corresponding address
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, numbers=none]
   0x4d43c1E254a9333fB0D8A50BD3f01b6787ee8895
 \end{lstlisting}
 The second derived private key is:
-\begin{lstlisting}[language=bash]
-  0x64b45c024041178aff2f9ed7b7026fff
-    6890c871818c39c1c7bd826e6aa33773
+\begin{lstlisting}[language=bash, numbers=none]
+  0x64b45c024041178aff2f9ed7b7026fff6890c871818c39c1c7bd826e6aa33773
 \end{lstlisting}
 \newpage
 with the corresponding address
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, numbers=none]
   0xd38F7dc2d9B6F6D9d5CB6C8813e213D5DC541458
 \end{lstlisting}
 and so on. This means that the single mnemonic phrase will act as a backup phrase for all accounts that will be created inside the MetaMask wallet.
@@ -285,14 +281,19 @@ The most important data types in Solidity are\cite{doc-types}:
   \item \textit{address}: The address variable stores 20 bytes.
   \item \textit{address payable}: The address payable variable stores 20 bytes as well. Additionally it holds the members \textit{transfer} and \textit{send} to send Ether to that address.
   \item \textit{bytes32}: Holds 32 bytes of data.
+  \item \textit{mapping(keyType $=>$ valueType)}: Mappings work similarly to hash tables. The key can be of any elementary type, the value can be of any type, even another mapping. An example for a frequently used mapping would be the balance variable:
+  \\
+  \textit{mapping(address $=>$ uint256) balances;}
+  \\
+  Every address points to a uint256 which represents a balance.
   \item \textit{bytes[]}: Dynamically-sized byte array.
   \item \textit{string}: Dynamically-sized UTF-8 encoded string.
 \end{itemize}
 \leavevmode
-\newpage
+\\
 \textbf{Pragma}\\
 The first line of a solidity file defines the compiler version\cite{doc-pragma}:
-\begin{lstlisting}[language=C++]
+\begin{lstlisting}[language=Solidity, numbers=none]
   pragma solidity ^0.5.4;
 \end{lstlisting}
 The \^{} symbol means that the code can be compiled by a compiler with the versions 0.5.4 and above, but below 0.6.0. Without the \^{} symbol only the compiler version 0.5.4 can compile the source code.
@@ -444,26 +445,32 @@ The modified library is included with the source code of this bachelor's thesis.
 Before hashing data in a Smart Contract, which is required for validating off-chain transactions, it has to be encoded in so-called packed mode\cite{packed-spec}. To ensure consistency, the microcontrollers implement the same encoding. The rules are a whole lot simpler than RLP encoding:
 \begin{itemize}
   \item all variables are converted to bytes and concatenated together
-  \item "types shorter than 32 bytes are neither zero padded nor sign extended"
-  \item "dynamic types are encoded in-place and without the length"
+  \item "types shorter than 32 bytes are neither zero padded nor sign extended"\cite{packed-spec}
+  \item "dynamic types are encoded in-place and without the length"\cite{packed-spec}
 \end{itemize}
 \leavevmode
 \\
-\textbf{3. Hash data}
+\textbf{3. Hash data}\\
 The encoded data of both, on- and off-chain transactions, is hashed using the Keccak-256 hashing algorithm. The implementation relies on a library that was written by Aleksey Kravchenko and was found in the source code of the firefly DIY hardware wallet\cite{keccak-source}. The library is also included with the source code of this bachelor's thesis.
 \\\\
-\textbf{4. Sign data}
+Before signing an Ethereum specific signature, i.e. an off-chain transaction, the data has to be prefixed with an Ethereum specific prefix\cite{prefix}. The data is hashed first, then prefixed according to the following rules:
+\\
+"\textbackslash x19Ethereum Signed Message:\textbackslash n" + len(message) + message
+\\
+As a hash is the message that is signed, the length of the prefix will always be 32 bytes. Finally the prefixed message is hashed again. The reasoning behind prefixing a signed message is to protect users unknowingly signing a transaction, when they actually thought they would sign a message.
+\\\\
+\textbf{4. Sign data}\\
 Although Ethereum relies on ECDSA elliptic curve signatures, there are some additional rules and features that differ the signature process from its standard implementation:
 \begin{itemize}
-  \item Additionally to the $r$ \& $s$ values of a ECDSA signature a third value $v$, also called the \textit{recovery ID} is calculated. According to the Ethereum yellow paper\cite{ethereum-yellow-paper} "the recovery identifier is a 1 byte value specifying the parity and finiteness of the coordinates of the curve point for which r is the x-value". Therefore the recovery ID is used to recover the address of the sender from a signature and is determined during the signature process by looking at the y value on the elliptic curve. The recovery ID is determined by the following formula, which is implemented for off-chain transactions:
-\\
-$v = 27 + (y \% 2)$
-\\
-i.e. if y is even the recovery ID equals to 27, if it's odd, it equals to 28. The implementation of the aforementioned EIP-155, which secures transactions against cross-chain replay attacks, is optional and uses the following formula, which is implemented for on-chain transactions:
-\\
-$v = chain\_id * 2 + 35 + (y \% 2)$
-\\
-This means that for transactions on the Rinkeby network the recovery ID is either 43 or 44.
+  \item It takes up to 2 guesses to recover the public key / address from the $r$ \& $s$ values of an ECDSA signature. Additionally a third value $v$, also called the \textit{recovery ID} is calculated. According to the Ethereum yellow paper\cite{ethereum-yellow-paper} "the recovery identifier is a 1 byte value specifying the parity and finiteness of the coordinates of the curve point for which r is the x-value". Therefore the recovery ID is used to recover the address of the sender from a signature and is determined during the signature process by looking at the y value on the elliptic curve. The recovery ID is determined by the following formula, which is implemented for off-chain transactions:
+  \\
+  $v = 27 + (y \% 2)$
+  \\
+  i.e. if y is even the recovery ID equals to 27, if it's odd, it equals to 28. The implementation of the aforementioned EIP-155, which secures transactions against cross-chain replay attacks, is optional and uses the following formula, which is implemented for on-chain transactions:
+  \\
+  $v = chain\_id * 2 + 35 + (y \% 2)$
+  \\
+  This means that for transactions on the Rinkeby network the recovery ID is either 43 or 44.
   \item According to the Ethereum yellow paper\cite{ethereum-yellow-paper} the $s$ part of the signature has to be less or equal than half of the numeric value of the elliptic curve $n$, which equals to 
   $0x7FFFFFFFFFFFFFFFFFFFFFFFFFFF
   \\FFFF5D576E7357A4501DDFE92F46681B20A0$
@@ -474,8 +481,7 @@ As previously mentioned the micro-ecc ECDSA library by Kenneth MacKay was used f
 To submit an on-chain transaction, the transaction data and the signature has to be RLP encoded again. The resulting byte array can then be submitted to the Ethereum network using the "eth\_sendRawTransaction" RPC-API method.
 \\\\
 Both, the plug and the socket, know all transaction data, therefore when the plug is submitting an off-chain transaction, it simply sends the signature to the socket via the WebSockets connection.
-\newpage
-
+\\
 \paragraph{State Machine}
 The microcontrollers were implemented as finite state machines. The following states with the according IDs were implemented:
 \begin{enumerate}[start=0, label=\arabic*:]
@@ -527,20 +533,81 @@ The payment process starts when the customer sends the first signature, i.e. off
 \\
 $value = number\_of\_transactions * price\_per\_second * seconds\_between\_transactions$
 \\
-With the assumed values from chapter 3 (a total price of 18\euro{} over a duration of 11 hours) roughly 0.007\euro{} are transmitted with each off-chain transaction. With the formula above, this means that the value hashed and signed is 0.007\euro{} for the first transaction, 0.014\euro{} for the second, and so on. This means that each time a new transaction is sent it contains the entire value and the last transaction becomes invalid. As the Smart Contract operates on Ether and not \euro, the values are converted to Wei first. When the socket receives an off-chain transaction, it should verify that the payment is actually valid. The Smart Contract implements a helper function \textit{verifySignature(uint256 \_value, bytes memory \_signature)} which takes the signature from the off-chain transaction and the value as a parameter and returns true, if the sender of the transaction equals to the channel customer stored in the Smart Contract, in other words the transaction is valid. If the transaction is valid, the socket opens the relay for a specific number of seconds, in this case 15.
+With the assumed values from chapter 3 (a total price of 18\euro{} over a duration of 11 hours) roughly 0.007\euro{} are transmitted with each off-chain transaction. With the formula above, this means that the value hashed and signed is 0.007\euro{} for the first transaction, 0.014\euro{} for the second, and so on. This means that each time a new transaction is sent it contains the entire value and the last transaction becomes invalid. As the Smart Contract operates on Ether and not \euro, the values are converted to Wei first. When the socket receives an off-chain transaction, it should verify that the payment is actually valid. The Smart Contract implements a helper function \textit{verifySignature(uint256 \_value, bytes memory \_signature)} which takes the signature from the off-chain transaction and the value as a parameter and returns true, if the sender of the transaction equals to the channel customer stored in the Smart Contract, in other words the transaction is valid. If the transaction is valid, the socket opens the relay for a specific number of seconds, in this case 15 s.
 \\\\
 To ensure that the socket doesn’t deliver more electricity than the plug can pay for, the supplier should now check whether the maximum value, that was deposited into the Smart Contract, was reached. In that case the channel is closed, as described in the next section.
 \\\\
-After the plug sends a transaction that pays for $n$ amount of seconds, it should start measuring the current and as soon as it is detected, start a timer and wait an appropriate amount of time to send the next transaction. In the implementation, a new transaction is sent to the socket when there is just 5 seconds of paid electricity left to ensure a steady flow without interruptions. On the other hand if the socket closes the relay and no current is measured, the socket can immediately interrupt the payment process, by closing the payment channel, without losing another payment. 
+After the plug sends a transaction that pays for $n$ seconds, it should start measuring the current and as soon as it is detected, start a timer and wait an appropriate amount of time to send the next transaction. In the implementation, a new transaction is sent to the socket when there is just 5 seconds of paid electricity left to ensure a steady flow without interruptions. On the other hand if the socket closes the relay and no current is measured, the socket can immediately interrupt the payment process, by closing the payment channel, without losing another payment. 
 \\\\
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{img/Plug-Socket-settlement_process.pdf}
     \caption{Settlement process}
     \label{fig:settlement_process}
 \end{figure}
-As soon as a party wants to stop the payment process, e.g. the battery of the customer is fully charged or the socket received an invalid signature, it can notify the other party about it. The latest valid off-chain transaction, which contains the total value spent by the plug up to this point, is then submitted to the Smart Contract closing the payment channel, in other words settling the transaction on the blockchain. The \textit{closeChannel(uint256 \_value, bytes memory \_signature)} function verifies the submitted signature and pays out the amounts accordingly.
+As soon as a party wants to stop the payment process, e.g. when the battery of the customer is fully charged or the socket received an invalid signature, it can notify the other party about it. The latest valid off-chain transaction, which contains the total value spent by the plug up to this point, is then submitted to the Smart Contract closing the payment channel, in other words settling the transaction on the blockchain. The \textit{closeChannel(uint256 \_value, bytes memory \_signature)} function verifies the submitted signature and pays out the amounts accordingly.
 \\
 As it is in the interest of the supplier to close the channel with the latest signature, containing the highest value, it’s the sockets task to settle the transaction. The Smart Contract also protects the customer – if the supplier fails to submit a valid signature in a certain amount of time, the deposited amount can be withdrawn again.
-
+\newpage
 \subsubsection{Smart Contract}
-This section will go over the Smart Contract implementation and explain all key functions and design choices. The entire source code can be found under the appendix, \ref{lis:safemath} \& \ref{lis:pc_sc}.
+Security is extraordinarily important for Smart Contract development, as possibly large sums of money are handled and the code is immutable, i.e. can’t be changed once the Smart Contract has been deployed to the Ethereum network. This section will go over the Smart Contract implementation and explain all key functions, some security best practices and design choices. The entire source code can be found under the appendix, listing \ref{lis:safemath} \& \ref{lis:pc_sc}.
+\paragraph{SafeMath Library}
+Solidity has no built in checks for integer under- and overflows, which can become a major security issue, especially when dealing with balances, allowing an attacker to drain a Smart Contract. A so-called SafeMath library, as the one found under appendix \ref{lis:safemath} can help in preventing integer under- and overflows.
+An example on how to use a library for a certain data type can be found in line 70 of the Smart Contract source code:
+\begin{lstlisting}[language=Solidity, caption={Using the SafeMath library}, label={lis:safemath_use}, firstnumber=70]
+using SafeMath for uint256;
+\end{lstlisting}
+Here are some examples on how to add, subtract or multiply integers.
+\begin{lstlisting}[language=Solidity, caption={Examples for SafeMath calculations}, label={lis:safemath_example}]
+uint256 a = 5;
+uint256 b = 7;
+
+// add two integers
+// c = a + b
+uint256 c = a.add(b)
+
+// subtract two integers
+// d = b - a
+// would result in an integer underflow, therefore the safemath library throws
+uint256 d = b.sub(a)
+
+// multiply two integers
+// e = a * b
+uint256 e = a.mul(b)
+\end{lstlisting}
+\leavevmode
+\\
+\paragraph{Off-chain transaction}
+As previously mentioned, there is no standard for off-chain transactions and it heavily relies on its implementation. At its core, they are nothing else than a few values that are hashed and signed. The first, most obvious part of the transaction is the value, an unsigned 256 bit integer. The second value is a nonce. It’s necessary to protect the customer against replay attacks. Without the nonce, the supplier could just resubmit an off-chain transaction with a higher value from another payment channel. The nonces are stored in a mapping variable defined in line 96 and initialized with zero for all customers. As soon as a payment channel is closed via the \textit{closeChannel} function in line 148 or the channel times out via the \textit{timeOutChannel} function in line 187, the nonce of the payment channel customer increments by one, rendering all off-chain transactions up to this point invalid for the future. The last value is the contract address, so the transaction is protected against replay attacks on other Smart Contracts.
+\\\\
+The \textit{verifySignature} function is used to verify the off-chain transaction on the Smart Contract. It takes the value and the signature of the transaction as a parameter. Then in lines 235-241 it takes the 3 values listed above, the value, nonce and contract address and recreates the message used for the signature. First the 3 values are encoded using the \textit{abi.encodePacked()} function and hashed using the \textit{keccak256()} function:
+\\
+\begin{lstlisting}[language=Solidity, numbers=none]
+bytes32 message = keccak256(
+  abi.encodePacked(
+    _value,
+    contractAddress,
+    customerNonces[channelCustomer]
+  )
+);
+\end{lstlisting}
+\leavevmode
+\\
+The resulting hash is then prefixed by the Ethereum specific prefix and hashed a second time.
+\\
+\begin{lstlisting}[language=Solidity, numbers=none]
+bytes32 prefixedMessage = keccak256(
+  abi.encodePacked(
+    "\x19Ethereum Signed Message:\n32",
+    message
+  )
+);
+\end{lstlisting}
+\leavevmode
+\\
+This recreates the exact hash that the customer signed to generate the off-chain transaction. With this hash and the signature passed to the function, the sender of the off-chain transaction can be recovered using the \textit{ecrecover} function in line 244 and if it matches the current channel customer stored inside the \textit{channelCustomer} variable in line 91, the function returns true, accepting the off-chain transaction.
+\\
+\begin{lstlisting}[language=Solidity, numbers=none]
+return ecrecover(prefixedMessage, v, r, s) == channelCustomer;
+\end{lstlisting}
+\leavevmode
+\\
