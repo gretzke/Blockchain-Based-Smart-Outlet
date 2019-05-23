@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  23 MAY 2019 00:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  23 MAY 2019 04:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -987,10 +987,11 @@ Package: enumitem 2019/02/04 v3.8 Customized lists
 \enit@count@id=\count171
 \enitdp@description=\count172
 )
+(./solidity-highlighting.tex)
 \@nomenclaturefile=\write7
 \openout7 = `doc.nlo'.
 
-Package nomencl Info: Writing nomenclature file doc.nlo on input line 65.
+Package nomencl Info: Writing nomenclature file doc.nlo on input line 67.
 
 
 LaTeX Warning: Unused global option(s):
@@ -999,20 +1000,20 @@ LaTeX Warning: Unused global option(s):
 (./doc.aux)
 \openout1 = `doc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
@@ -1058,7 +1059,7 @@ runsystem(pygmentize -S default -f latex > doc.pyg)...executed.
 
 (./doc.pyg) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box55
-Package hyperref Info: Link coloring OFF on input line 67.
+Package hyperref Info: Link coloring OFF on input line 69.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1068,9 +1069,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
 
 (./doc.out) (./doc.out)
 \@outlinefile=\write8
@@ -1082,7 +1083,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message with `\usepackage{bookmark}'
-(scrartcl)           before \begin{document} on input line 67.
+(scrartcl)           before \begin{document} on input line 69.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
@@ -1127,27 +1128,27 @@ UKL_LOGO.pdf>] [2
 \openout9 = `doc.toc'.
 
  [5] (./inc/1.introduction.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 8--167
+Underfull \hbox (badness 10000) in paragraph at lines 8--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--167
+Underfull \hbox (badness 10000) in paragraph at lines 8--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--167
+Underfull \hbox (badness 10000) in paragraph at lines 8--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--167
+Underfull \hbox (badness 10000) in paragraph at lines 8--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--167
+Underfull \hbox (badness 10000) in paragraph at lines 8--169
 
  []
 
@@ -1344,7 +1345,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--82
  []
 
 ) [11] (./inc/3.analysis.tex
-<img/average-confirmation-time.png, id=178, 1205.50375pt x 608.2725pt>
+<img/average-confirmation-time.png, id=179, 1205.50375pt x 608.2725pt>
 File: img/average-confirmation-time.png Graphic file (type png)
 <use img/average-confirmation-time.png>
 Package pdftex.def Info: img/average-confirmation-time.png  used on input line 
@@ -1393,7 +1394,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 [12
 
 ] [13]
-<img/nano-confirmation-time.pdf, id=215, 1140.31857pt x 650.46346pt>
+<img/nano-confirmation-time.pdf, id=216, 1140.31857pt x 650.46346pt>
 File: img/nano-confirmation-time.pdf Graphic file (type pdf)
 <use img/nano-confirmation-time.pdf>
 Package pdftex.def Info: img/nano-confirmation-time.pdf  used on input line 58.
@@ -1446,7 +1447,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-<img/S20_open.png, id=257, 741.972pt x 572.3784pt>
+<img/S20_open.png, id=258, 741.972pt x 572.3784pt>
 File: img/S20_open.png Graphic file (type png)
 <use img/S20_open.png>
 Package pdftex.def Info: img/S20_open.png  used on input line 35.
@@ -1461,7 +1462,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-<img/serial_port.png, id=265, 907.9521pt x 728.4816pt>
+<img/serial_port.png, id=266, 907.9521pt x 728.4816pt>
 File: img/serial_port.png Graphic file (type png)
 <use img/serial_port.png>
 Package pdftex.def Info: img/serial_port.png  used on input line 62.
@@ -1485,7 +1486,7 @@ Overfull \hbox (0.36519pt too wide) in paragraph at lines 71--72
 . com / stable / package _ esp8266com _ index . json$[]
  []
 
-<img/heltec.jpg, id=274, 3082.51625pt x 1795.70876pt>
+<img/heltec.jpg, id=275, 3082.51625pt x 1795.70876pt>
 File: img/heltec.jpg Graphic file (type jpg)
 <use img/heltec.jpg>
 Package pdftex.def Info: img/heltec.jpg  used on input line 89.
@@ -1495,7 +1496,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--92
 
  []
 
-<img/acs712.jpg, id=276, 3834.325pt x 2271.48625pt>
+<img/acs712.jpg, id=277, 3834.325pt x 2271.48625pt>
 File: img/acs712.jpg Graphic file (type jpg)
 <use img/acs712.jpg>
 Package pdftex.def Info: img/acs712.jpg  used on input line 97.
@@ -1541,18 +1542,16 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-Overfull \hbox (2.22882pt too wide) in paragraph at lines 167--168
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+LaTeX Font Info:    Try loading font information for OML+cmss on input line 184
+.
+LaTeX Font Info:    No file OMLcmss.fd. on input line 184.
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 184.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 184.
- [23]
+LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textgreater' on input line 184.
+
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
  []
@@ -1629,70 +1628,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 334--343
  []
 
 [28]
-\openout4 = `doc.pyg'.
-
-runsystem(pygmentize -l cpp -f latex -F tokenmerge        -P linenos -P "verbop
-tions= ,fontsize=\scriptsize " -o doc.out.pyg doc.pyg)...executed.
-
- (./doc.out.pyg
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 8.
-)
-runsystem(rm doc.out.pyg)...executed.
-
-runsystem(rm doc.pyg)...executed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+Underfull \hbox (badness 10000) in paragraph at lines 346--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--397
+Underfull \hbox (badness 10000) in paragraph at lines 346--348
 
  []
 
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 351
+.
+LaTeX Font Info:    No file OMScmss.fd. on input line 351.
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--397
-
- []
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 351.
 
 [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 412--420
+Underfull \hbox (badness 10000) in paragraph at lines 407--415
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 428--435
+Underfull \hbox (badness 10000) in paragraph at lines 423--430
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 447--451
+Underfull \hbox (badness 10000) in paragraph at lines 442--446
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--463
+Underfull \hbox (badness 10000) in paragraph at lines 450--458
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 476--482
+Underfull \hbox (badness 10000) in paragraph at lines 471--477
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--482
+Underfull \hbox (badness 10000) in paragraph at lines 471--477
 
  []
 
 [34] [35]
-<img/Plug-Socket-pairing_process.pdf, id=473, 436.5108pt x 427.5975pt>
+<img/Plug-Socket-pairing_process.pdf, id=520, 436.5108pt x 427.5975pt>
 File: img/Plug-Socket-pairing_process.pdf Graphic file (type pdf)
 <use img/Plug-Socket-pairing_process.pdf>
 Package pdftex.def Info: img/Plug-Socket-pairing_process.pdf  used on input lin
-e 499.
+e 494.
 (pdftex.def)             Requested size: 418.25555pt x 409.71902pt.
  [36 <./img/Plug-Socket-pairing_process.pdf
 
@@ -1700,24 +1688,24 @@ pdfTeX warning: pdflatex (file ./img/Plug-Socket-pairing_process.pdf): PDF incl
 usion: invalid other resource which is no dict (key 'ProcSets', type <array>); 
 ignored.
 >]
-<img/Plug-Socket-verification_process.pdf, id=502, 476.74109pt x 490.71327pt>
+<img/Plug-Socket-verification_process.pdf, id=549, 476.74109pt x 490.71327pt>
 File: img/Plug-Socket-verification_process.pdf Graphic file (type pdf)
 <use img/Plug-Socket-verification_process.pdf>
 Package pdftex.def Info: img/Plug-Socket-verification_process.pdf  used on inpu
-t line 514.
+t line 509.
 (pdftex.def)             Requested size: 418.25555pt x 430.52615pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 511--517
+Underfull \hbox (badness 10000) in paragraph at lines 506--512
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--525
+Underfull \hbox (badness 10000) in paragraph at lines 513--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--525
+Underfull \hbox (badness 10000) in paragraph at lines 513--520
 
  []
 
@@ -1727,35 +1715,35 @@ pdfTeX warning: pdflatex (file ./img/Plug-Socket-verification_process.pdf): PDF
  inclusion: invalid other resource which is no dict (key 'ProcSets', type <arra
 y>); ignored.
 >] [38]
-<img/Plug-Socket-payment_process.pdf, id=541, 434.58359pt x 462.76888pt>
+<img/Plug-Socket-payment_process.pdf, id=589, 434.58359pt x 462.76888pt>
 File: img/Plug-Socket-payment_process.pdf Graphic file (type pdf)
 <use img/Plug-Socket-payment_process.pdf>
 Package pdftex.def Info: img/Plug-Socket-payment_process.pdf  used on input lin
-e 527.
+e 522.
 (pdftex.def)             Requested size: 418.25555pt x 445.39699pt.
-<img/Plug-Socket-settlement_process.pdf, id=542, 466.62328pt x 312.20638pt>
+<img/Plug-Socket-settlement_process.pdf, id=590, 466.62328pt x 312.20638pt>
 File: img/Plug-Socket-settlement_process.pdf Graphic file (type pdf)
 <use img/Plug-Socket-settlement_process.pdf>
 Package pdftex.def Info: img/Plug-Socket-settlement_process.pdf  used on input 
-line 542.
+line 537.
 (pdftex.def)             Requested size: 418.25555pt x 279.85884pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--545
+Underfull \hbox (badness 10000) in paragraph at lines 526--540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--545
+Underfull \hbox (badness 10000) in paragraph at lines 526--540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--545
+Underfull \hbox (badness 10000) in paragraph at lines 526--540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--545
+Underfull \hbox (badness 10000) in paragraph at lines 526--540
 
  []
 
@@ -1772,31 +1760,1158 @@ nclusion: invalid other resource which is no dict (key 'ProcSets', type <array>
 >]) [41]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 187.
+less on input line 189.
 
-(./inc/appendix.tex) [42
+(./inc/appendix.tex [42
 
 
-] (./doc.lof)
+] [43pdfTeX warning (ext4): destination with the same identifier (name{lstnumbe
+r.3.\\thelstnumber\040}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.\\thelstnumber\040}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.\\thelstnumber\040}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.\\thelstnumber\040}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.68}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.69}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.70}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.72}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.73}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.75}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.76}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.78}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.79}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.80}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.81}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.83}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.84}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.85}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.86}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.87}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.88}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.89}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.90}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.3.91}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.123     uint256 
+                  public maxValue;] [44pdfTeX warning (ext4): destination with 
+the same identifier (name{lstnumber.3.92}) has been already used, duplicate ign
+ored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.93}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.95}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.96}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.98}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.99}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.100}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.101}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.102}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.104}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.105}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.106}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.107}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.108}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.110}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.111}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.112}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.113}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.114}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.115}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.116}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.118}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.119}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.120}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.121}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.122}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.123}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.124}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.126}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.127}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.128}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.129}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.130}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.131}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.132}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.133}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.134}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.135}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.137}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.3.138}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.170         return 
+                     true;] [45pdfTeX warning (ext4): destination with the same
+ identifier (name{lstnumber.3.139}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.140}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.141}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.143}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.144}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.145}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.146}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.147}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.148}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.149}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.150}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.151}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.152}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.153}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.154}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.156}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.157}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.159}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.160}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.161}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.162}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.163}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.164}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.165}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.166}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.167}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.168}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.169}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.170}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.172}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.173}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.175}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.176}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.177}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.178}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.179}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.180}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.182}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.183}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.185}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be activepdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.3.186}) has been already used, du
+plicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.218         //
+                 payment channel has to be active] [46pdfTeX warning (ext4): de
+stination with the same identifier (name{lstnumber.3.187}) has been already use
+d, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+88}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+89}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+90}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+91}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+93}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+94}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+96}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+97}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.1
+99}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+00}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+02}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+03}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+04}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+05}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+06}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+07}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+09}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+10}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+12}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+13}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+14}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+15}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+16}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+18}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+19}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+21}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+22}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+23}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+25}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+26}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+27}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+28}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+29}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+30}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+31}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+32}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3.2
+33}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.266         //
+                 variables that are included in the message: value, address ...
+]) [47pdfTeX warning (ext4): destination with the same identifier (name{lstnumb
+er.3.235}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.236}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.237}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.238}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.239}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.240}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.241}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.242}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.243}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.244}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.245}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.247}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.248}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.249}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.250}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.251}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.252}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.253}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.254}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.255}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.256}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.257}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.258}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.259}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.261}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.262}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.263}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.264}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.265}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.266}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.3.267}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.195 \newpage
+              ] (./doc.lof)
 \tf@lof=\write10
 \openout10 = `doc.lof'.
 
- [43
+ [48
 
 ] (./doc.lot)
 \tf@lot=\write11
 \openout11 = `doc.lot'.
 
- [44
+ [49
 
 ] (./doc.lol)
 \tf@lol=\write12
 \openout12 = `doc.lol'.
 
+ [50
 
-[45
-
-] (./doc.nls) [46
+] (./doc.nls)
+[51
 
 ] (./doc.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 79--85
@@ -1810,7 +2925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--99
 rt-[]ii-[]def83653b21f$[]\OT1/cmr/m/n/10.95 ,
  []
 
-[47
+[52
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 119--124
@@ -1836,49 +2951,55 @@ Underfull \hbox (badness 2990) in paragraph at lines 175--179
 OT1/cmtt/m/n/10.95 https : / / web3js .
  []
 
-[48]
+[53]
 Underfull \hbox (badness 2318) in paragraph at lines 231--235
 []\OT1/cmr/m/n/10.95 JSON RPC Google Group.  Json rpc 2.0.  []$\OT1/cmtt/m/n/10
 .95 https : / / www . jsonrpc . org /
  []
 
-) [49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
+) [54]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
  (./doc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 239.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 239.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `doc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 239.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 25034 strings out of 492623
- 455327 string characters out of 6129553
- 812253 words of memory out of 5000000
- 28169 multiletter control sequences out of 15000+600000
- 13276 words of font info for 53 fonts, out of 8000000 for 9000
+ 25787 strings out of 492623
+ 465210 string characters out of 6129553
+ 957543 words of memory out of 5000000
+ 28595 multiletter control sequences out of 15000+600000
+ 15645 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,12n,99p,9111b,1323s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,12n,99p,9111b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
-ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local
-/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
-texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on doc.pdf (49 pages, 30487585 bytes).
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on doc.pdf (54 pages, 30544275 bytes).
 PDF statistics:
- 898 PDF objects out of 1000 (max. 8388607)
- 762 compressed objects within 8 object streams
- 219 named destinations out of 1000 (max. 500000)
+ 1310 PDF objects out of 1440 (max. 8388607)
+ 1163 compressed objects within 12 object streams
+ 538 named destinations out of 1000 (max. 500000)
  378 words of extra memory for PDF output out of 10000 (max. 10000000)
 

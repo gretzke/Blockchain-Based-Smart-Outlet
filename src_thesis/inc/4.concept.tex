@@ -345,8 +345,7 @@ Events are an important part of Smart Contract programming for 2 key reasons:
 \end{enumerate}
 See \ref{lis:sc_basic_ref} for an example of an event.
 \\\\
-\begin{listing}[H]
-\begin{minted}[linenos, bgcolor=light-gray, fontsize=\scriptsize]{cpp}
+\begin{lstlisting}[language=Solidity, caption={Basic structure of a Smart Contract}, label={lis:sc_basic_ref}]
 pragma solidity 0.5.8;
 
 contract ModifierExample{
@@ -391,11 +390,7 @@ contract ModifierExample{
     }
     
 }
-\end{minted}
-\caption{Basic structure of a Smart Contract}
-\label{lis:sc_basic_ref}
-\end{listing}
-
+\end{lstlisting}
 
 \newpage
 \subsection{Implementation}
@@ -548,3 +543,4 @@ As soon as a party wants to stop the payment process, e.g. the battery of the cu
 As it is in the interest of the supplier to close the channel with the latest signature, containing the highest value, it’s the sockets task to settle the transaction. The Smart Contract also protects the customer – if the supplier fails to submit a valid signature in a certain amount of time, the deposited amount can be withdrawn again.
 
 \subsubsection{Smart Contract}
+This section will go over the Smart Contract implementation and explain all key functions and design choices. The entire source code can be found under the appendix, \ref{lis:safemath} \& \ref{lis:pc_sc}.
