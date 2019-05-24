@@ -279,7 +279,7 @@ contract SocketPaymentChannel {
     function withdraw() public returns (bool) {
         // save balance of sender to a variable
         uint256 balance = balances[msg.sender];
-        // set balance of sender to zero
+        // best practice: set balance of sender to zero before sending the transaction, see reentrancy attack
         balances[msg.sender] = 0;
         // send entire balance to sender
         msg.sender.transfer(balance);
