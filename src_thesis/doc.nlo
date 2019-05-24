@@ -6,7 +6,7 @@
 \nomenclatureentry{anumber used once@[{number used once}]\begingroup nonce \nomrefpage \nomeqref {2.0}|nompageref}{9}
 \nomenclatureentry{aEthereum Virtual Machine@[{Ethereum Virtual Machine}]\begingroup EVM \nomrefpage \nomeqref {2.0}|nompageref}{10}
 \nomenclatureentry{aexternally owned account@[{externally owned account}]\begingroup EOA \nomrefpage \nomeqref {2.0}|nompageref}{11}
-\nomenclatureentry{aVirtual Private Server@[{Virtual Private Server}]\begingroup VPS \nomrefpage \nomeqref {4.0}|nompageref}{22}
-\nomenclatureentry{anumber used once@[{number used once}]\begingroup nonce \nomrefpage \nomeqref {4.0}|nompageref}{31}
-\nomenclatureentry{aproof of authority@[{proof of authority}]\begingroup POA \nomrefpage \nomeqref {4.0}|nompageref}{32}
-\nomenclatureentry{aRecursive Length Prefix@[{Recursive Length Prefix}]\begingroup RLP \nomrefpage \nomeqref {4.0}|nompageref}{32}
+\nomenclatureentry{aVirtual Private Server@[{Virtual Private Server}]\begingroup VPS \nomrefpage \nomeqref {5.0}|nompageref}{24}
+\nomenclatureentry{anumber used once@[{number used once}]\begingroup nonce \nomrefpage \nomeqref {5.0}|nompageref}{33}
+\nomenclatureentry{aproof of authority@[{proof of authority}]\begingroup POA \nomrefpage \nomeqref {5.0}|nompageref}{34}
+\nomenclatureentry{aRecursive Length Prefix@[{Recursive Length Prefix}]\begingroup RLP \nomrefpage \nomeqref {5.0}|nompageref}{34}

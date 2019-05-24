@@ -2,28 +2,30 @@
 \contentsline {section}{\numberline {1}Introduction}{6}{section.1}% 
 \contentsline {section}{\numberline {2}Theory}{8}{section.2}% 
 \contentsline {section}{\numberline {3}Analysis of different payment methods}{12}{section.3}% 
-\contentsline {section}{\numberline {4}Concept, Setup \& Implementation}{17}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Concept}{17}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Setup}{18}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Socket}{18}{subsubsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Plug}{20}{subsubsection.4.2.2}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Libraries}{22}{subsubsection.4.2.3}% 
-\contentsline {subsubsection}{\numberline {4.2.4}Server}{22}{subsubsection.4.2.4}% 
-\contentsline {subsubsection}{\numberline {4.2.5}Smart Contract}{24}{subsubsection.4.2.5}% 
-\contentsline {paragraph}{\numberline {4.2.5.1}Wallet}{24}{paragraph.4.2.5.1}% 
-\contentsline {paragraph}{\numberline {4.2.5.2}Getting Ether}{25}{paragraph.4.2.5.2}% 
-\contentsline {paragraph}{\numberline {4.2.5.3}IDE}{25}{paragraph.4.2.5.3}% 
-\contentsline {paragraph}{\numberline {4.2.5.4}Solidity}{26}{paragraph.4.2.5.4}% 
-\contentsline {subsection}{\numberline {4.3}Implementation}{31}{subsection.4.3}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Microcontrollers}{31}{subsubsection.4.3.1}% 
-\contentsline {paragraph}{\numberline {4.3.1.1}Transactions}{31}{paragraph.4.3.1.1}% 
-\contentsline {paragraph}{\numberline {4.3.1.2}State Machine}{35}{paragraph.4.3.1.2}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Smart Contract}{42}{subsubsection.4.3.2}% 
-\contentsline {paragraph}{\numberline {4.3.2.1}SafeMath Library}{42}{paragraph.4.3.2.1}% 
-\contentsline {paragraph}{\numberline {4.3.2.2}Off-chain transaction}{42}{paragraph.4.3.2.2}% 
-\contentsline {section}{\numberline {5}Appendix}{44}{section.5}% 
-\contentsline {subsection}{List of Figures}{50}{lstnumber.5.268}% 
-\contentsline {subsection}{List of Tables}{51}{lstnumber.5.268}% 
-\contentsline {subsection}{List of Listings}{52}{lstnumber.5.268}% 
-\contentsline {subsection}{List of Abbreviations}{53}{section*.14}% 
-\contentsline {subsection}{References}{54}{section*.15}% 
+\contentsline {section}{\numberline {4}State of the art}{17}{section.4}% 
+\contentsline {section}{\numberline {5}Concept, Setup \& Implementation}{19}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Concept}{19}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Setup}{20}{subsection.5.2}% 
+\contentsline {subsubsection}{\numberline {5.2.1}Socket}{20}{subsubsection.5.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.2}Plug}{22}{subsubsection.5.2.2}% 
+\contentsline {subsubsection}{\numberline {5.2.3}Libraries}{24}{subsubsection.5.2.3}% 
+\contentsline {subsubsection}{\numberline {5.2.4}Server}{24}{subsubsection.5.2.4}% 
+\contentsline {subsubsection}{\numberline {5.2.5}Smart Contract}{26}{subsubsection.5.2.5}% 
+\contentsline {paragraph}{\numberline {5.2.5.1}Wallet}{26}{paragraph.5.2.5.1}% 
+\contentsline {paragraph}{\numberline {5.2.5.2}Getting Ether}{27}{paragraph.5.2.5.2}% 
+\contentsline {paragraph}{\numberline {5.2.5.3}IDE}{27}{paragraph.5.2.5.3}% 
+\contentsline {paragraph}{\numberline {5.2.5.4}Solidity}{28}{paragraph.5.2.5.4}% 
+\contentsline {subsection}{\numberline {5.3}Implementation}{33}{subsection.5.3}% 
+\contentsline {subsubsection}{\numberline {5.3.1}Microcontrollers}{33}{subsubsection.5.3.1}% 
+\contentsline {paragraph}{\numberline {5.3.1.1}Transactions}{33}{paragraph.5.3.1.1}% 
+\contentsline {paragraph}{\numberline {5.3.1.2}State Machine}{37}{paragraph.5.3.1.2}% 
+\contentsline {subsubsection}{\numberline {5.3.2}Smart Contract}{44}{subsubsection.5.3.2}% 
+\contentsline {paragraph}{\numberline {5.3.2.1}SafeMath Library}{44}{paragraph.5.3.2.1}% 
+\contentsline {paragraph}{\numberline {5.3.2.2}Off-chain transaction}{44}{paragraph.5.3.2.2}% 
+\contentsline {section}{\numberline {6}Conclusion}{46}{section.6}% 
+\contentsline {section}{\numberline {7}Appendix}{47}{section.7}% 
+\contentsline {subsection}{List of Figures}{53}{lstnumber.5.268}% 
+\contentsline {subsection}{List of Tables}{54}{lstnumber.5.268}% 
+\contentsline {subsection}{List of Listings}{55}{lstnumber.5.268}% 
+\contentsline {subsection}{List of Abbreviations}{56}{section*.14}% 
+\contentsline {subsection}{References}{57}{section*.15}% 

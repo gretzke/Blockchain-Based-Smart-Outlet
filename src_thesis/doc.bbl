@@ -109,6 +109,52 @@ Colin LeMahieu.
 \newblock \url{https://nano.org/en/whitepaper}.
 \newblock [Online; accessed 2019-05-06].
 
+\bibitem{car-wallet}
+accessec GmbH.
+\newblock Car wallet.
+\newblock
+  \url{https://accessec.com/car-wallet/?fbclid=IwAR0bbgAra62V6FNWt_Ani5zi6v3xK4CXyNqefIPNH0ukJYZ-k3qdgUMffGQ}.
+\newblock [Online; accessed: 2019-05-23].
+
+\bibitem{bosch-dlt}
+Bosch Presse.
+\newblock Dlt restores trust in the internet.
+\newblock
+  \url{https://www.bosch-presse.de/pressportal/de/en/dlt-restores-trust-in-the-internet-189824.html}.
+\newblock [Online; accessed: 2019-05-23].
+
+\bibitem{share-charge}
+Innogy.
+\newblock Share\&charge.
+\newblock
+  \url{https://shareandcharge.com/},\url{https://blog.slock.it/blockchain-energy-p2p-sharing-project-share-charge-going-into-live-beta-ad4e069e79d}.
+\newblock [Online; accessed: 2019-05-23].
+
+\bibitem{blockcharge}
+Innogy.
+\newblock Blockcharge.
+\newblock \url{https://www.youtube.com/watch?v=0A0LqJ9oYNg}.
+\newblock [Online; accessed: 2019-05-23].
+
+\bibitem{innogy}
+Innogy.
+\newblock Share\&charge: the future of charging.
+\newblock
+  \url{https://innovationhub.innogy.com/news-event/1AStXhfTXmG6EKSSQUm6mQ/share-charge-the-future-of-charging}.
+\newblock [Online; accessed: 2019-05-23].
+
+\bibitem{share-charge-closed}
+Share\&Charge.
+\newblock Blogpost regarding closure.
+\newblock \url{http://snc-wordpress.hidora.com/information-for-users/}.
+\newblock [Online; accessed: 2019-05-23].
+
+\bibitem{state-channels}
+Ethereum Foundation.
+\newblock State channel research.
+\newblock \url{https://ethresear.ch/c/state-channels}.
+\newblock [Online; accessed: 2019-05-23].
+
 \bibitem{acs712}
 Allegro~MicroSystems Inc.
 \newblock Fully integrated, hall effect-based linear current sensor.
