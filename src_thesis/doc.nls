@@ -8,6 +8,7 @@
   \item [{number used once}]\begingroup nonce \nomrefpage \nomeqref {2.0}\nompageref{9}
   \item [{number used once}]\begingroup nonce \nomrefpage \nomeqref {5.0}\nompageref{33}
   \item [{peer to peer}]\begingroup P2P \nomrefpage \nomeqref {1.0}\nompageref{6}
+  \item [{power-line communication}]\begingroup PLC \nomrefpage \nomeqref {6.0}\nompageref{47}
   \item [{proof of authority}]\begingroup POA \nomrefpage \nomeqref {5.0}\nompageref{34}
   \item [{Proof of Work}]\begingroup PoW \nomrefpage \nomeqref {2.0}\nompageref{9}
   \item [{Recursive Length Prefix}]\begingroup RLP \nomrefpage \nomeqref {5.0}\nompageref{34}
