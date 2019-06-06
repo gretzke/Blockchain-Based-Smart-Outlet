@@ -48,6 +48,13 @@ Scott~Vansto Don~Johnson, Alfred~Menezes.
   \url{https://web.archive.org/web/20170921160141/http://cs.ucsb.edu/~koc/ccs130h/notes/ecdsa-cert.pdf}.
 \newblock [Online; accessed 2019-05-06].
 
+\bibitem{btc-fees}
+BitInfoCharts.
+\newblock Bitcoin avg. transaction fee historical chart.
+\newblock
+  \url{https://bitinfocharts.com/comparison/bitcoin-transactionfees.html}.
+\newblock [Online; accessed: 2019-06-01].
+
 \bibitem{ethereum-blocktime}
 Vitalik Buterin.
 \newblock Toward a 12-second block time.
@@ -67,6 +74,12 @@ Paypal.
 \newblock Fees for micro transactions.
 \newblock \url{https://www.paypal.com/de/webapps/mpp/paypal-fees}, 2019.
 \newblock [Online; accessed 2019-05-06].
+
+\bibitem{coincap}
+Coincap.
+\newblock Cryptocurrency list.
+\newblock \url{https://coincap.io/}.
+\newblock [Online; accessed: 2019-06-01].
 
 \bibitem{btc-conf-time}
 blockchain.com.
@@ -100,7 +113,7 @@ Brian Pugh.
 \bibitem{nano-confirmation-time}
 Repnode.org.
 \newblock Block propagation and confirmation times.
-\newblock \url{ http://repnode.org/network/propagation-confirmation}, 2019.
+\newblock \url{https://repnode.org/network/propagation-confirmation}, 2019.
 \newblock [Online; accessed: 2019-02-22, 14:54].
 
 \bibitem{nano-white-paper}
@@ -108,6 +121,13 @@ Colin LeMahieu.
 \newblock Nano: A feeless distributed cryptocurrency network.
 \newblock \url{https://nano.org/en/whitepaper}.
 \newblock [Online; accessed 2019-05-06].
+
+\bibitem{dao-hack}
+Etherchain.
+\newblock Account of dao hacker.
+\newblock
+  \url{https://www.etherchain.org/account/0x304a554a310c7e546dfe434669c62820b7d83490#history}.
+\newblock [Online; accessed: 2019-06-05].
 
 \bibitem{car-wallet}
 accessec GmbH.
@@ -127,7 +147,8 @@ Bosch Presse.
 Innogy.
 \newblock Share\&charge.
 \newblock
-  \url{https://shareandcharge.com/},\url{https://blog.slock.it/blockchain-energy-p2p-sharing-project-share-charge-going-into-live-beta-ad4e069e79d}.
+  \url{https://blog.slock.it/blockchain-energy-p2p-sharing-project-share-charge-going-into-live-beta-ad4e069e79d},
+  \url{https://shareandcharge.com/}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{blockcharge}
@@ -155,6 +176,64 @@ Ethereum Foundation.
 \newblock \url{https://ethresear.ch/c/state-channels}.
 \newblock [Online; accessed: 2019-05-23].
 
+\bibitem{abi-encoding}
+Ethereum Foundation.
+\newblock Contract abi specification.
+\newblock \url{https://solidity.readthedocs.io/en/v0.5.8/abi-spec.html}.
+\newblock [Online; accessed: 2019-06-05].
+
+\bibitem{design-rationale}
+Ethereum Foundation.
+\newblock Design rationale.
+\newblock \url{https://github.com/ethereum/wiki/wiki/Design-Rationale}.
+\newblock [Online; accessed: 2019-05-19].
+
+\bibitem{eip-155}
+Ethereum Foundation.
+\newblock Eip 155.
+\newblock \url{https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md}.
+\newblock [Online; accessed: 2019-05-19].
+
+\bibitem{rlp-lib}
+Takahiro Okada.
+\newblock Rlp c++ implementation.
+\newblock
+  \url{https://github.com/kopanitsa/web3-arduino/blob/master/src/Util.cpp}.
+\newblock [Online; accessed: 2019-05-21].
+
+\bibitem{packed-spec}
+Ethereum Foundation.
+\newblock Packed encoding.
+\newblock
+  \url{https://solidity.readthedocs.io/en/v0.4.24/abi-spec.html#abi-packed-mode}.
+\newblock [Online; accessed: 2019-05-21].
+
+\bibitem{prefix}
+Ethereum Foundation.
+\newblock Signature prefix.
+\newblock \url{https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign}.
+\newblock [Online; accessed: 2019-05-23].
+
+\bibitem{micro-ecc}
+Kenneth MacKay.
+\newblock micro-ecc.
+\newblock \url{https://github.com/kmackay/micro-ecc}.
+\newblock [Online; accessed: 2019-01-15].
+
+\bibitem{best-practice}
+Consensys.
+\newblock Smart contract best practices.
+\newblock
+  \url{https://consensys.github.io/smart-contract-best-practices/recommendations/}.
+\newblock [Online; accessed: 2019-06-05].
+
+\bibitem{eth-2}
+Ethereum Foundation.
+\newblock Ethereum 2.0.
+\newblock
+  \url{https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/}.
+\newblock [Online; accessed: 2019-05-23].
+
 \bibitem{acs712}
 Allegro~MicroSystems Inc.
 \newblock Fully integrated, hall effect-based linear current sensor.
@@ -174,11 +253,11 @@ Links2004.
 \newblock \url{https://github.com/Links2004/arduinoWebSockets}.
 \newblock [Online; accessed: 2019-05-12].
 
-\bibitem{micro-ecc}
-Kenneth MacKay.
-\newblock micro-ecc.
-\newblock \url{https://github.com/kmackay/micro-ecc}.
-\newblock [Online; accessed: 2019-01-15].
+\bibitem{keccak-source}
+Aleksey Kravchenko.
+\newblock Keccak-256 c implementation.
+\newblock \url{https://github.com/firefly/wallet}.
+\newblock [Online; accessed: 2019-05-21].
 
 \bibitem{geth}
 Ethereum Foundation.
@@ -222,6 +301,12 @@ Ethereum Foundation.
 \newblock Javascript ethereum api 1.0.
 \newblock \url{https://web3js.readthedocs.io/en/1.0/}.
 \newblock [Online; accessed: 2019-05-13].
+
+\bibitem{json-rpc-spec}
+JSON RPC~Google Group.
+\newblock Json rpc 2.0.
+\newblock \url{https://www.jsonrpc.org/specification}.
+\newblock [Online; accessed: 2019-05-19].
 
 \bibitem{metamask}
 Metamask.
@@ -272,56 +357,5 @@ Ethereum Foundation.
 \newblock
   \url{https://solidity.readthedocs.io/en/v0.5.8/miscellaneous.html#function-visibility-specifiers}.
 \newblock [Online; accessed: 2019-05-15].
-
-\bibitem{json-rpc-spec}
-JSON RPC~Google Group.
-\newblock Json rpc 2.0.
-\newblock \url{https://www.jsonrpc.org/specification}.
-\newblock [Online; accessed: 2019-05-19].
-
-\bibitem{design-rationale}
-Ethereum Foundation.
-\newblock Design rationale.
-\newblock \url{https://github.com/ethereum/wiki/wiki/Design-Rationale}.
-\newblock [Online; accessed: 2019-05-19].
-
-\bibitem{eip-155}
-Ethereum Foundation.
-\newblock Eip 155.
-\newblock \url{https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md}.
-\newblock [Online; accessed: 2019-05-19].
-
-\bibitem{rlp-lib}
-Takahiro Okada.
-\newblock Rlp c++ implementation.
-\newblock
-  \url{https://github.com/kopanitsa/web3-arduino/blob/master/src/Util.cpp}.
-\newblock [Online; accessed: 2019-05-21].
-
-\bibitem{packed-spec}
-Ethereum Foundation.
-\newblock Packed encoding.
-\newblock
-  \url{https://solidity.readthedocs.io/en/v0.4.24/abi-spec.html#abi-packed-mode}.
-\newblock [Online; accessed: 2019-05-21].
-
-\bibitem{keccak-source}
-Aleksey Kravchenko.
-\newblock Keccak-256 c implementation.
-\newblock \url{https://github.com/firefly/wallet}.
-\newblock [Online; accessed: 2019-05-21].
-
-\bibitem{prefix}
-Ethereum Foundation.
-\newblock Signature prefix.
-\newblock \url{https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign}.
-\newblock [Online; accessed: 2019-05-23].
-
-\bibitem{eth-2}
-Ethereum Foundation.
-\newblock Ethereum 2.0.
-\newblock
-  \url{https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/}.
-\newblock [Online; accessed: 2019-05-23].
 
 \end{thebibliography}
