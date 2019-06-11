@@ -86,11 +86,11 @@ Fees differ from cryptocurrency to cryptocurrency and can be as low as a fractio
 
 \textbf{Proof of Work}\\
 There are different approaches to reach consensus over which block should be added next to the network, \abbr{Proof of Work}{PoW} is one of them and is used by most cryptocurrencies.
-A \abbr{number used once}{nonce} is included in the block which is adjusted by a validator.
+A \abbr{number used once}{nonce} is included in the block which is adjusted by a miner.
 Every different nonce produces a different block hash.
-The goal is to find a nonce that is numerically lower than a certain threshold value (also called difficulty).
-A validator who finds this number can submit their block to the network.
-All miners race to find a nonce as fast as possible, so their block will be accepted by all other participants in the network and considered valid.
+The goal is to find a nonce which produces a hash that is numerically lower than a certain threshold value (also called difficulty).
+A miner who finds this number can submit their block to the network.
+All miners race to find a nonce as fast as possible, so their block will be accepted by all other participants in the network first and considered valid.
 The fastest submission gets a so-called block reward, a reward minted by the protocol to the fastest miner, as well as all transaction fees from that block.
 \newpage
 
@@ -112,9 +112,9 @@ As a result, the Ethereum network acts like a decentralized computer with all th
 \\\\
 
 \textbf{Smart Contract}\\
-Smart contracts are written in special programming languages, the most popular being called "Solidity", and are compiled into bytecode afterwards.
+Ethereum smart contracts are written in special programming languages, the most popular being called "Solidity", and are compiled into bytecode afterwards.
 This bytecode is then publicly stored on the blockchain and can be executed by everyone.
-The advantage of smart contracts is, that the code is public to everyone and immutable, thus can theoretically be used as a binding, programmable contract that can control monetary value on its own.
+The advantage of smart contracts is, that the code is public and immutable, thus can theoretically be used as a binding, programmable contract that can control monetary value on its own.
 As a drawback, every computational step and byte stored on the blockchain costs money in form of transaction fees.
 \\\\
 

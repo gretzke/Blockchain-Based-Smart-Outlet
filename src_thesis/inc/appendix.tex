@@ -111,7 +111,7 @@ The pins of the current meter have to be soldered to the Heltec board as follows
 \\
 To program the Heltec WiFi Kit 8, USB to UART drivers need to be installed first.
 The download link can be found under "References"\cite{vcp-drivers}.
-Next, if the ESP8266 was not installed inside the Arduino IDE yet, the instructions found in the section above can be used to install the board.
+Next, if the ESP8266 was not installed inside the Arduino IDE yet, the instructions found in the subsection above can be used to install the board.
 \\
 After a successful driver installation, the board should be found under Tools $\rightarrow$ Port when the device is connected to the computer.
 \newpage
@@ -176,7 +176,7 @@ The launch options have the following purposes\cite{cli-options}:
 \begin{itemize}
     \item \textit{rinkeby}: synchronizes the Rinkeby testnet
     \item \textit{rpc}: enables the HTTP-RPC server, allows to receive JSON RPC requests
-    \item \textit{rpcapi}: exposed APIs, listing of all APIs can be found under "References"\cite{json-rpc}\cite{management-apis}
+    \item \textit{rpcapi}: exposed APIs, a listing of all APIs can be found under "References"\cite{json-rpc}\cite{management-apis}
     \item \textit{rpcaddr}: IP address of RPC interface, replace "X.X.X.X" with the IP address of the server, defaults to "localhost".
     Exposing the RPC interface without any restrictions is not advisable, especially on the mainnet, as it is a severe security concern.
     \item \textit{rpcport}: listening port of the RPC server
@@ -221,7 +221,7 @@ As previously mentioned, the node was set up to accept and handle api calls in t
 The implementation heavily relies on the API, as it is used to not only fetch data from the blockchain, but also to send transactions and make smart contract calls\cite{json-rpc}\cite{management-apis}.
 \\\\
 \subsection{Smart Contract}
-The following paragraphs will describe every step of deploying a smart contract to the Rinkeby Ethereum testnet.
+The following subsections will describe every step of deploying a smart contract to the Rinkeby Ethereum testnet.
 \\ 
 \subsubsection{Wallet}
 The first thing needed to start programming smart contracts is an Ethereum wallet.
@@ -290,12 +290,12 @@ After a contract has been deployed or loaded, all functions and public variables
 This will be the main way to interact with the smart contract.
 \\\\
 \subsubsection{Solidity}
-This paragraph will explain the basics and key features of the Solidity programming language.
+This subsection will explain the basics and key features of the Solidity programming language.
 A solidity source file has the ".sol" file extension.
 The language has a C++ style syntax and works very similarly to object-oriented programming and is also called contract-oriented\cite{doc-oriented}.
 Contracts can be viewed as classes and also work with interfaces and inheritance.
 \\
-See listing \ref{lis:sc_basic_ref} for an example of a minimalistic smart contract, which demonstrates the general syntax as well as some of the features listed below.
+See Listing \ref{lis:sc_basic_ref} for an example of a minimalistic smart contract, which demonstrates the general syntax as well as some of the features listed below.
 \\\\
 \textbf{General notice}\\
 There are a few important aspects in how certain things behave during smart contract programming and execution:
@@ -394,10 +394,10 @@ The \textit{payable} modifier allows a function to receive Ether.
 If Ether is included in a function call that doesn't have the \textit{payable} modifier, it throws.
 \\\\
 It's also possible to write custom modifiers.
-The example \ref{lis:sc_basic_ref} will show the function of a custom modifier through a commonly used \textit{onlyOwner} modifier, which only allows the owner of a smart contract to call the function.
+Listing \ref{lis:sc_basic_ref} shows the function of a custom modifier through a commonly used \textit{onlyOwner} modifier, which only allows the owner of a smart contract to call the function.
 \\\\
 \textbf{Events}\\
-Events are an important part of smart contract programming for 2 key reasons:
+Events are an important part of smart contract programming for two key reasons:
 \begin{enumerate}
   \item With a complex smart contract handling thousands of transactions, it can get confusing to keep track of all changes made to the state of the smart contract.
   Events are a good way to sort these changes into different categories and make them searchable by specific filters.
@@ -405,7 +405,7 @@ Events are an important part of smart contract programming for 2 key reasons:
   Events can be used to act as a return value.
   A computer system or a frontend can then scan for these events and act accordingly, e.g., show updates to the user.
 \end{enumerate}
-See listing \ref{lis:sc_basic_ref} for an example of an event.
+See Listing \ref{lis:sc_basic_ref} for an example of an event.
 \\\\
 \begin{lstlisting}[language=Solidity, caption={Basic structure of a smart contract}, label={lis:sc_basic_ref}]
 pragma solidity 0.5.8;

@@ -1,5 +1,5 @@
 \section{Implementation}
-This section will go into the details of the implementation of the previously worked out concept, explain why certain design choices were made as well as all challenges that were faced to successfully implement the payment system on an embedded platform.
+This chapter will go into the details of the implementation of the previously worked out concept, explain why certain design choices were made as well as all challenges that were faced to successfully implement the payment system on an embedded platform.
 \\
 \subsection{State Machine}
 The concept was implemented on the microcontrollers as finite state machines.
@@ -74,14 +74,14 @@ The goal of the payment process is to exchange off-chain transactions for electr
     \label{fig:payment_process}
 \end{figure}
 The payment process starts when the customer sends the first off-chain transaction to the supplier.
-As it would be really inconvenient for the socket to store and submit hundreds of off-chain transactions, only one signature can be submitted to the smart contract.
+As it would be inconvenient for the socket to store and submit hundreds of off-chain transactions, only one signature can be submitted to the smart contract.
 With every transaction, the plug increases the value of the off-chain transaction.
 Every signature is valid, but it is in the interest of the supplier to submit the latest signature with the highest value.
 The value of the transaction is calculated as follows:
 \begin{center}
 $value = number\_of\_transactions * price\_per\_second * seconds\_between\_transactions$
 \end{center}
-With the assumed values from chapter 3 (a total price of 18 \euro{} over a duration of 11 hours) roughly 0.007 \euro{} are transmitted with each off-chain transaction.
+With the assumed values from Chapter 3 (a total price of 18 \euro{} over a duration of 11 hours) roughly 0.007 \euro{} are transmitted with each off-chain transaction.
 With the formula above, this means that the value hashed and signed is 0.007 \euro{} for the first transaction, 0.014 \euro{} for the second, and so on.
 As the smart contract operates on ETH and not \euro, the values are converted to Wei first.
 \\\\
@@ -126,7 +126,7 @@ In an effort to find existing code that could be used as a foundation for the im
 Payment channels and off-chain transactions were implemented in this bachelor thesis as well.
 They are a subset of state channels, which currently are a heavily researched topic on their own, therefore no standard exists that could be followed for the implementation.
 As far as exploratory research went, every state channel implementation was still under development and not a single implementation of a payment channel on an embedded level could be found\cite{state-channels}.
-Therefore an entire concept for the payment channel had to be developed, that could run independently on microcontrollers.
+Therefore an entire concept for the payment channel had to be developed, that could run on microcontrollers.
 \\\\
 The process of sending an on-chain transaction can be broken down into the following steps: 
 \begin{enumerate}
@@ -263,7 +263,7 @@ It needs to produce the same hash for the same input data as the smart contract 
 \textbf{4. Sign data}\\
 Although Ethereum relies on ECDSA elliptic curve signatures, there are some additional rules and features that differ the signature process from its standard implementation:
 \begin{itemize}
-  \item It takes up to 2 guesses to recover the public key / address from the $r$ \& $s$ values of an ECDSA signature.
+  \item It takes up to two guesses to recover the public key / address from the $r$ \& $s$ values of an ECDSA signature.
   Therefore, a third value $v$, also called the \textit{recovery ID} is calculated, that enables the immediate extraction of a public key from a signature.
   According to the Ethereum yellow paper\cite{ethereum-yellow-paper} "the recovery identifier is a 1 byte value specifying the parity and finiteness of the coordinates of the curve point for which r is the x-value".
   The recovery ID is determined during the signature process by looking at the y value on the elliptic curve with the following formula:
@@ -322,7 +322,7 @@ channelCustomer = msg.sender;
 The channel can be timed out by any participant on the network after the expiration date has been reached, returning the deposited funds to the customer.
 The function to close the channel can only be called by the supplier.
 The total transaction value and the signature of the final off-chain transaction is passed to the function as an argument.
-From the three values inside the off-chain transactions, the transaction data is regenerated.
+From the three values inside the off-chain transaction, the transaction data is regenerated.
 The nonce and the address of the smart contract cannot be forged, as these values are not passed by the supplier.
 Instead, they are taken directly from the storage of the smart contract itself.
 The smart contract repeats the same steps to generate the transaction data as the plug – the data is hashed and prefixed with the Ethereum specific prefix:
@@ -356,7 +356,7 @@ return ecrecover(prefixedMessage, v, r, s) == channelCustomer;
 \end{lstlisting}
 \leavevmode
 \\
-This function returns true if the recovered address matches the current payment channel customer.
+The function returns true if the recovered address matches the current payment channel customer.
 The verification of the off-chain transaction is tamper proof.
 If the supplier tried to provide a false value with the signature, the recreation of the data would result in data that the customer did not sign.
 Therefore, the \textit{ecrecover} function would return an address that does not match the current channel customer.

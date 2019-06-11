@@ -1,5 +1,5 @@
 \section{Concept}
-This section describes the requirements for the overall concept and goals of this bachelor thesis, analyzes different payment methods to evaluate which meet said requirements and defines a concept and its hardware requirements for a possible implementation.
+This chapter describes the requirements for the overall concept and goals of this bachelor thesis, analyzes different payment methods to evaluate which meet said requirements and defines a concept and its hardware requirements for a possible implementation.
 \\
 \subsection{Definition of Prerequisites}
 
@@ -21,8 +21,8 @@ The following prerequisites are required to develop a concept for the sale of el
 \end{enumerate}
 \leavevmode
 \\
-The objective of this chapter is to evaluate which payment method is suited best for the described use case.
-Next, the goals of the M2M payment system have to be defined:
+The objective of the next section is to evaluate which payment method is suited best for the described use case.
+Thus, the goals of the M2M payment system have to be defined:
 
 \begin{enumerate}
     \item Value has to be transferred from Alice to Bob.
@@ -42,7 +42,7 @@ In this subsection, the advantages and disadvantages of traditional payment meth
 The simplest form of monetary value is cash, it could be imagined that money could be paid through a coin slot and electricity would be returned as a result.
 It's not suitable for this use case, as the risk of not receiving any electricity in return for the customer and the risk of theft for the supplier, e.g., someone violently stealing the cash, is too high.
 \\\\
-Traditional electronic or online payments like VISA or PayPal pose a low risk of theft for the buyer because of customer protection methods, unfortunately, the risk for the seller is non-negligible, e.g., in the form of credit card fraud or customer protection exploitation.
+Traditional electronic or online payments like VISA or PayPal pose a low risk of theft for the buyer because of customer protection methods, but the risk for the seller is non-negligible, e.g., in the form of credit card fraud or customer protection exploitation.
 Another disadvantage can be seen in the high fees, PayPal, for example, has a pricing of 0.10 \euro{} + 10\% for micro-transactions\cite{paypal-fees} and wouldn't be economically feasible for the predefined goals.
 The key strength is a fast, near-instant transaction time.
 \\
@@ -51,9 +51,9 @@ Cryptocurrency payments have some major advantages over the previously analyzed 
 Compared to electronic and online payments, many cryptocurrencies have lower fees and some even work without any fees at all.
 Payments can be broken down into fractions, as mentioned above, with payment intervals of a minute or less.
 Because all payments are immutable, the supplier has no risk and the customer risks just losing less than one cent for a first payment.
-Additionally the currency can be stored right on an embedded device and the machine is in charge of sending transactions.
+Additionally the currency can be stored right on an embedded device and the machine itself is in charge of sending transactions.
 One of the biggest disadvantages of cryptocurrencies for M2M payments are long transaction times, but as the technology is still in its infancy, this might change in the future.
-\\\\
+\newpage
 Over a thousand different cryptocurrencies exist\cite{coincap} and every one of them has their own rules that can drastically differ from the next one.
 Each underlying blockchain technology has their benefits and drawbacks.
 In the next paragraphs, some of these digital currencies will be evaluated whether or not they are suitable to reach the set goals.
@@ -111,7 +111,7 @@ They differ from each other, as off-chain transactions are not recorded on the b
 They can be sent from one participant to another directly, therefore there is no transaction fee or transaction time involved.
 A number of these off-chain transactions can be bundled in a payment channel.
 In the end, these transactions have to be settled on the blockchain, actually modifying the ledger and updating the balances of all participants.
-Thus the 2,460 transactions required during a charging period of 11 hours can be bundled into a few transactions on the blockchain.
+Thus, the 2,460 transactions required during a charging period of 11 hours can be bundled into a few transactions on the blockchain.
 Sending on- and off-chain transaction requires computations like encoding, hashing or signing of data which can be achieved on an embedded platform.
 Therefore this payment method meets all the requirements listed above.
 \\\\
@@ -123,7 +123,7 @@ The following steps briefly explain how the payment concept works:
     \item The customer signs an off-chain transaction and sends it to the supplier.
     \item Once the supplier receives the transaction, the delivery of electricity begins.
     Steps 2 \& 3 are repeated until the customer or the supplier want to discontinue the exchange.
-    \item As soon as any party wants to close the payment channel, the supplier submits the offline transactions to the smart contract.
+    \item As soon as any party wants to close the payment channel, the supplier submits the off-chain transactions to the smart contract.
     Each party is now able to withdraw their share from the smart contract.
 \end{enumerate}
 \begin{figure}[H]
@@ -133,9 +133,10 @@ The following steps briefly explain how the payment concept works:
     \label{fig:paymentchannel}
   \end{center}
 \end{figure}
-With payment channels, the risk of the supplier is minimal, as electricity must only be provided when a valid payment was received and the customer only risks losing one transaction for the initialization of the payment channel and one off-chain transaction if no electricity is provided in return.
+With payment channels, the risk of the supplier is minimal, as electricity must only be provided when a valid payment was received.
+The customer only risks losing one transaction for the initialization of the payment channel and one off-chain transaction if no electricity is provided in return.
 \\\\
-In total, only 4 transactions have to be made.
+In total, only 4 on-chain transactions have to be made.
 One for the payment channel initialization, one for the settlement, and one by each party to withdraw the balances, totaling all transaction fees at a couple cents.
 \newpage
 \subsection{Component Requirements}
@@ -218,7 +219,7 @@ The project that came closest to the topic of this bachelor thesis is called Sha
 It launched at the end of April 2017 with close to 1,500 charging stations, but the project was closed merely a year later\cite{share-charge-closed}.
 It claimed to be a P2P charging network calling itself the "AirBnB of Charging Stations".
 It was running on the Ethereum mainnet where anyone could become a charging station owner by purchasing a smart electrical socket to sell electricity.
-At first glance it seemed like the solution this bachelor thesis was trying to achieve, but upon further investigation the decentralization aspect had to be questioned.
+At first glance it seemed like the solution to this thesis' question, but upon further investigation the decentralization aspect had to be questioned.
 The electrical socket was communicating with a smartphone app to manage the purchase of electricity.
 This app had to be preloaded with fiat currency via PayPal, etc., the transaction was conducted in fiat and a charging station owner could only withdraw fiat currency as well.
 There is no evidence that the monetary transaction itself was handled on the blockchain and not just the record aspect of it.
