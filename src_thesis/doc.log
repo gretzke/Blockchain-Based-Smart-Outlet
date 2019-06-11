@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  7 JUN 2019 00:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  11 JUN 2019 09:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1115,19 +1115,19 @@ LaTeX Font Info:    Try loading font information for U+trsy on input line 22.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/trsym/utrsy.fd
 File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
-) [1
+) [-3
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/T
-UKL_LOGO.pdf>] [2
+UKL_LOGO.pdf>] [-2
 
-]) (./inc/0a.abstract_english.tex) [3]
-(./inc/0b.abstract_deutsch.tex) [4] (./doc.toc)
+]) (./inc/0a.abstract_english.tex) [-1]
+(./inc/0b.abstract_deutsch.tex) [0] (./doc.toc)
 \tf@toc=\write9
 \openout9 = `doc.toc'.
 
- [5] (./inc/1.introduction.tex)
+ [1] (./inc/1.introduction.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 8--170
 
  []
@@ -1152,7 +1152,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--170
 
  []
 
-[6] [7] (./inc/2.theory.tex
+[2] [3] (./inc/2.theory.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
@@ -1182,7 +1182,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
  []
 
-[8
+[4
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 35--39
@@ -1234,7 +1234,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--59
 
  []
 
-[9]
+[5]
 <img/blockchain.pdf, id=175, 626.34pt x 203.80139pt>
 File: img/blockchain.pdf Graphic file (type pdf)
 <use img/blockchain.pdf>
@@ -1265,7 +1265,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
-[10 <./img/blockchain.pdf
+[6 <./img/blockchain.pdf
 
 pdfTeX warning: pdflatex (file ./img/blockchain.pdf): PDF inclusion: invalid ot
 her resource which is no dict (key 'ProcSets', type <array>); ignored.
@@ -1319,7 +1319,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--125
 
  []
 
-[11]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 132--137
 
  []
@@ -1339,12 +1339,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--146
 
  []
 
-) [12] (./inc/3.concept.tex
+) [8] (./inc/3.concept.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-[13
+[9
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 36--38
@@ -1392,7 +1392,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--71
 
  []
 
-[14] [15 <./img/average-confirmation-time.png>]
+[10] [11 <./img/average-confirmation-time.png>]
 <img/nano-confirmation-time.png, id=269, 1140.26pt x 535.50063pt>
 File: img/nano-confirmation-time.png Graphic file (type png)
 <use img/nano-confirmation-time.png>
@@ -1404,7 +1404,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--95
 
  []
 
-[16 <./img/nano-confirmation-time.png>]
+[12 <./img/nano-confirmation-time.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 103--122
 
  []
@@ -1424,12 +1424,12 @@ File: img/payment_channel.pdf Graphic file (type pdf)
 <use img/payment_channel.pdf>
 Package pdftex.def Info: img/payment_channel.pdf  used on input line 131.
 (pdftex.def)             Requested size: 249.57506pt x 227.62204pt.
-[17]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 136--140
 
  []
 
-[18 <./img/payment_channel.pdf
+[14 <./img/payment_channel.pdf
 
 pdfTeX warning: pdflatex (file ./img/payment_channel.pdf): PDF inclusion: inval
 id other resource which is no dict (key 'ProcSets', type <array>); ignored.
@@ -1469,11 +1469,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--186
 
  []
 
-[19 <./img/concept.pdf
+[15 <./img/concept.pdf
 
 pdfTeX warning: pdflatex (file ./img/concept.pdf): PDF inclusion: invalid other
  resource which is no dict (key 'ProcSets', type <array>); ignored.
->] [20]
+>] [16]
 Underfull \hbox (badness 10000) in paragraph at lines 187--209
 
  []
@@ -1483,7 +1483,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--209
 
  []
 
-[21])
+[17])
 Underfull \hbox (badness 10000) in paragraph at lines 211--176
 
  []
@@ -1494,17 +1494,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--176
  []
 
 
-Overfull \hbox (0.52162pt too wide) in paragraph at lines 211--176
-\OT1/cmr/m/n/10.95 The project that came clos-est to the topic of this bach-e-l
-or's the-sis is called Share&Charge,
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 211--176
 
  []
 
-[22] (./inc/4.implementation.tex
+[18] (./inc/4.implementation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
@@ -1534,7 +1528,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
  []
 
-[23
+[19
 
  <./img/state_machine.pdf
 
@@ -1588,12 +1582,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--65
 
  []
 
-[24 <./img/Plug-Socket-pairing_process.pdf
+[20 <./img/Plug-Socket-pairing_process.pdf
 
 pdfTeX warning: pdflatex (file ./img/Plug-Socket-pairing_process.pdf): PDF incl
 usion: invalid other resource which is no dict (key 'ProcSets', type <array>); 
 ignored.
->] [25] [26 <./img/Plug-Socket-verification_process.pdf
+>] [21] [22 <./img/Plug-Socket-verification_process.pdf
 
 pdfTeX warning: pdflatex (file ./img/Plug-Socket-verification_process.pdf): PDF
  inclusion: invalid other resource which is no dict (key 'ProcSets', type <arra
@@ -1615,33 +1609,33 @@ File: img/Plug-Socket-settlement_process.pdf Graphic file (type pdf)
 <use img/Plug-Socket-settlement_process.pdf>
 Package pdftex.def Info: img/Plug-Socket-settlement_process.pdf  used on input 
 line 107.
-(pdftex.def)             Requested size: 315.24463pt x 256.0748pt.
+(pdftex.def)             Requested size: 301.21927pt x 244.69386pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--111
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--111
+Underfull \hbox (badness 10000) in paragraph at lines 84--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--111
+Underfull \hbox (badness 10000) in paragraph at lines 84--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--111
+Underfull \hbox (badness 10000) in paragraph at lines 84--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--111
+Underfull \hbox (badness 10000) in paragraph at lines 84--111
 
  []
 
-[27 <./img/Plug-Socket-payment_process.pdf
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--111
+
+ []
+
+[23 <./img/Plug-Socket-payment_process.pdf
 
 pdfTeX warning: pdflatex (file ./img/Plug-Socket-payment_process.pdf): PDF incl
 usion: invalid other resource which is no dict (key 'ProcSets', type <array>); 
@@ -1651,7 +1645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--119
 
  []
 
-[28 <./img/Plug-Socket-settlement_process.pdf
+[24 <./img/Plug-Socket-settlement_process.pdf
 
 pdfTeX warning: pdflatex (file ./img/Plug-Socket-settlement_process.pdf): PDF i
 nclusion: invalid other resource which is no dict (key 'ProcSets', type <array>
@@ -1681,7 +1675,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--145
 
  []
 
-[29] [30]
+[25] [26]
 Underfull \hbox (badness 10000) in paragraph at lines 173--192
 
  []
@@ -1691,7 +1685,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--192
 
  []
 
-[31]
+[27]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 192.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
@@ -1704,7 +1698,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--213
 
  []
 
-[32]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 228--236
 
  []
@@ -1719,72 +1713,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--244
 
  []
 
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 283--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 283--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 283--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 283--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 283--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
+Underfull \hbox (badness 10000) in paragraph at lines 283--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--308
-
- []
-
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 309--318
+Underfull \hbox (badness 10000) in paragraph at lines 283--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--332
+Underfull \hbox (badness 10000) in paragraph at lines 283--306
 
  []
 
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 351--356
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--369
-
- []
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 371--179
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 307--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--179
+Underfull \hbox (badness 10000) in paragraph at lines 320--330
 
  []
 
-[36] [37] (./inc/5.conclusion.tex
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 349--354
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--367
+
+ []
+
+[32])
+Underfull \hbox (badness 10000) in paragraph at lines 369--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--179
+
+ []
+
+[33] (./inc/5.conclusion.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--18
 
  []
@@ -1809,9 +1808,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--182
 
  []
 
-[38
+[34
 
-] [39]
+] [35]
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 193.
@@ -1824,38 +1823,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 <img/S20_open.png, id=614, 741.972pt x 572.3784pt>
 File: img/S20_open.png Graphic file (type png)
 <use img/S20_open.png>
-Package pdftex.def Info: img/S20_open.png  used on input line 10.
+Package pdftex.def Info: img/S20_open.png  used on input line 14.
 (pdftex.def)             Requested size: 418.25555pt x 322.65202pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--13
+Underfull \hbox (badness 10000) in paragraph at lines 7--17
 
  []
 
-[40
+[36
 
 
  <./img/S20_open.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 31.
+(caption)                particular \caption on input line 36.
 See the caption package documentation for explanation.
 
 <img/serial_port.png, id=621, 907.9521pt x 728.4816pt>
 File: img/serial_port.png Graphic file (type png)
 <use img/serial_port.png>
-Package pdftex.def Info: img/serial_port.png  used on input line 39.
+Package pdftex.def Info: img/serial_port.png  used on input line 48.
 (pdftex.def)             Requested size: 418.25555pt x 335.58359pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--42
+Underfull \hbox (badness 10000) in paragraph at lines 39--51
 
  []
 
-[41 <./img/serial_port.png>]
-Overfull \hbox (0.36519pt too wide) in paragraph at lines 48--49
+[37 <./img/serial_port.png>]
+Overfull \hbox (0.36519pt too wide) in paragraph at lines 58--59
 []\OT1/cmr/m/n/10.95 Enter []$\OT1/cmtt/m/n/10.95 http : / / arduino . esp8266 
 . com / stable / package _ esp8266com _ index . json$[]
  []
@@ -1863,55 +1862,55 @@ Overfull \hbox (0.36519pt too wide) in paragraph at lines 48--49
 <img/heltec.jpg, id=630, 3082.51625pt x 1795.70876pt>
 File: img/heltec.jpg Graphic file (type jpg)
 <use img/heltec.jpg>
-Package pdftex.def Info: img/heltec.jpg  used on input line 65.
+Package pdftex.def Info: img/heltec.jpg  used on input line 76.
 (pdftex.def)             Requested size: 418.25555pt x 243.64323pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--68
+Underfull \hbox (badness 10000) in paragraph at lines 73--79
 
  []
 
 <img/acs712.jpg, id=632, 3834.325pt x 2271.48625pt>
 File: img/acs712.jpg Graphic file (type jpg)
 <use img/acs712.jpg>
-Package pdftex.def Info: img/acs712.jpg  used on input line 73.
+Package pdftex.def Info: img/acs712.jpg  used on input line 88.
 (pdftex.def)             Requested size: 418.25555pt x 247.75pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--76
+Underfull \hbox (badness 10000) in paragraph at lines 81--91
 
  []
 
-[42 <./img/heltec.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
+[38 <./img/heltec.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 92.
+(caption)                particular \caption on input line 107.
 See the caption package documentation for explanation.
 
-[43 <./img/acs712.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 110--127
+[39 <./img/acs712.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 127--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--147
 
  []
 
@@ -1921,1076 +1920,1076 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 128--132
+Underfull \hbox (badness 10000) in paragraph at lines 148--156
 
  []
 
-[44]
-LaTeX Font Info:    Try loading font information for OML+cmss on input line 163
+[40]
+LaTeX Font Info:    Try loading font information for OML+cmss on input line 192
 .
-LaTeX Font Info:    No file OMLcmss.fd. on input line 163.
+LaTeX Font Info:    No file OMLcmss.fd. on input line 192.
 
 
 LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
 (Font)              using `OML/cmm/m/it' instead
-(Font)              for symbol `textgreater' on input line 163.
+(Font)              for symbol `textgreater' on input line 192.
 
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 179--181
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--188
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 210--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--188
+Underfull \hbox (badness 10000) in paragraph at lines 217--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--188
+Underfull \hbox (badness 10000) in paragraph at lines 217--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
-
- []
-
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 219--222
+Underfull \hbox (badness 10000) in paragraph at lines 217--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--233
+Underfull \hbox (badness 10000) in paragraph at lines 224--226
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 259--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
+Underfull \hbox (badness 10000) in paragraph at lines 265--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
+Underfull \hbox (badness 10000) in paragraph at lines 285--292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
-
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 241--249
-
- []
-
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 278--283
+Underfull \hbox (badness 10000) in paragraph at lines 285--292
 
  []
 
 
-Overfull \hbox (5.09648pt too wide) in paragraph at lines 288--289
+Underfull \hbox (badness 10000) in paragraph at lines 285--292
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 293--303
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 340--345
+
+ []
+
+
+Overfull \hbox (5.09648pt too wide) in paragraph at lines 353--355
 []$\OML/cmm/m/it/10.95 <$\OT1/cmr/m/it/10.95 address payable$\OML/cmm/m/it/10.9
 5 >$\OT1/cmr/m/it/10.95 .transfer(uint256 value)/$\OML/cmm/m/it/10.95 <$\OT1/cm
 r/m/it/10.95 address payable$\OML/cmm/m/it/10.95 >$\OT1/cmr/m/it/10.95 .send(ui
 nt256 value)\OT1/cmr/m/n/10.95 :
  []
 
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 294--303
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 362--371
 
  []
 
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 315--324
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--324
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 391--402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
+Underfull \hbox (badness 10000) in paragraph at lines 391--402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
+Underfull \hbox (badness 10000) in paragraph at lines 408--410
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 332
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--410
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 413
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 332.
+LaTeX Font Info:    No file OMScmss.fd. on input line 413.
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 332.
+(Font)              for symbol `textbraceleft' on input line 413.
 
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 375--381
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--386
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 456--463
 
  []
 
-[52] [53] [54pdfTeX warning (ext4): destination with the same identifier (name{
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--468
+
+ []
+
+[48] [49] [50pdfTeX warning (ext4): destination with the same identifier (name{
 lstnumber.5.\\thelstnumber\040}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.\\thelstnumb
 er\040}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.\\thelstnumb
 er\040}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.\\thelstnumb
 er\040}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.68}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.69}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.70}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.72}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.73}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.75}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.76}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.78}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.79}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.80}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
+l.597     //
              boolean whether the payment channel is currently activepdfTeX warn
 ing (ext4): destination with the same identifier (name{lstnumber.5.81}) has bee
 n already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.515     //
-             boolean whether the payment channel is currently active] [55pdfTeX
+l.597     //
+             boolean whether the payment channel is currently active] [51pdfTeX
  warning (ext4): destination with the same identifier (name{lstnumber.5.83}) ha
 s been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.84}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.85}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.86}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.87}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.88}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.89}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.90}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.91}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.92}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.93}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.95}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.96}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.98}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.99}) has 
 been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.100}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.101}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.102}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.104}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.105}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.106}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.107}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.108}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.110}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.111}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.112}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.113}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.114}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.115}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.116}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.118}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.119}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.120}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.121}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.122}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.123}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.124}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.126}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.127}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.128}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.129}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intializationpdfTeX w
 arning (ext4): destination with the same identifier (name{lstnumber.5.130}) has
  been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.563         //
+l.645         //
                  set the timestamp of the payment channel intialization]
-[56pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.
+[52pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.
 5.131}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.132}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.133}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.134}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.135}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.137}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.138}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.139}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.140}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.141}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.143}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.144}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.145}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.146}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.147}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.148}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.149}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.150}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.151}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.152}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.153}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.154}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.156}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.157}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.159}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.160}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.161}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.162}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.163}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.164}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.165}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.166}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.167}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.168}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.169}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.170}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.172}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.173}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.175}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.176}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.177}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
+l.693         creationTimeStamp 
                                 = 0;pdfTeX warning (ext4): destination with the
  same identifier (name{lstnumber.5.178}) has been already used, duplicate ignor
 ed
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.611         creationTimeStamp 
-                                = 0;] [57pdfTeX warning (ext4): destination wit
+l.693         creationTimeStamp 
+                                = 0;] [53pdfTeX warning (ext4): destination wit
 h the same identifier (name{lstnumber.5.179}) has been already used, duplicate 
 ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.180}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.182}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.183}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.185}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.186}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.187}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.188}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.189}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.190}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.191}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.193}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.194}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.196}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.197}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.199}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.200}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.202}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.203}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.204}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.205}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.206}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.207}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.209}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.210}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.212}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.213}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.214}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.215}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.216}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.218}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.219}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.221}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.222}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.223}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
+l.740             //
                      first 32 bytes of messagepdfTeX warning (ext4): destinatio
 n with the same identifier (name{lstnumber.5.225}) has been already used, dupli
 cate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.658             //
-                     first 32 bytes of message]) [58pdfTeX warning (ext4): dest
+l.740             //
+                     first 32 bytes of message]) [54pdfTeX warning (ext4): dest
 ination with the same identifier (name{lstnumber.5.226}) has been already used,
  duplicate ignored
 
@@ -3229,38 +3228,38 @@ l.199 \newpage
 \tf@lof=\write10
 \openout10 = `doc.lof'.
 
- [59
+ [55
 
 ] (./doc.lot)
 \tf@lot=\write11
 \openout11 = `doc.lot'.
 
- [60
+ [56
 
 ] (./doc.lol)
 \tf@lol=\write12
 \openout12 = `doc.lol'.
 
- [61
+ [57
 
 ] (./doc.nls)
-[62
+[58
 
 ] (./doc.bbl
-Underfull \hbox (badness 2726) in paragraph at lines 52--57
-[]\OT1/cmr/m/n/10.95 BitInfoCharts.  Bit-coin avg. trans-ac-tion fee his-tor-i-
+Underfull \hbox (badness 1708) in paragraph at lines 52--57
+[]\OT1/cmr/m/n/10.95 BitInfoCharts.  Bit-coin Avg. Trans-ac-tion Fee his-tor-i-
 cal chart.  []$\OT1/cmtt/m/n/10.95 https : / /
  []
 
+[59
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 92--98
 \OT1/cmtt/m/n/10.95 2t4uxvsIqk0EUau6g2sw0g / 45eae33637ca92f85dd9f4a3a218e1ec /
  iota1 _ 4 _ 3 .
  []
 
-[63
 
-]
 Underfull \hbox (badness 10000) in paragraph at lines 106--112
 \OT1/cmtt/m/n/10.95 @bnp117 / stress -[] testing -[] the -[] raiblocks -[] netw
 ork -[] part -[] ii -[] def83653b21f$[]\OT1/cmr/m/n/10.95 ,
@@ -3273,8 +3272,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--145
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 147--153
-[]\OT1/cmr/m/n/10.95 Innogy.  Share&charge.  []$\OT1/cmtt/m/n/10.95 https : / /
+Underfull \hbox (badness 1092) in paragraph at lines 147--153
+[]\OT1/cmr/m/n/10.95 Innogy.  Share&Charge.  []$\OT1/cmtt/m/n/10.95 https : / /
  blog . slock . it / blockchain -[] energy -[] p2p -[]
  []
 
@@ -3285,36 +3284,36 @@ harge -[] the -[] future -[] of -[]
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 180--184
-[]\OT1/cmr/m/n/10.95 Ethereum Foun-da-tion.  Con-tract abi spec-i-fi-ca-tion.  
+Underfull \hbox (badness 2401) in paragraph at lines 180--184
+[]\OT1/cmr/m/n/10.95 Ethereum Foun-da-tion.  Con-tract ABI Spec-i-fi-ca-tion.  
 []$\OT1/cmtt/m/n/10.95 https : / / solidity .
  []
 
-[64]
-Underfull \hbox (badness 10000) in paragraph at lines 244--249
-\OT1/cmtt/m/n/10.95 products / development -[] tools / software / usb -[] to -[
-] uart -[] bridge -[] vcp -[] drivers$[]\OT1/cmr/m/n/10.95 .
+[60]
+Underfull \hbox (badness 3219) in paragraph at lines 244--249
+[]\OT1/cmr/m/n/10.95 Silicon Labs.  CP210x USB to UART Bridge VCP Drivers.  []$
+\OT1/cmtt/m/n/10.95 https :
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 263--267
-[]\OT1/cmr/m/n/10.95 Ethereum Foun-da-tion.  Go ethereum.  []$\OT1/cmtt/m/n/10.
+Underfull \hbox (badness 10000) in paragraph at lines 244--249
+\OT1/cmtt/m/n/10.95 / / www . silabs . com / products / development -[] tools /
+ software / usb -[] to -[] uart -[]
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 263--267
+[]\OT1/cmr/m/n/10.95 Ethereum Foun-da-tion.  Go Ethereum.  []$\OT1/cmtt/m/n/10.
 95 https : / / github . com / ethereum / go -[]
  []
 
-[65]
-Underfull \hbox (badness 2990) in paragraph at lines 300--304
-[]\OT1/cmr/m/n/10.95 Ethereum Foun-da-tion.  Javascript ethereum api 1.0.  []$\
+[61]
+Underfull \hbox (badness 1735) in paragraph at lines 300--304
+[]\OT1/cmr/m/n/10.95 Ethereum Foun-da-tion.  JavaScript Ethereum API 1.0.  []$\
 OT1/cmtt/m/n/10.95 https : / / web3js .
  []
 
-
-Underfull \hbox (badness 2318) in paragraph at lines 306--310
-[]\OT1/cmr/m/n/10.95 JSON RPC Google Group.  Json rpc 2.0.  []$\OT1/cmtt/m/n/10
-.95 https : / / www . jsonrpc . org /
- []
-
-) [66]
+) [62]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 245.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 245.
  (./doc.aux)
@@ -3330,8 +3329,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 245.
  ) 
 Here is how much of TeX's memory you used:
  25702 strings out of 492623
- 464284 string characters out of 6129553
- 970680 words of memory out of 5000000
+ 464283 string characters out of 6129553
+ 970724 words of memory out of 5000000
  28428 multiletter control sequences out of 15000+600000
  15645 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3353,10 +3352,10 @@ ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
 e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 /2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2
 019/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on doc.pdf (66 pages, 30644119 bytes).
+Output written on doc.pdf (66 pages, 30642048 bytes).
 PDF statistics:
- 1576 PDF objects out of 1728 (max. 8388607)
- 1404 compressed objects within 15 object streams
+ 1577 PDF objects out of 1728 (max. 8388607)
+ 1405 compressed objects within 15 object streams
  617 named destinations out of 1000 (max. 500000)
  454 words of extra memory for PDF output out of 10000 (max. 10000000)
 

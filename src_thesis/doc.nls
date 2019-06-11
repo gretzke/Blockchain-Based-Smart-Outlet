@@ -1,18 +1,18 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
-  \item [{Elliptic Curve Digital Signature Algorithm}]\begingroup ECDSA \nomrefpage \nomeqref {2.0}\nompageref{8}
-  \item [{Ether}]\begingroup ETH \nomrefpage \nomeqref {2.0}\nompageref{12}
-  \item [{Ethereum Virtual Machine}]\begingroup EVM \nomrefpage \nomeqref {2.0}\nompageref{11}
-  \item [{externally owned account}]\begingroup EOA \nomrefpage \nomeqref {2.0}\nompageref{11}
-  \item [{machine to machine}]\begingroup M2M \nomrefpage \nomeqref {1.0}\nompageref{7}
-  \item [{number used once}]\begingroup nonce \nomrefpage \nomeqref {2.0}\nompageref{10}
-  \item [{peer to peer}]\begingroup P2P \nomrefpage \nomeqref {1.0}\nompageref{6}
-  \item [{power-line communication}]\begingroup PLC \nomrefpage \nomeqref {3.0}\nompageref{20}
-  \item [{Proof of Authority}]\begingroup PoA \nomrefpage \nomeqref {4.0}\nompageref{30}
-  \item [{Proof of Work}]\begingroup PoW \nomrefpage \nomeqref {2.0}\nompageref{10}
-  \item [{Recursive Length Prefix}]\begingroup RLP \nomrefpage \nomeqref {4.0}\nompageref{31}
-  \item [{transactions per second}]\begingroup TPS \nomrefpage \nomeqref {1.0}\nompageref{6}
-  \item [{Virtual Private Server}]\begingroup VPS \nomrefpage \nomeqref {6.0}\nompageref{44}
+  \item [{Elliptic Curve Digital Signature Algorithm}]\begingroup ECDSA \nomrefpage \nomeqref {2.0}\nompageref{4}
+  \item [{Ether}]\begingroup ETH \nomrefpage \nomeqref {2.0}\nompageref{8}
+  \item [{Ethereum Virtual Machine}]\begingroup EVM \nomrefpage \nomeqref {2.0}\nompageref{7}
+  \item [{externally owned account}]\begingroup EOA \nomrefpage \nomeqref {2.0}\nompageref{7}
+  \item [{machine to machine}]\begingroup M2M \nomrefpage \nomeqref {1.0}\nompageref{3}
+  \item [{number used once}]\begingroup nonce \nomrefpage \nomeqref {2.0}\nompageref{6}
+  \item [{peer to peer}]\begingroup P2P \nomrefpage \nomeqref {1.0}\nompageref{2}
+  \item [{power-line communication}]\begingroup PLC \nomrefpage \nomeqref {3.0}\nompageref{16}
+  \item [{Proof of Authority}]\begingroup PoA \nomrefpage \nomeqref {4.0}\nompageref{26}
+  \item [{Proof of Work}]\begingroup PoW \nomrefpage \nomeqref {2.0}\nompageref{6}
+  \item [{Recursive Length Prefix}]\begingroup RLP \nomrefpage \nomeqref {4.0}\nompageref{27}
+  \item [{transactions per second}]\begingroup TPS \nomrefpage \nomeqref {1.0}\nompageref{2}
+  \item [{Virtual Private Server}]\begingroup VPS \nomrefpage \nomeqref {6.0}\nompageref{40}
 
 \end{thenomenclature}

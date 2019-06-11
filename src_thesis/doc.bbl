@@ -2,62 +2,62 @@
 
 \bibitem{ethereum-fee}
 ETH~Gas Station.
-\newblock Fees.
+\newblock {Fees}.
 \newblock \url{https://ethgasstation.info/}, 2019.
 \newblock [Online; accessed 2019-05-06].
 
 \bibitem{bitcoinTPS}
 blockchain.com.
-\newblock 7 day average chart.
+\newblock {7 day average chart}.
 \newblock
   \url{https://www.blockchain.com/de/charts/transactions-per-second?daysAverageString=7}.
 \newblock [Online; accessed: 2019-05-06].
 
 \bibitem{visa}
 Visa.
-\newblock Annual report 2018.
+\newblock {Annual Report 2018}.
 \newblock
   \url{https://s1.q4cdn.com/050606653/files/doc_financials/annual/2018/Visa-2018-Annual-Report-FINAL.pdf}.
 \newblock [Online; accessed: 2019-01-05].
 
 \bibitem{hash}
 Shrimpton~T. Rogaway~P.
-\newblock Cryptographic hash-function basics: Definitions, implications, and
-  separations for preimage resistance, second-preimage resistance, and
-  collision resistance.
+\newblock {Cryptographic Hash-Function Basics: Definitions, Implications, and
+  Separations for Preimage Resistance, Second-Preimage Resistance, and
+  Collision Resistance.}
 \newblock {\em Roy B., Meier W. (eds) Fast Software Encryption. FSE 2004.
   Lecture Notes in Computer Science, vol 3017. Springer, Berlin, Heidelberg},
   (2004).
 
 \bibitem{bitcoin-whitepaper}
 Satoshi Nakamoto.
-\newblock Bitcoin white paper.
+\newblock {Bitcoin white paper}.
 \newblock \url{https://bitcoin.org/bitcoin.pdf}, 2008.
 \newblock [Online; accessed 2019-05-06].
 
 \bibitem{ethereum-yellow-paper}
 Dr.~Gavin Wood.
-\newblock Ethereum yellow paper.
+\newblock {Ethereum yellow paper}.
 \newblock \url{https://ethereum.github.io/yellowpaper/paper.pdf}, 2019.
 \newblock [Online; accessed 2019-05-06].
 
 \bibitem{public-key-cryptography}
 Scott~Vansto Don~Johnson, Alfred~Menezes.
-\newblock The elliptic curve digital signature algorithm (ecdsa).
+\newblock {The Elliptic Curve Digital Signature Algorithm (ECDSA)}.
 \newblock
   \url{https://web.archive.org/web/20170921160141/http://cs.ucsb.edu/~koc/ccs130h/notes/ecdsa-cert.pdf}.
 \newblock [Online; accessed 2019-05-06].
 
 \bibitem{btc-fees}
 BitInfoCharts.
-\newblock Bitcoin avg. transaction fee historical chart.
+\newblock {Bitcoin Avg. Transaction Fee historical chart}.
 \newblock
   \url{https://bitinfocharts.com/comparison/bitcoin-transactionfees.html}.
 \newblock [Online; accessed: 2019-06-01].
 
 \bibitem{ethereum-blocktime}
 Vitalik Buterin.
-\newblock Toward a 12-second block time.
+\newblock {Toward a 12-second Block Time}.
 \newblock
   \url{https://blog.ethereum.org/2014/07/11/toward-a-12-second-block-time/},
   2014.
@@ -65,32 +65,32 @@ Vitalik Buterin.
 
 \bibitem{ethereum-blocktime-chart}
 etherscan.io.
-\newblock Ethereum average block time chart.
+\newblock {Ethereum Average Block Time Chart}.
 \newblock \url{https://etherscan.io/chart/blocktime}, 2019.
 \newblock [Online; accessed 2019-05-06].
 
 \bibitem{paypal-fees}
 Paypal.
-\newblock Fees for micro transactions.
+\newblock {Fees for micro transactions}.
 \newblock \url{https://www.paypal.com/de/webapps/mpp/paypal-fees}, 2019.
 \newblock [Online; accessed 2019-05-06].
 
 \bibitem{coincap}
 Coincap.
-\newblock Cryptocurrency list.
+\newblock {Cryptocurrency List}.
 \newblock \url{https://coincap.io/}.
 \newblock [Online; accessed: 2019-06-01].
 
 \bibitem{btc-conf-time}
 blockchain.com.
-\newblock Average confirmation time.
+\newblock {Average Confirmation Time}.
 \newblock
   \url{https://www.blockchain.com/en/charts/avg-confirmation-time?timespan=all&daysAverageString=7}.
 \newblock [Online; accessed: 2019-05-12].
 
 \bibitem{tangle}
 Serguei Popov.
-\newblock The tangle.
+\newblock {The Tangle}.
 \newblock
   \url{https://assets.ctfassets.net/r1dr6vzfxhev/2t4uxvsIqk0EUau6g2sw0g/45eae33637ca92f85dd9f4a3a218e1ec/iota1_4_3.pdf},
   2018.
@@ -98,13 +98,13 @@ Serguei Popov.
 
 \bibitem{iota-time}
 The~Tangle Monitor.
-\newblock Average confirmation time.
+\newblock {Average Confirmation Time}.
 \newblock \url{https://tanglemonitor.com/}, 2019.
 \newblock [Online; accessed 2019-05-06].
 
 \bibitem{nano-stress-test}
 Brian Pugh.
-\newblock Stress testing the raiblocks network: Part ii.
+\newblock {Stress Testing The RaiBlocks Network: Part II}.
 \newblock
   \url{https://medium.com/@bnp117/stress-testing-the-raiblocks-network-part-ii-def83653b21f},
   2018.
@@ -112,40 +112,40 @@ Brian Pugh.
 
 \bibitem{nano-confirmation-time}
 Repnode.org.
-\newblock Block propagation and confirmation times.
+\newblock {Block Propagation and Confirmation Times}.
 \newblock \url{https://repnode.org/network/propagation-confirmation}, 2019.
 \newblock [Online; accessed: 2019-02-22, 14:54].
 
 \bibitem{nano-white-paper}
 Colin LeMahieu.
-\newblock Nano: A feeless distributed cryptocurrency network.
+\newblock {Nano: A Feeless Distributed Cryptocurrency Network}.
 \newblock \url{https://nano.org/en/whitepaper}.
 \newblock [Online; accessed 2019-05-06].
 
 \bibitem{dao-hack}
 Etherchain.
-\newblock Account of dao hacker.
+\newblock {Account of DAO Hacker}.
 \newblock
   \url{https://www.etherchain.org/account/0x304a554a310c7e546dfe434669c62820b7d83490#history}.
 \newblock [Online; accessed: 2019-06-05].
 
 \bibitem{car-wallet}
 accessec GmbH.
-\newblock Car wallet.
+\newblock {Car Wallet}.
 \newblock
   \url{https://accessec.com/car-wallet/?fbclid=IwAR0bbgAra62V6FNWt_Ani5zi6v3xK4CXyNqefIPNH0ukJYZ-k3qdgUMffGQ}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{bosch-dlt}
 Bosch Presse.
-\newblock Dlt restores trust in the internet.
+\newblock {DLT restores trust in the internet}.
 \newblock
   \url{https://www.bosch-presse.de/pressportal/de/en/dlt-restores-trust-in-the-internet-189824.html}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{share-charge}
 Innogy.
-\newblock Share\&charge.
+\newblock {Share\&Charge}.
 \newblock
   \url{https://blog.slock.it/blockchain-energy-p2p-sharing-project-share-charge-going-into-live-beta-ad4e069e79d},
   \url{https://shareandcharge.com/}.
@@ -153,207 +153,207 @@ Innogy.
 
 \bibitem{blockcharge}
 Innogy.
-\newblock Blockcharge.
+\newblock {BlockCharge}.
 \newblock \url{https://www.youtube.com/watch?v=0A0LqJ9oYNg}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{innogy}
 Innogy.
-\newblock Share\&charge: the future of charging.
+\newblock {Share\&Charge: the future of charging}.
 \newblock
   \url{https://innovationhub.innogy.com/news-event/1AStXhfTXmG6EKSSQUm6mQ/share-charge-the-future-of-charging}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{share-charge-closed}
 Share\&Charge.
-\newblock Blogpost regarding closure.
+\newblock {Blogpost regarding closure}.
 \newblock \url{http://snc-wordpress.hidora.com/information-for-users/}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{state-channels}
 Ethereum Foundation.
-\newblock State channel research.
+\newblock {State Channel Research}.
 \newblock \url{https://ethresear.ch/c/state-channels}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{abi-encoding}
 Ethereum Foundation.
-\newblock Contract abi specification.
+\newblock {Contract ABI Specification}.
 \newblock \url{https://solidity.readthedocs.io/en/v0.5.8/abi-spec.html}.
 \newblock [Online; accessed: 2019-06-05].
 
 \bibitem{design-rationale}
 Ethereum Foundation.
-\newblock Design rationale.
+\newblock {Design Rationale}.
 \newblock \url{https://github.com/ethereum/wiki/wiki/Design-Rationale}.
 \newblock [Online; accessed: 2019-05-19].
 
 \bibitem{eip-155}
 Ethereum Foundation.
-\newblock Eip 155.
+\newblock {EIP 155}.
 \newblock \url{https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md}.
 \newblock [Online; accessed: 2019-05-19].
 
 \bibitem{rlp-lib}
 Takahiro Okada.
-\newblock Rlp c++ implementation.
+\newblock {RLP C++ implementation}.
 \newblock
   \url{https://github.com/kopanitsa/web3-arduino/blob/master/src/Util.cpp}.
 \newblock [Online; accessed: 2019-05-21].
 
 \bibitem{packed-spec}
 Ethereum Foundation.
-\newblock Packed encoding.
+\newblock {Packed Encoding}.
 \newblock
   \url{https://solidity.readthedocs.io/en/v0.4.24/abi-spec.html#abi-packed-mode}.
 \newblock [Online; accessed: 2019-05-21].
 
 \bibitem{prefix}
 Ethereum Foundation.
-\newblock Signature prefix.
+\newblock {Signature prefix}.
 \newblock \url{https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{micro-ecc}
 Kenneth MacKay.
-\newblock micro-ecc.
+\newblock {micro-ecc}.
 \newblock \url{https://github.com/kmackay/micro-ecc}.
 \newblock [Online; accessed: 2019-01-15].
 
 \bibitem{best-practice}
 Consensys.
-\newblock Smart contract best practices.
+\newblock {Smart Contract Best Practices}.
 \newblock
   \url{https://consensys.github.io/smart-contract-best-practices/recommendations/}.
 \newblock [Online; accessed: 2019-06-05].
 
 \bibitem{eth-2}
 Ethereum Foundation.
-\newblock Ethereum 2.0.
+\newblock {Ethereum 2.0}.
 \newblock
   \url{https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/}.
 \newblock [Online; accessed: 2019-05-23].
 
 \bibitem{acs712}
 Allegro~MicroSystems Inc.
-\newblock Fully integrated, hall effect-based linear current sensor.
+\newblock {Fully Integrated, Hall Effect-Based Linear Current Sensor}.
 \newblock \url{https://www.sparkfun.com/datasheets/BreakoutBoards/0712.pdf}.
 \newblock [Online; accessed: 2019-05-11].
 
 \bibitem{vcp-drivers}
 Silicon Labs.
-\newblock Cp210x usb to uart bridge vcp drivers.
+\newblock {CP210x USB to UART Bridge VCP Drivers}.
 \newblock
   \url{https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers}.
 \newblock [Online; accessed: 2019-05-12].
 
 \bibitem{websockets}
 Links2004.
-\newblock Websocket server and client for arduino.
+\newblock {WebSocket Server and Client for Arduino}.
 \newblock \url{https://github.com/Links2004/arduinoWebSockets}.
 \newblock [Online; accessed: 2019-05-12].
 
 \bibitem{keccak-source}
 Aleksey Kravchenko.
-\newblock Keccak-256 c implementation.
+\newblock {Keccak-256 C implementation}.
 \newblock \url{https://github.com/firefly/wallet}.
 \newblock [Online; accessed: 2019-05-21].
 
 \bibitem{geth}
 Ethereum Foundation.
-\newblock Go ethereum.
+\newblock {Go Ethereum}.
 \newblock \url{https://github.com/ethereum/go-ethereum}.
 \newblock [Online; accessed: 2019-05-11].
 
 \bibitem{geth-instructions}
 Ethereum Foundation.
-\newblock Installing geth.
+\newblock {Installing Geth}.
 \newblock \url{https://github.com/ethereum/go-ethereum/wiki/Installing-Geth}.
 \newblock [Online; accessed: 2019-05-12].
 
 \bibitem{cli-options}
 Ethereum Foundation.
-\newblock Command line options.
+\newblock {Command Line Options}.
 \newblock
   \url{https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options}.
 \newblock [Online; accessed: 2019-05-12].
 
 \bibitem{json-rpc}
 Ethereum Foundation.
-\newblock Json rpc api.
+\newblock {JSON RPC API}.
 \newblock \url{https://github.com/ethereum/wiki/wiki/JSON-RPC}.
 \newblock [Online; accessed: 2019-05-12].
 
 \bibitem{management-apis}
 Ethereum Foundation.
-\newblock Management apis.
+\newblock {Management APIs}.
 \newblock \url{https://github.com/ethereum/go-ethereum/wiki/Management-APIs}.
 \newblock [Online; accessed: 2019-05-13].
 
 \bibitem{javascript-0.20}
 Ethereum Foundation.
-\newblock Javascript ethereum api 0.2x.x.
+\newblock {JavaScript Ethereum {API} 0.2x.x}.
 \newblock \url{https://github.com/ethereum/wiki/wiki/JavaScript-API}.
 \newblock [Online; accessed: 2019-05-13].
 
 \bibitem{javascript-1.0}
 Ethereum Foundation.
-\newblock Javascript ethereum api 1.0.
+\newblock {JavaScript Ethereum API 1.0}.
 \newblock \url{https://web3js.readthedocs.io/en/1.0/}.
 \newblock [Online; accessed: 2019-05-13].
 
 \bibitem{json-rpc-spec}
 JSON RPC~Google Group.
-\newblock Json rpc 2.0.
+\newblock {JSON RPC 2.0}.
 \newblock \url{https://www.jsonrpc.org/specification}.
 \newblock [Online; accessed: 2019-05-19].
 
 \bibitem{metamask}
 Metamask.
-\newblock Wallet browser extension.
+\newblock {Wallet browser extension}.
 \newblock \url{https://metamask.io/}.
 \newblock [Online; accessed: 2019-05-13].
 
 \bibitem{bip39}
 Bitcoin.
-\newblock Bip39 mnemonic phrases.
+\newblock {BIP39 Mnemonic phrases}.
 \newblock \url{https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki}.
 \newblock [Online; accessed: 2019-05-13].
 
 \bibitem{bip44}
 Bitcoin.
-\newblock Private key derivation.
+\newblock {Private key derivation}.
 \newblock \url{https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki}.
 \newblock [Online; accessed: 2019-05-13].
 
 \bibitem{doc-oriented}
 Ethereum Foundation.
-\newblock The solidity contract-oriented programming language.
+\newblock {The Solidity Contract-Oriented Programming Language}.
 \newblock \url{https://solidity.readthedocs.io/en/v0.1.5/README.html}.
 \newblock [Online; accessed: 2019-05-14].
 
 \bibitem{doc-types}
 Ethereum Foundation.
-\newblock Types.
+\newblock {Types}.
 \newblock \url{https://solidity.readthedocs.io/en/v0.5.3/types.html}.
 \newblock [Online; accessed: 2019-05-16].
 
 \bibitem{doc-pragma}
 Ethereum Foundation.
-\newblock Layout of a solidity source file.
+\newblock {Layout of a Solidity Source File}.
 \newblock
   \url{https://solidity.readthedocs.io/en/v0.5.8/layout-of-source-files.html}.
 \newblock [Online; accessed: 2019-05-14].
 
 \bibitem{doc-constructor}
 Ethereum Foundation.
-\newblock Constructor.
+\newblock {Constructor}.
 \newblock \url{https://solidity.readthedocs.io/en/v0.5.8/contracts.html}.
 \newblock [Online; accessed: 2019-05-15].
 
 \bibitem{doc-modifiers}
 Ethereum Foundation.
-\newblock Modifiers.
+\newblock {Modifiers}.
 \newblock
   \url{https://solidity.readthedocs.io/en/v0.5.8/miscellaneous.html#function-visibility-specifiers}.
 \newblock [Online; accessed: 2019-05-15].

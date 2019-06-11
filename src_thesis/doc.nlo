@@ -1,13 +1,13 @@
-\nomenclatureentry{apeer to peer@[{peer to peer}]\begingroup P2P \nomrefpage \nomeqref {1.0}|nompageref}{6}
-\nomenclatureentry{atransactions per second@[{transactions per second}]\begingroup TPS \nomrefpage \nomeqref {1.0}|nompageref}{6}
-\nomenclatureentry{amachine to machine@[{machine to machine}]\begingroup M2M \nomrefpage \nomeqref {1.0}|nompageref}{7}
-\nomenclatureentry{aElliptic Curve Digital Signature Algorithm@[{Elliptic Curve Digital Signature Algorithm}]\begingroup ECDSA \nomrefpage \nomeqref {2.0}|nompageref}{8}
-\nomenclatureentry{aProof of Work@[{Proof of Work}]\begingroup PoW \nomrefpage \nomeqref {2.0}|nompageref}{10}
-\nomenclatureentry{anumber used once@[{number used once}]\begingroup nonce \nomrefpage \nomeqref {2.0}|nompageref}{10}
-\nomenclatureentry{aEthereum Virtual Machine@[{Ethereum Virtual Machine}]\begingroup EVM \nomrefpage \nomeqref {2.0}|nompageref}{11}
-\nomenclatureentry{aexternally owned account@[{externally owned account}]\begingroup EOA \nomrefpage \nomeqref {2.0}|nompageref}{11}
-\nomenclatureentry{aEther@[{Ether}]\begingroup ETH \nomrefpage \nomeqref {2.0}|nompageref}{12}
-\nomenclatureentry{apower-line communication@[{power-line communication}]\begingroup PLC \nomrefpage \nomeqref {3.0}|nompageref}{20}
-\nomenclatureentry{aProof of Authority@[{Proof of Authority}]\begingroup PoA \nomrefpage \nomeqref {4.0}|nompageref}{30}
-\nomenclatureentry{aRecursive Length Prefix@[{Recursive Length Prefix}]\begingroup RLP \nomrefpage \nomeqref {4.0}|nompageref}{31}
-\nomenclatureentry{aVirtual Private Server@[{Virtual Private Server}]\begingroup VPS \nomrefpage \nomeqref {6.0}|nompageref}{44}
+\nomenclatureentry{apeer to peer@[{peer to peer}]\begingroup P2P \nomrefpage \nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{atransactions per second@[{transactions per second}]\begingroup TPS \nomrefpage \nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{amachine to machine@[{machine to machine}]\begingroup M2M \nomrefpage \nomeqref {1.0}|nompageref}{3}
+\nomenclatureentry{aElliptic Curve Digital Signature Algorithm@[{Elliptic Curve Digital Signature Algorithm}]\begingroup ECDSA \nomrefpage \nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{aProof of Work@[{Proof of Work}]\begingroup PoW \nomrefpage \nomeqref {2.0}|nompageref}{6}
+\nomenclatureentry{anumber used once@[{number used once}]\begingroup nonce \nomrefpage \nomeqref {2.0}|nompageref}{6}
+\nomenclatureentry{aEthereum Virtual Machine@[{Ethereum Virtual Machine}]\begingroup EVM \nomrefpage \nomeqref {2.0}|nompageref}{7}
+\nomenclatureentry{aexternally owned account@[{externally owned account}]\begingroup EOA \nomrefpage \nomeqref {2.0}|nompageref}{7}
+\nomenclatureentry{aEther@[{Ether}]\begingroup ETH \nomrefpage \nomeqref {2.0}|nompageref}{8}
+\nomenclatureentry{apower-line communication@[{power-line communication}]\begingroup PLC \nomrefpage \nomeqref {3.0}|nompageref}{16}
+\nomenclatureentry{aProof of Authority@[{Proof of Authority}]\begingroup PoA \nomrefpage \nomeqref {4.0}|nompageref}{26}
+\nomenclatureentry{aRecursive Length Prefix@[{Recursive Length Prefix}]\begingroup RLP \nomrefpage \nomeqref {4.0}|nompageref}{27}
+\nomenclatureentry{aVirtual Private Server@[{Virtual Private Server}]\begingroup VPS \nomrefpage \nomeqref {6.0}|nompageref}{40}

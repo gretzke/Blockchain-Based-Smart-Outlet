@@ -4,9 +4,9 @@ Most explanations will be kept superficial, as only a broad understanding of the
 \\\\
 
 \textbf{Cryptocurrency}\\
-Traditional, so-called fiat currencies like the Euro or US Dollar, have been around for hundreds of years in form of coins or paper money.
+Traditional, so-called fiat currencies like the Euro or US Dollar have been around for hundreds of years in form of coins or paper money.
 They are usually issued and regulated by a government.
-With the internet a new form of currencies, the so-called cryptocurrencies emerged.
+With the rise of the internet, a new form of currencies, the so-called cryptocurrencies emerged.
 They are digital currencies that are usually decentralized, meaning they work without a central authority controlling and regulating the flow of monetary value.
 The rightfulness of transactions is ensured by mathematical functions like digital signatures and often a technology called the blockchain.
 \\\\
@@ -16,8 +16,8 @@ In cryptocurrencies, hashes are used to verify data.
 The cryptographic hash function is a mathematical function that usually fulfills the following requirements\cite{hash}:
 \begin{enumerate}
     \item \textit{Determinism}: the same input always produces the same output
-    \item \textit{Preimage resistance}: it's nearly impossible to get the input from the output
-    \item \textit{Second-preimage resistance}: it's nearly impossible to find a second input that produces the same output as the first input
+    \item \textit{Preimage resistance}: it is nearly impossible to get the input from the output
+    \item \textit{Second-preimage resistance}: it is nearly impossible to find a second input that produces the same output as the first input
 \end{enumerate}
 The output of this function is called hash.
 Bitcoin uses the SHA-256\cite{bitcoin-whitepaper}, Ethereum uses the Keccak-256\cite{ethereum-yellow-paper} hashing algorithm which produces an output hash with a length of 32 bytes.
@@ -25,7 +25,7 @@ Bitcoin uses the SHA-256\cite{bitcoin-whitepaper}, Ethereum uses the Keccak-256\
 
 \textbf{Public Key Cryptography}\\
 Public key cryptography\cite{public-key-cryptography} is the backbone of the blockchain technology and consists of a key pair – a private and a public key.
-As the name suggests the private key needs to be secret and the public key can be shared with anyone.
+The private key needs to be secret and the public key can be shared with anyone.
 A message can be signed using the private key resulting in a signature.
 This signature can then be verified using the public key to prove that the message was, in fact, signed by the corresponding private key.
 Bitcoin and Ethereum use the \abbr{Elliptic Curve Digital Signature Algorithm}{ECDSA} for signatures.
@@ -34,12 +34,12 @@ They are used to prove that transactions were indeed sent by a specific account 
 
 \textbf{Wallet}\\
 Everything that is needed to send and/or receive cryptocurrencies is a private key\cite{bitcoin-whitepaper}, which is a wallet in its simplest form.
-More complex forms of a wallet encrypt a private private key with a password or store it on a dedicated hardware device.
+More complex forms of a wallet encrypt a private key with a password or store it on a dedicated hardware device.
 \\\\
 
 \textbf{Address}\\
 An address is used to identify participants on the blockchain.
-Usually it's derived from a public key belonging to the private key of an account, e.g. Ethereum uses the 20 least significant bytes of the Keccak-256 hash of the public key as the address\cite{ethereum-yellow-paper}.
+Usually, it is derived from a public key belonging to the private key of an account, e.g., Ethereum uses the 20 least significant bytes of the Keccak-256 hash of the public key as the address\cite{ethereum-yellow-paper}.
 \\\\
 
 \textbf{Ledger}\\
@@ -49,18 +49,18 @@ Every participant of the network has a copy of this ledger.
 
 \textbf{Node}\\
 A node is a participant on the blockchain.
-When a new node joins the network, it downloads the ledger, currently accepted by the majority.
+When a new node joins the network, it downloads the ledger currently accepted by the majority.
 A so-called full node has the entire history of the ledger – from the first block to the latest.
 \\\\
 
 \textbf{Transaction}\\
-A transaction updates the ledger, e.g. reducing the balance of an address by a specific amount and adding it to the balance of another account.
+A transaction updates the ledger, e.g., reducing the balance of an address by a specific amount and adding it to the balance of another account.
 \\\\
 
 \textbf{Blockchain}\\
 A list of transactions is bundled together into a block.
 Also included in this block is the hash of the previous block, which contains the hash of the previous block and so on.
-This creates a chain of blocks\cite{bitcoin-whitepaper} which always point to their predecessor as demonstrated in figure \ref{fig:blockchain}, thus the name blockchain.
+This creates a chain of blocks\cite{bitcoin-whitepaper} which always point to their predecessor as demonstrated in Figure \ref{fig:blockchain}, thus the name blockchain.
 This is also the reason why a blockchain is considered immutable: modifying any information in a block would automatically change the hashes of every block after it and would be rejected by the network.
 \newpage
 \begin{figure}[H]
@@ -76,9 +76,9 @@ A miner is a participant on the network whose task it is to secure the network t
 \\\\
 
 \textbf{Fees}\\
-For most cryptocurrencies a fee has to be paid with every transaction.
+For most cryptocurrencies, a fee has to be paid with every transaction.
 These go to the miner as a reward for including a transaction in a block.
-Additionally they prevent an attacker from spamming the network with transactions.
+Additionally, they prevent an attacker from spamming the network with transactions.
 In contrast to traditional payment methods, which usually have a variable fee based on the total transaction value, cryptocurrencies have a fixed fee.
 Miners can freely choose which transactions they want to include in a block, therefore the more a user is willing to pay, the higher the chance, that the transaction will be included in the next block.
 Fees differ from cryptocurrency to cryptocurrency and can be as low as a fraction of a cent, but also went up to 55\$ for a single transaction on average\cite{btc-fees} for Bitcoin once, when the network couldn't scale to handle all transactions.
@@ -96,8 +96,8 @@ The fastest submission gets a so-called block reward, a reward minted by the pro
 
 \textbf{Block Time}\\
 The time it takes to add a new block to the network is called block time.
-On the Bitcoin network the block time is 10 minutes\cite{bitcoin-whitepaper}.
-Ethereum wants to archive a block time of 12 seconds\cite{ethereum-blocktime}, realistically it's averaging at about 15 seconds\cite{ethereum-blocktime-chart}.
+On the Bitcoin network, the block time is 10 minutes\cite{bitcoin-whitepaper}.
+Ethereum wants to archive a block time of 12 seconds\cite{ethereum-blocktime}, realistically it is averaging at about 15 seconds\cite{ethereum-blocktime-chart}.
 The difficulty is adjusted automatically to keep the block time roughly the same, no matter how much computing power is currently mining.
 \\\\
 
@@ -130,7 +130,7 @@ An EOA is controlled by a private key, whereas a contract account has code and s
 \newpage
 
 \textbf{Off-chain Transactions / Payment Channels}\\
-For every transaction on the blockchain fees have to be paid.
+For every transaction on the blockchain, fees have to be paid.
 One way to save transaction fees is to have multiple transactions that are not recorded on the blockchain.
 They are called off-chain transactions and are settled on the blockchain, once the payment process is finished.
 \\\\

@@ -6,23 +6,23 @@ This worked out concept was successfully implemented on embedded devices.
 An underlying payment system was developed to enable fast and secure transfers of monetary value between two participants.
 The system uses the Ethereum blockchain to initialize and settle a payment channel, which enables instant and feeless transactions which can be sent from one party to another.
 The transactions are secured through digital signatures and the smart contract acts as a trustee managing the monetary value while protecting both parties from fraud and minimizing the risk of theft dramatically.
-The payment system enables a true P2P market, allowing everyone to become an charging station provider and to securely sell electricity to electric car owners.
+The payment system enables a true P2P market, allowing everyone to become a charging station provider and to securely sell electricity to electric car owners.
 As there is no need for a third party as a middleman that oversees the transaction, the total transaction fees for a charging process of any length and value should average at less than 0.10 \euro{} at the time of writing.
-This bachelor's thesis can not only be used for this specific concept, but many different P2P business models can be developed using the payment channel as a base as well.
+This bachelor thesis can not only be used for this specific concept, but many different P2P business models can be developed using the payment channel as a base as well.
 \\\\
 This implementation is most likely the first implementation of a payment channel on an embedded platform, as far as research went.
-For Ethereum specific functionalities, e.g. signatures and encoding that were especially created for the blockchain technology, libraries exist in high level programming languages, but had to be implemented on embedded devices for this purpose.
-Additionally many computational steps and memory allocation had to be optimized to make the payment system work on microcontrollers.
-This means that the code that was written for this bachelor's thesis can be used in the future not only for payment channels, but as the groundwork for basically any communication between an embedded device and the Ethereum blockchain and smart contracts.
+For Ethereum specific functionalities, e.g., signatures and encoding that were especially created for the blockchain technology, libraries exist in high level programming languages, but had to be implemented on embedded devices for this purpose.
+Additionally, many computational steps and memory allocation had to be optimized to make the payment system work on microcontrollers.
+This means that the code that was written for this bachelor thesis can be used in the future not only for payment channels, but as the groundwork for basically any communication between an embedded device and the Ethereum blockchain and smart contracts.
 \\\\
 \subsection{Outlook}
-As cryptocurrencies are still in their infancies, most of the development is still ahead and nobody can imagine what they will look like in 10 years, similarly when the internet was in its infancy, no-one even imagined that something like Facebook could even exist.
+As cryptocurrencies are still in their infancies, most of the development is still ahead and nobody can imagine what they will look like in 10 years, similarly when the internet was in its infancy, no-one imagined that something like Facebook could even exist.
 The technology will scale to process more transactions at even lower fees and will be steadily integrated more and more into our daily lives.
-For example in its latest flagship, the Galaxy S10, Samsung included an Ethereum and Bitcoin wallet, meaning that millions of people are now able to transact with cryptocurrencies securely without any big entry barriers.
+For example, in its latest flagship, the Galaxy S10, Samsung included an Ethereum and Bitcoin wallet, meaning that millions of people are now able to transact with cryptocurrencies securely without any big entry barriers.
 \\\\
-Eventually the price of cryptocurrencies will stabilize, but until that happens, some suggestions for future work that can build upon this thesis are proposed.
-Currently the microcontrollers are communicating with each other over a WiFi connection and WebSockets and the plug has to be powered separately to function.
-An implementation that would improve upon this, would have the socket and the plug communicate over PLC, i.e. over the electricity that is transmitted.
+Eventually, the price of cryptocurrencies will stabilize, but until that happens, some suggestions for future work that can build upon this thesis are proposed.
+Currently, the microcontrollers are communicating with each other over a WiFi connection and WebSockets and the plug has to be powered separately to function.
+An implementation that would improve upon this, would have the socket and the plug communicate over PLC, i.e., over the electricity that is transmitted.
 Before the actual electricity delivery, the socket could limit the output so that the microcontroller of the plug can be powered and communicated with, without the need for an external energy source.
 Another interesting topic would be to implement the payment system with other cryptocurrencies, such as IOTA or Nano to analyze the key strengths and weaknesses of the different payment methods.
 As fast as the crypto-ecosystem develops, there could be new cryptocurrencies in a few months that couldn’t even be considered during this thesis.

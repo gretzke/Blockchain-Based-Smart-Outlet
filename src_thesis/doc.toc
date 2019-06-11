@@ -1,34 +1,34 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Introduction}{6}{section.1}% 
-\contentsline {section}{\numberline {2}Theory}{8}{section.2}% 
-\contentsline {section}{\numberline {3}Concept}{13}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Definition of Prerequisites}{13}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Analysis of Different Payment Methods}{14}{subsection.3.2}% 
-\contentsline {subsubsection}{\numberline {3.2.1}Traditional Currency}{14}{subsubsection.3.2.1}% 
-\contentsline {subsubsection}{\numberline {3.2.2}Cryptocurrency}{14}{subsubsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.3}Component Requirements}{19}{subsection.3.3}% 
-\contentsline {subsection}{\numberline {3.4}Risks \& Concerns}{21}{subsection.3.4}% 
-\contentsline {subsection}{\numberline {3.5}State of the Art}{22}{subsection.3.5}% 
-\contentsline {section}{\numberline {4}Implementation}{23}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}State Machine}{23}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Transactions}{29}{subsection.4.2}% 
-\contentsline {subsection}{\numberline {4.3}Smart Contract}{35}{subsection.4.3}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Best practices}{37}{subsubsection.4.3.1}% 
-\contentsline {section}{\numberline {5}Conclusion}{38}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Outlook}{38}{subsection.5.1}% 
-\contentsline {section}{\numberline {6}Appendix}{40}{section.6}% 
-\contentsline {subsection}{\numberline {6.1}Setup Instructions}{40}{subsection.6.1}% 
-\contentsline {subsubsection}{\numberline {6.1.1}Socket}{40}{subsubsection.6.1.1}% 
-\contentsline {subsubsection}{\numberline {6.1.2}Plug}{42}{subsubsection.6.1.2}% 
-\contentsline {subsubsection}{\numberline {6.1.3}Libraries}{44}{subsubsection.6.1.3}% 
-\contentsline {subsubsection}{\numberline {6.1.4}Node}{44}{subsubsection.6.1.4}% 
-\contentsline {subsection}{\numberline {6.2}Smart Contract}{46}{subsection.6.2}% 
-\contentsline {subsubsection}{\numberline {6.2.1}Wallet}{46}{subsubsection.6.2.1}% 
-\contentsline {subsubsection}{\numberline {6.2.2}IDE}{47}{subsubsection.6.2.2}% 
-\contentsline {subsubsection}{\numberline {6.2.3}Solidity}{48}{subsubsection.6.2.3}% 
-\contentsline {subsubsection}{\numberline {6.2.4}Source Code}{53}{subsubsection.6.2.4}% 
-\contentsline {subsection}{List of Figures}{59}{lstnumber.5.268}% 
-\contentsline {subsection}{List of Tables}{60}{lstnumber.5.268}% 
-\contentsline {subsection}{List of Listings}{61}{lstnumber.5.268}% 
-\contentsline {subsection}{List of Abbreviations}{62}{section*.18}% 
-\contentsline {subsection}{References}{63}{section*.19}% 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}% 
+\contentsline {section}{\numberline {2}Theory}{4}{section.2}% 
+\contentsline {section}{\numberline {3}Concept}{9}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Definition of Prerequisites}{9}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Analysis of Different Payment Methods}{10}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Traditional Currency}{10}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Cryptocurrency}{10}{subsubsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.3}Component Requirements}{15}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Risks \& Concerns}{17}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.5}State of the Art}{18}{subsection.3.5}% 
+\contentsline {section}{\numberline {4}Implementation}{19}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}State Machine}{19}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Transactions}{25}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Smart Contract}{31}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Best practices}{33}{subsubsection.4.3.1}% 
+\contentsline {section}{\numberline {5}Conclusion}{34}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Outlook}{34}{subsection.5.1}% 
+\contentsline {section}{\numberline {6}Appendix}{36}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Setup Instructions}{36}{subsection.6.1}% 
+\contentsline {subsubsection}{\numberline {6.1.1}Socket}{36}{subsubsection.6.1.1}% 
+\contentsline {subsubsection}{\numberline {6.1.2}Plug}{38}{subsubsection.6.1.2}% 
+\contentsline {subsubsection}{\numberline {6.1.3}Libraries}{40}{subsubsection.6.1.3}% 
+\contentsline {subsubsection}{\numberline {6.1.4}Node}{40}{subsubsection.6.1.4}% 
+\contentsline {subsection}{\numberline {6.2}Smart Contract}{42}{subsection.6.2}% 
+\contentsline {subsubsection}{\numberline {6.2.1}Wallet}{42}{subsubsection.6.2.1}% 
+\contentsline {subsubsection}{\numberline {6.2.2}IDE}{43}{subsubsection.6.2.2}% 
+\contentsline {subsubsection}{\numberline {6.2.3}Solidity}{44}{subsubsection.6.2.3}% 
+\contentsline {subsubsection}{\numberline {6.2.4}Source Code}{49}{subsubsection.6.2.4}% 
+\contentsline {subsection}{List of Figures}{55}{lstnumber.5.268}% 
+\contentsline {subsection}{List of Tables}{56}{lstnumber.5.268}% 
+\contentsline {subsection}{List of Listings}{57}{lstnumber.5.268}% 
+\contentsline {subsection}{List of Abbreviations}{58}{section*.18}% 
+\contentsline {subsection}{References}{59}{section*.19}% 

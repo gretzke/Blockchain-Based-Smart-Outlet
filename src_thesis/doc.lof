@@ -1,15 +1,15 @@
 \babel@toc {english}{}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Visualization of a blockchain\relax }}{10}{figure.caption.4}% 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Average confirmation time of a transaction on the Bitcoin blockchain\cite {btc-conf-time}\relax }}{15}{figure.caption.5}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Improvements of transaction times after the update to V18 on Feb. 22nd, 2019\cite {nano-confirmation-time}\relax }}{16}{figure.caption.6}% 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Sketch of a payment channel\relax }}{18}{figure.caption.7}% 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Sketch of the concept\relax }}{19}{figure.caption.8}% 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Concept of the state machine\relax }}{23}{figure.caption.9}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Pairing process\relax }}{24}{figure.caption.10}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Verification process\relax }}{26}{figure.caption.11}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Payment process\relax }}{27}{figure.caption.12}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Settlement process\relax }}{28}{figure.caption.13}% 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Sonoff S20\relax }}{40}{figure.caption.14}% 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Serial ports of the Sonoff S20\relax }}{41}{figure.caption.15}% 
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Heltec WiFi Kit 8\relax }}{42}{figure.caption.16}% 
-\contentsline {figure}{\numberline {6.4}{\ignorespaces ACS712 current meter connected to plug\relax }}{43}{figure.caption.17}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Visualization of a blockchain\relax }}{6}{figure.caption.4}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Average confirmation time of a transaction on the Bitcoin blockchain\cite {btc-conf-time}\relax }}{11}{figure.caption.5}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Improvements of transaction times after the update to V18 on Feb. 22nd, 2019\cite {nano-confirmation-time}\relax }}{12}{figure.caption.6}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sketch of a payment channel\relax }}{14}{figure.caption.7}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sketch of the concept\relax }}{15}{figure.caption.8}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Concept of the state machine\relax }}{19}{figure.caption.9}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Pairing process\relax }}{20}{figure.caption.10}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Verification process\relax }}{22}{figure.caption.11}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Payment process\relax }}{23}{figure.caption.12}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Settlement process\relax }}{24}{figure.caption.13}% 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Sonoff S20\relax }}{36}{figure.caption.14}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Serial ports of the Sonoff S20\relax }}{37}{figure.caption.15}% 
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Heltec WiFi Kit 8\relax }}{38}{figure.caption.16}% 
+\contentsline {figure}{\numberline {6.4}{\ignorespaces ACS712 current meter connected to plug\relax }}{39}{figure.caption.17}% 
