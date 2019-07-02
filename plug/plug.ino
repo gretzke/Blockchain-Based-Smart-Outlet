@@ -75,7 +75,7 @@ uint64_t transactionValue = 0;
 uint64_t transactionCounter = 0;
 
 // current ethereum price in EUR to calculate the current value in EUR to display it to the user
-uint64_t etherPriceEUR = 150;
+uint64_t etherPriceEUR = 300;
 
 // during payment process this variable is used to keep track of the time passed
 unsigned long timestamp = 0;
@@ -251,7 +251,7 @@ void loop() {
         // after first transaction was sent wait until current flows, start timer
         if (transactionCounter == 1) {
           double Amps = measureCurrent();
-          if (Amps <= 0.2) {
+          if (Amps <= 0.3) {
             // return statement restarts the loop function
             return;
           }
@@ -266,7 +266,7 @@ void loop() {
           // measure if current is still flowing before sending the next transaction
           double Amps = measureCurrent();
           Serial.printf("Current: %lf A\n", Amps);
-          if (Amps > 0.2) {
+          if (Amps > 0.3) {
             timestamp += secondsPerPayment * 1000;
           } else {
             // close channel if no current present
