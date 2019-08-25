@@ -1,2 +1,4 @@
 /.vscode
 build/
+__pycache__/
+build-Plug_python-Desktop_Qt_5_13_0_clang_64bit-Debug/
