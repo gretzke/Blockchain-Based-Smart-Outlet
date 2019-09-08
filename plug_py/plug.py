@@ -338,8 +338,7 @@ class WSConnection(QThread):
         try:
             data, addr = s.recvfrom(1024)  # wait for a packet
             if data.decode('utf-8') == ID:
-                # self.IP = 'ws://' + addr[0] + ':1337'
-                self.IP = 'ws://192.168.0.128:1337'
+                self.IP = 'ws://' + addr[0] + ':1337'
                 window.ui.startButton.setVisible(False)
                 self.loop = asyncio.new_event_loop()
                 asyncio.set_event_loop(self.loop)

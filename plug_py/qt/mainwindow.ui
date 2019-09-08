@@ -173,6 +173,7 @@ Smart Socket</string>
 	color:white;
 }
 QListWidget::item {
+	background: rgb(0,88,208);
     font-size: 22px;
 }
 QListWidget::item:selected:!active {

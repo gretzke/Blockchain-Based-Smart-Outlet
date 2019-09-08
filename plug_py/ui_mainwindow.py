@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'qt/mainwindow.ui',
 # licensing of 'qt/mainwindow.ui' applies.
 #
-# Created: Sun Sep  8 21:24:25 2019
+# Created: Sun Sep  8 22:39:31 2019
 #      by: pyside2-uic  running on PySide2 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -68,6 +68,7 @@ class Ui_MainWindow(object):
                                     "    color:white;\n"
                                     "}\n"
                                     "QListWidget::item {\n"
+                                    "    background: rgb(0,88,208);\n"
                                     "    font-size: 22px;\n"
                                     "}\n"
                                     "QListWidget::item:selected:!active {\n"
