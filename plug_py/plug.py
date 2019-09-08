@@ -1,6 +1,6 @@
 # ui libraries
 from PyQt5.QtGui import QPalette, QFont
-from PyQt5.QtCore import QThread, QObject, pyqtSignal, pyqtSlot, Qt, QEvent
+from PyQt5.QtCore import QThread, QObject, pyqtSignal, pyqtSlot, Qt, QEvent, QSize
 from PyQt5.QtWidgets import QApplication, QMainWindow, QScrollerProperties, QScroller, QListWidgetItem
 
 # ethereum library
@@ -78,6 +78,7 @@ class MainWindow(QMainWindow):
         # setup input list scroller
         for i in range(2):
             item = QListWidgetItem("")
+            item.setSizeHint(QSize(80, 28))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
@@ -86,6 +87,7 @@ class MainWindow(QMainWindow):
 
         for i in range(24):
             item = QListWidgetItem(str(i+1))
+            item.setSizeHint(QSize(80, 28))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
@@ -94,6 +96,7 @@ class MainWindow(QMainWindow):
 
         for i in range(2):
             item = QListWidgetItem("")
+            item.setSizeHint(QSize(80, 28))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
@@ -141,8 +144,8 @@ class MainWindow(QMainWindow):
         numItems = 23
         max = 645
         position = round(position*numItems/max)
-        #self.ui.hourList.setCurrentRow(position+2)
-        #self.ui.hourList.verticalScrollBar().setValue(position*max/numItems)
+        # self.ui.hourList.setCurrentRow(position+2)
+        # self.ui.hourList.verticalScrollBar().setValue(position*max/numItems)
         if position == 0:
             self.ui.hourLabel.setText("hour")
         else:
