@@ -195,11 +195,11 @@ class MainWindow(QMainWindow):
             self.updateInfo(
                 'Price for ' + str(int(self.ws_thread.maxSeconds / 3600)) + 'h: %.2f€' % round(euroValue, 2))
             self.ui.acceptPriceButton.setVisible(True)
-            self.ui.disconnectButton.setVisible(True)
+            self.ui.rejectButton.setVisible(True)
         else:
             self.updateInfo('')
             self.ui.acceptPriceButton.setVisible(False)
-            self.ui.disconnectButton.setVisible(False)
+            self.ui.rejectButton.setVisible(False)
 
     def resetToStart(self):
         self.updateInfo('')
@@ -209,12 +209,14 @@ class MainWindow(QMainWindow):
         self.ui.infoCenterLabel.setVisible(False)
         self.ui.selectButton.setVisible(False)
         self.ui.disconnectButton.setVisible(False)
+        self.ui.rejectButton.setVisible(False)
         self.ui.acceptPriceButton.setVisible(False)
         self.ui.ampsLabel.setVisible(False)
         self.ui.pcClosedButton.setVisible(False)
         self.ui.startButton.setVisible(True)
 
     def disconnect(self):
+        self.ui.disconnectButton.setVisible(False)
         self.ws_thread.paymentState = State.closed
 
     def closeEvent(self, event):
@@ -566,6 +568,7 @@ class WSConnection(QThread):
                     window.cm_thread = measureCurrent()
                     window.cm_thread.start()
                     self.startTimestamp = time()
+                    window.ui.disconnectButton.setVisible(True)
                     return
                 else:
                     # if current measurement thread not running, set up
