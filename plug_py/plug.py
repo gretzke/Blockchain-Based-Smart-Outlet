@@ -72,7 +72,8 @@ class MainWindow(QMainWindow):
         self.ui.startButton.clicked.connect(self.connectWS)
         self.ui.selectButton.clicked.connect(self.getMaxSeconds)
         self.ui.acceptPriceButton.clicked.connect(self.acceptPrice)
-        self.ui.disconnectButton.clicked.connect(self.rejectPrice)
+        self.ui.rejectButton.clicked.connect(self.rejectPrice)
+        self.ui.disconnectButton.clicked.connect(self.disconnect)
         self.ui.pcClosedButton.clicked.connect(self.resetToStart)
 
         itemHeight = self.ui.hourList.height()/5
@@ -213,11 +214,26 @@ class MainWindow(QMainWindow):
         self.ui.pcClosedButton.setVisible(False)
         self.ui.startButton.setVisible(True)
 
+    def disconnect(self):
+        self.ws_thread.paymentState = State.closed
+
     def closeEvent(self, event):
         # cleanup and end threads
-        self.terminateThread('node_thread')
-        self.terminateThread('ws_thread')
-        self.terminateThread('cm_thread')
+        try:
+            self.node_thread.threadActive = False
+            self.node_thread.wait()
+        except:
+            pass
+        try:
+            self.ws_thread.threadActive = False
+            self.ws_thread.wait()
+        except:
+            pass
+        try:
+            self.cm_thread.threadActive = False
+            self.cm_thread.wait()
+        except:
+            pass
         # GPIO.cleanup()
         event.accept()  # let the window close
 

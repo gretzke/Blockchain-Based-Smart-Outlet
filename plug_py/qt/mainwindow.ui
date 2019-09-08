@@ -133,7 +133,7 @@ Smart Socket</string>
      <string notr="true">color: white; background-color:rgba(255,0,0,0.5); border-radius: 4px; font-weight: bold; font-size: 20px</string>
     </property>
     <property name="text">
-     <string>Disconnect</string>
+     <string>End process</string>
     </property>
    </widget>
    <widget class="QLabel" name="ampsLabel">
@@ -251,6 +251,22 @@ QListWidget::item:selected:disabled {
     <property name="text">
      <string>Start a new
 payment process</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rejectButton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>340</y>
+      <width>220</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; background-color:rgba(255,0,0,0.5); border-radius: 4px; font-weight: bold; font-size: 20px</string>
+    </property>
+    <property name="text">
+     <string>Disconnect</string>
     </property>
    </widget>
   </widget>
