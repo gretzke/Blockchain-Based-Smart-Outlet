@@ -251,6 +251,7 @@ void loop() {
         // after first transaction was sent wait until current flows, start timer
         if (transactionCounter == 1) {
           double Amps = measureCurrent();
+          Serial.printf("Current: %lf A\n", Amps);
           if (Amps <= 0.3) {
             // return statement restarts the loop function
             return;
