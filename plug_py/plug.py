@@ -24,7 +24,7 @@ import json
 from json import JSONDecodeError
 import credentials
 
-DEBUG = True
+DEBUG = False
 
 # credentials
 nodeAddr = credentials.nodeAddr
@@ -103,8 +103,6 @@ class MainWindow(QMainWindow):
             item.setFlags(item.flags() & Qt.NoItemFlags)
             self.ui.hourList.addItem(item)
 
-        print('__________\nHeight: ' + str(self.ui.hourList.height()) + '\n\n')
-
         # set list selection handler
         self.ui.hourList.setCurrentRow(2)
         self.hourTrigger = self.ui.hourList.verticalScrollBar(
@@ -140,12 +138,11 @@ class MainWindow(QMainWindow):
             self.ui.hourList.viewport(), QScroller.LeftMouseButtonGesture)
 
     def updateHourList(self, position):
-        print(position)
         numItems = 23
-        max = 645
+        max = 646
         position = round(position*numItems/max)
-        # self.ui.hourList.setCurrentRow(position+2)
-        # self.ui.hourList.verticalScrollBar().setValue(position*max/numItems)
+        self.ui.hourList.setCurrentRow(position+2)
+        self.ui.hourList.verticalScrollBar().setValue(position*max/numItems)
         if position == 0:
             self.ui.hourLabel.setText("hour")
         else:
