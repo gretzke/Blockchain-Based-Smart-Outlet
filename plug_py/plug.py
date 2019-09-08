@@ -1,7 +1,7 @@
 # ui libraries
-from PySide2.QtGui import QPalette, QFont
-from PySide2.QtCore import QThread, QObject, SIGNAL, SLOT, Qt, QEvent
-from PySide2.QtWidgets import QApplication, QMainWindow, QScrollerProperties, QScroller, QListWidgetItem
+from PyQt5.QtGui import QPalette, QFont
+from PyQt5.QtCore import QThread, QObject, pyqtSignal, pyqtSlot, Qt, QEvent
+from PyQt5.QtWidgets import QApplication, QMainWindow, QScrollerProperties, QScroller, QListWidgetItem
 
 # ethereum library
 from eth_account.messages import encode_defunct
@@ -102,8 +102,8 @@ class MainWindow(QMainWindow):
 
         # set list selection handler
         self.ui.hourList.setCurrentRow(2)
-        QObject.connect(self.ui.hourList.verticalScrollBar(),
-                        SIGNAL('valueChanged(int)'), self, SLOT('updateHourList(int)'))
+        self.hourTrigger = self.ui.hourList.verticalScrollBar(
+        ).valueChanged.connect(self.updateHourList)
 
         # hide items
         self.resetToStart()
@@ -229,23 +229,12 @@ class MainWindow(QMainWindow):
             pass
 
     def connectWS(self):
-        self.updateInfo('')
         self.updateInfoCenter('')
-        # scan for smart socket on the network
-        PORT = 50000
-        ID = "smartsocket"
+        self.updateInfo('Searching for smart sockets...')
 
-        s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
-        s.bind(('', PORT))
-
-        data, addr = s.recvfrom(1024)  # wait for a packet
-        if data.decode('utf-8') == ID:
-            self.IP = 'ws://' + addr[0] + ':1337'
-            # start websocket
-            self.ws_thread = WSConnection()
-            self.ws_thread.start()
-        else:
-            self.updateInfo('No smart socket found')
+        # start websocket
+        self.ws_thread = WSConnection()
+        self.ws_thread.start()
 
 
 # ethereum node functionality
@@ -315,10 +304,25 @@ class WSConnection(QThread):
 
     def run(self):
         # start websocket handler
-        window.ui.startButton.setVisible(False)
-        self.loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(self.loop)
-        self.loop.run_until_complete(self.wsConnection())
+        # scan for smart socket on the network
+        PORT = 50000
+        ID = "smartsocket"
+
+        s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
+        s.bind(('', PORT))
+        s.settimeout(3.0)
+        try:
+            data, addr = s.recvfrom(1024)  # wait for a packet
+            if data.decode('utf-8') == ID:
+                self.IP = 'ws://' + addr[0] + ':1337'
+                window.ui.startButton.setVisible(False)
+                self.loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(self.loop)
+                self.loop.run_until_complete(self.wsConnection())
+            else:
+                window.updateInfo('No smart socket found')
+        except:
+            window.updateInfo('No smart socket found')
 
     # disconnect from websocket and display message to user
     def disconnect(self, err_msg):
@@ -601,7 +605,7 @@ class WSConnection(QThread):
 
         try:
             # wait until connected to websocket
-            self.websocket = await websockets.connect(window.IP)
+            self.websocket = await websockets.connect(self.IP)
         except:
             # if connection times out close thread
             window.ui.startButton.setVisible(True)
