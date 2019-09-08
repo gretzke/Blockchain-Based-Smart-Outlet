@@ -75,10 +75,11 @@ class MainWindow(QMainWindow):
         self.ui.disconnectButton.clicked.connect(self.rejectPrice)
         self.ui.pcClosedButton.clicked.connect(self.resetToStart)
 
+        itemHeight = self.ui.hourList.height()/5
         # setup input list scroller
         for i in range(2):
             item = QListWidgetItem("")
-            item.setSizeHint(QSize(80, 28))
+            item.setSizeHint(QSize(80, itemHeight))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
@@ -87,7 +88,7 @@ class MainWindow(QMainWindow):
 
         for i in range(24):
             item = QListWidgetItem(str(i+1))
-            item.setSizeHint(QSize(80, 28))
+            item.setSizeHint(QSize(80, itemHeight))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
@@ -96,7 +97,7 @@ class MainWindow(QMainWindow):
 
         for i in range(2):
             item = QListWidgetItem("")
-            item.setSizeHint(QSize(80, 28))
+            item.setSizeHint(QSize(80, itemHeight))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
