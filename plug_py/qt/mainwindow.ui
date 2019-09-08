@@ -220,9 +220,9 @@ QListWidget::item:selected:disabled {
    <widget class="QLabel" name="infoCenterLabel">
     <property name="geometry">
      <rect>
-      <x>85</x>
+      <x>20</x>
       <y>195</y>
-      <width>630</width>
+      <width>760</width>
       <height>90</height>
      </rect>
     </property>

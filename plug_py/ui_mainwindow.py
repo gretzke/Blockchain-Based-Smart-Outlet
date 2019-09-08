@@ -3,8 +3,8 @@
 # Form implementation generated from reading ui file 'qt/mainwindow.ui',
 # licensing of 'qt/mainwindow.ui' applies.
 #
-# Created: Sun Sep  8 16:34:02 2019
-#      by: pyside2-uic  running on PySide2 5.13.0
+# Created: Sun Sep  8 20:12:44 2019
+#      by: pyside2-uic  running on PySide2 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -89,7 +89,7 @@ class Ui_MainWindow(object):
         self.hourLabel.setStyleSheet("color:white; font-size:24px")
         self.hourLabel.setObjectName("hourLabel")
         self.infoCenterLabel = QtWidgets.QLabel(self.centralWidget)
-        self.infoCenterLabel.setGeometry(QtCore.QRect(85, 195, 630, 90))
+        self.infoCenterLabel.setGeometry(QtCore.QRect(20, 195, 760, 90))
         self.infoCenterLabel.setStyleSheet("color:white; font-size:36px")
         self.infoCenterLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.infoCenterLabel.setObjectName("infoCenterLabel")

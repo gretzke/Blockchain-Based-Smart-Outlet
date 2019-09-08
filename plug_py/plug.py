@@ -100,6 +100,8 @@ class MainWindow(QMainWindow):
             item.setFlags(item.flags() & Qt.NoItemFlags)
             self.ui.hourList.addItem(item)
 
+        print('__________\nHeight: ' + str(self.ui.hourList.height()) + '\n\n')
+
         # set list selection handler
         self.ui.hourList.setCurrentRow(2)
         self.hourTrigger = self.ui.hourList.verticalScrollBar(
@@ -135,12 +137,13 @@ class MainWindow(QMainWindow):
             self.ui.hourList.viewport(), QScroller.LeftMouseButtonGesture)
 
     def updateHourList(self, position):
+        print(position)
         numItems = 23
         max = 645
         position = round(position*numItems/max)
-        self.ui.hourList.setCurrentRow(position+2)
-        self.ui.hourList.verticalScrollBar().setValue(position*max/numItems)
-        if position == 1:
+        #self.ui.hourList.setCurrentRow(position+2)
+        #self.ui.hourList.verticalScrollBar().setValue(position*max/numItems)
+        if position == 0:
             self.ui.hourLabel.setText("hour")
         else:
             self.ui.hourLabel.setText("hours")
@@ -171,6 +174,7 @@ class MainWindow(QMainWindow):
 
     def hourSelection(self, show):
         if show:
+            self.ui.hourLabel.setText('hour')
             self.updateInfo(
                 'How long do you want\nto purchase electricity?')
             self.ui.hourList.setVisible(True)
@@ -219,11 +223,12 @@ class MainWindow(QMainWindow):
     def terminateThread(self, process):
         try:
             thread = operator.attrgetter(process)(self)
-            thread.threadActive = False
-            thread.quit()
-            if (thread.wait(1000) == False):
-                thread.terminate()
-                thread.wait()
+            if thread.threadActive:
+                thread.threadActive = False
+                thread.quit()
+                if (thread.wait(1000) == False):
+                    thread.terminate()
+                    thread.wait()
         except AttributeError:
             # thread was not created yet
             pass
@@ -269,7 +274,7 @@ class Node(QThread):
                     "/" + str(syncing.highestBlock)
                 )
 
-            QThread().sleep(1)
+            QThread().sleep(5)
 
 
 class measureCurrent(QThread):
@@ -314,7 +319,8 @@ class WSConnection(QThread):
         try:
             data, addr = s.recvfrom(1024)  # wait for a packet
             if data.decode('utf-8') == ID:
-                self.IP = 'ws://' + addr[0] + ':1337'
+                # self.IP = 'ws://' + addr[0] + ':1337'
+                self.IP = 'ws://192.168.0.128:1337'
                 window.ui.startButton.setVisible(False)
                 self.loop = asyncio.new_event_loop()
                 asyncio.set_event_loop(self.loop)
@@ -397,6 +403,7 @@ class WSConnection(QThread):
         if active:
             expired = self.contract.functions.channelExpired().call()
             if expired:
+                window.updateInfo('')
                 window.updateInfoCenter(
                     'Closing currently active\nPayment Channel...')
 
@@ -599,6 +606,7 @@ class WSConnection(QThread):
         self.paymentState = State.disconnected
 
         # connect to socket
+        window.updateInfo('')
         window.updateInfoCenter('Connecting...')
         # deactivate close button during connection
         window.ui.closeButton.setVisible(False)
