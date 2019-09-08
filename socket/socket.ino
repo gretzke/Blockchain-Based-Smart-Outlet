@@ -56,7 +56,7 @@ uint8_t halfCurveN[32] = {0x7F, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 
 enum Status {disconnected, connected_P, connected_S, initialized_P, initialized_S, active_P, active_S, closed} paymentStatus;
 
 // define IP address and port of device
-const char* IPaddr = "172.20.10.13";
+const char* IPaddr = "192.168.0.128";
 const char* port = "1337";
 
 // set seconds per payment here
@@ -116,9 +116,9 @@ void setup() {
   contractAddr = credentials.contractAddress;
 
   // setup static IP
-  IPAddress ip(172, 20, 10, 13);
-  IPAddress gateway(172, 20, 10, 1); // set gateway to match your network
-  IPAddress subnet(255, 255, 255, 240); // set subnet mask to match your network
+  IPAddress ip(192, 168, 0, 128);
+  IPAddress gateway(192, 168, 0, 1); // set gateway to match your network
+  IPAddress subnet(255, 255, 255, 0); // set subnet mask to match your network
   WiFi.config(ip, gateway, subnet);
   WiFi.hostname("bc-smart-socket");
   // next 2 lines might be required to prevent disconnects
@@ -138,7 +138,7 @@ void setup() {
     }
   }
   Serial.println("Successfully connected to WiFi");
-  digitalWrite(LED, LOW);
+  digitalWrite(LED, HIGH);
 
   // set current state to disconnected
   paymentStatus = disconnected;
@@ -210,7 +210,7 @@ void loop() {
       free(encodedData);
       // if transaction is valid returns 0x1, if invalid returns 0x0
       int success = strtoul(result.c_str(), 0, 16);
-      if (success) {
+      if (success == 1) {
         Serial.println("Payment valid");
         // save last valid signature
         strcpy(lastSignature, lastSignatureTemp);
@@ -253,6 +253,9 @@ void loop() {
         clientID = -1;
         digitalWrite(LED, HIGH);
       }
+      transactionCounter = 0;
+      // reset last signature
+      lastSignature[0] = '\0';
     }
   }
 }
@@ -263,6 +266,7 @@ void loop() {
 */
 void disconnectFromPlug(bool notifyPlug) {
   paymentStatus = disconnected;
+  transactionCounter = 0;
   if (notifyPlug) {
     webSocket.sendTXT(clientID, "{\"id\": 0}");
   }
@@ -299,6 +303,7 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length
         IPAddress ip = webSocket.remoteIP(clientID);
         Serial.printf("New connection from plug [%u]. Connected from %d.%d.%d.%d url: %s\n", num, ip[0], ip[1], ip[2], ip[3], payload);
         paymentStatus = connected_P;
+        digitalWrite(LED, LOW);
       }
       break;
 
