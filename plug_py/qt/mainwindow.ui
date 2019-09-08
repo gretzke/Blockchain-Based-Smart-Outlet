@@ -20,14 +20,14 @@
    <widget class="QLabel" name="nodeInfoLabel">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>450</y>
+      <x>435</x>
+      <y>439</y>
       <width>351</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: white</string>
+     <string notr="true">color: white; font-size:18px</string>
     </property>
     <property name="text">
      <string>Currently not connected to node</string>
@@ -52,45 +52,20 @@
      <string>X</string>
     </property>
    </widget>
-   <widget class="QLabel" name="titleLabel">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>185</x>
-      <y>10</y>
-      <width>430</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font-size:30pt; font-style:italic; color:white;</string>
-    </property>
-    <property name="text">
-     <string>Blockchain-Based Smart Outlet</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="infoLabel">
     <property name="geometry">
      <rect>
       <x>85</x>
-      <y>140</y>
+      <y>20</y>
       <width>630</width>
-      <height>40</height>
+      <height>90</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:white; font-size:20px</string>
+     <string notr="true">color:white; font-size:36px</string>
     </property>
     <property name="text">
-     <string/>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -99,14 +74,14 @@
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>190</y>
-      <width>200</width>
-      <height>100</height>
+      <x>230</x>
+      <y>145</y>
+      <width>340</width>
+      <height>190</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: white; background-color: rgba(0,255, 0, 0.75); border: none; font-size: 24px; border-radius:5px</string>
+     <string notr="true">color: rgb(50, 50, 50); background-color: rgba(0,255, 0, 0.75); border: none; font-size: 32px; border-radius:5px; font-weight: bold;</string>
     </property>
     <property name="text">
      <string>Connect to
@@ -116,49 +91,74 @@ Smart Socket</string>
    <widget class="QPushButton" name="selectButton">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>320</y>
-      <width>120</width>
-      <height>40</height>
+      <x>290</x>
+      <y>350</y>
+      <width>220</width>
+      <height>70</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:black; background-color:white; border-radius: 4px</string>
+     <string notr="true">color:rgb(50, 50, 50); background-color:white; border-radius: 4px; font-weight: bold; font-size: 20px</string>
     </property>
     <property name="text">
      <string>Select</string>
     </property>
    </widget>
-   <widget class="QLabel" name="minuteLabel">
+   <widget class="QPushButton" name="acceptPriceButton">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>233</y>
-      <width>60</width>
-      <height>20</height>
+      <x>230</x>
+      <y>120</y>
+      <width>340</width>
+      <height>190</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(50, 50, 50); background-color: rgba(0,255, 0, 0.75); border: none; font-size: 32px; border-radius:5px; font-weight: bold;</string>
+    </property>
+    <property name="text">
+     <string>Accept Price</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="disconnectButton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>340</y>
+      <width>220</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; background-color:rgba(255,0,0,0.5); border-radius: 4px; font-weight: bold; font-size: 20px</string>
+    </property>
+    <property name="text">
+     <string>Disconnect</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ampsLabel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>370</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color:white</string>
     </property>
     <property name="text">
-     <string>minutes</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QListWidget" name="hourList">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>190</y>
-      <width>75</width>
-      <height>108</height>
+      <x>320</x>
+      <y>170</y>
+      <width>90</width>
+      <height>140</height>
      </rect>
     </property>
     <property name="font">
@@ -169,7 +169,18 @@ Smart Socket</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:white;</string>
+     <string notr="true">QListWidget {
+	color:white;
+}
+QListWidget::item {
+    font-size: 22px;
+}
+QListWidget::item:selected:!active {
+	background: rgb(0,88,208);
+}
+QListWidget::item:selected:disabled {
+	color:white;
+}</string>
     </property>
     <property name="verticalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -184,45 +195,7 @@ Smart Socket</string>
      <bool>false</bool>
     </property>
     <property name="verticalScrollMode">
-     <enum>QAbstractItemView::ScrollPerItem</enum>
-    </property>
-    <property name="currentRow">
-     <number>-1</number>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="minuteList">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>190</y>
-      <width>75</width>
-      <height>108</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:white;</string>
-    </property>
-    <property name="verticalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="horizontalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="dragEnabled">
-     <bool>false</bool>
-    </property>
-    <property name="alternatingRowColors">
-     <bool>false</bool>
-    </property>
-    <property name="verticalScrollMode">
-     <enum>QAbstractItemView::ScrollPerItem</enum>
+     <enum>QAbstractItemView::ScrollPerPixel</enum>
     </property>
     <property name="currentRow">
      <number>-1</number>
@@ -231,24 +204,53 @@ Smart Socket</string>
    <widget class="QLabel" name="hourLabel">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>233</y>
+      <x>420</x>
+      <y>225</y>
       <width>60</width>
-      <height>20</height>
+      <height>30</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
     <property name="styleSheet">
-     <string notr="true">color:white</string>
+     <string notr="true">color:white; font-size:24px</string>
     </property>
     <property name="text">
-     <string>hours</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;hours&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="infoCenterLabel">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>195</y>
+      <width>630</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white; font-size:36px</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pcClosedButton">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>145</y>
+      <width>340</width>
+      <height>190</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(50, 50, 50); background-color: rgba(0,255, 0, 0.75); border: none; font-size: 32px; border-radius:5px; font-weight: bold;</string>
+    </property>
+    <property name="text">
+     <string>Start a new
+payment process</string>
     </property>
    </widget>
   </widget>
