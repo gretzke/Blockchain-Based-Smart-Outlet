@@ -13,7 +13,7 @@ from ui_mainwindow import Ui_MainWindow
 # websockets
 import websockets
 import asyncio
-from socket import socket, AF_INET, SOCK_DGRAM
+from socket import socket, AF_INET, SOCK_DGRAM, SOL_SOCKET, SO_BROADCAST, gethostbyname, gethostname
 
 # utility libraries
 import operator
@@ -22,6 +22,7 @@ from enum import Enum
 import json
 from json import JSONDecodeError
 import credentials
+from time import sleep
 
 DEBUG = False
 
@@ -41,6 +42,9 @@ address = web3.toChecksumAddress(credentials.address)
 window = None
 app = None
 
+# broadcast port and ID
+PORT = 50000
+ID = "smartsocket"
 
 class State(Enum):
     disconnected = 0
@@ -97,14 +101,6 @@ class MainWindow(QMainWindow):
             # thread was not created yet
             pass
 
-    def connectWS(self):
-        self.updateInfoCenter('')
-        self.updateInfo('Searching for smart sockets...')
-
-        # start websocket
-        self.ws_thread = WSConnection()
-        self.ws_thread.start()
-
 
 # ethereum node functionality
 class Node(QThread):
@@ -148,7 +144,14 @@ class WSConnection(QThread):
         self.threadActive = False
 
     def run(self):
-        pass
+        s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
+        s.bind(('', 0))
+        s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)  # this is a broadcast socket
+        while 1:
+            data = ID
+            s.sendto(data.encode('utf-8'), ('<broadcast>', PORT))
+            print("sent service announcement")
+            sleep(1)
 
 
 def main():
