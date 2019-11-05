@@ -539,7 +539,7 @@ class WSConnection(QThread):
                     await asyncio.sleep(1)
 
                 if (transactionReceipt.status == 1):
-                    window.updateInfo(
+                    window.updateInfoCenter(
                         'Successfully initialized Payment Channel')
 
                     await self.websocket.send(json.dumps(
