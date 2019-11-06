@@ -339,7 +339,8 @@ class WSConnection(QThread):
             s.bind(('', PORT))
             data, addr = s.recvfrom(1024)  # wait for a packet
             s.close()
-            if data.decode('utf-8') == ID:
+            received_data = data.decode('utf-8')
+            if received_data == ID:
                 self.IP = 'ws://' + addr[0] + ':1337'
                 window.ui.startButton.setVisible(False)
                 self.loop = asyncio.new_event_loop()
@@ -348,7 +349,8 @@ class WSConnection(QThread):
             else:
                 window.updateInfo('No smart socket found')
         except:
-            window.updateInfo('No smart socket found')
+            window.updateInfo('Error in connecting to smart socket')
+            window.updateInfoCenter('')
 
     # disconnect from websocket and display message to user
     def disconnect(self, err_msg):
