@@ -13,7 +13,7 @@ from ui_mainwindow import Ui_MainWindow
 # websockets
 import websockets
 import asyncio
-from socket import socket, AF_INET, SOCK_DGRAM
+from socket import socket, AF_INET, SOCK_DGRAM, SOL_SOCKET, SO_REUSEADDR
 
 # utility libraries
 import operator
@@ -332,11 +332,13 @@ class WSConnection(QThread):
         PORT = 50000
         ID = "smartsocket"
 
-        s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
-        s.bind(('', PORT))
-        s.settimeout(3.0)
         try:
+            s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
+            s.settimeout(3.0)
+            s.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+            s.bind(('', PORT))
             data, addr = s.recvfrom(1024)  # wait for a packet
+            s.close()
             if data.decode('utf-8') == ID:
                 self.IP = 'ws://' + addr[0] + ':1337'
                 window.ui.startButton.setVisible(False)
