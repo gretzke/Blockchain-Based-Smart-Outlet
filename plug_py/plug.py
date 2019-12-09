@@ -353,8 +353,8 @@ class WSConnection(QThread):
             window.updateInfo('No smart socket found')
             window.updateInfoCenter('')
         except:
-            window.updateInfo('Error while connecting to smart socket')
-            window.updateInfoCenter('')
+            window.resetToStart()
+            window.updateInfo('An error occurred')
 
     # disconnect from websocket and display message to user
     def disconnect(self, err_msg):
