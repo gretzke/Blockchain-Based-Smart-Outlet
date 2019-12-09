@@ -204,7 +204,7 @@ class MainWindow(QMainWindow):
     def resetToStart(self):
         self.updateInfo('')
         self.updateInfoCenter('')
-        self.ui.hourList.setVisible(True)
+        self.ui.hourList.setVisible(False)
         self.ui.hourLabel.setVisible(False)
         self.ui.infoCenterLabel.setVisible(False)
         self.ui.selectButton.setVisible(False)
