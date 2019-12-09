@@ -3,8 +3,8 @@
 # Form implementation generated from reading ui file 'qt/mainwindow.ui',
 # licensing of 'qt/mainwindow.ui' applies.
 #
-# Created: Sun Sep  8 16:34:02 2019
-#      by: pyside2-uic  running on PySide2 5.13.0
+# Created: Mon Dec  9 17:02:40 2019
+#      by: pyside2-uic  running on PySide2 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -69,9 +69,10 @@ class Ui_MainWindow(object):
                                     "}\n"
                                     "QListWidget::item {\n"
                                     "    font-size: 22px;\n"
+                                    "    color:white;\n"
                                     "}\n"
                                     "QListWidget::item:selected:!active {\n"
-                                    "    background: rgb(0,88,208);\n"
+                                    "    color:white;\n"
                                     "}\n"
                                     "QListWidget::item:selected:disabled {\n"
                                     "    color:white;\n"
@@ -89,7 +90,7 @@ class Ui_MainWindow(object):
         self.hourLabel.setStyleSheet("color:white; font-size:24px")
         self.hourLabel.setObjectName("hourLabel")
         self.infoCenterLabel = QtWidgets.QLabel(self.centralWidget)
-        self.infoCenterLabel.setGeometry(QtCore.QRect(85, 195, 630, 90))
+        self.infoCenterLabel.setGeometry(QtCore.QRect(20, 195, 760, 90))
         self.infoCenterLabel.setStyleSheet("color:white; font-size:36px")
         self.infoCenterLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.infoCenterLabel.setObjectName("infoCenterLabel")
@@ -98,6 +99,11 @@ class Ui_MainWindow(object):
         self.pcClosedButton.setStyleSheet(
             "color: rgb(50, 50, 50); background-color: rgba(0,255, 0, 0.75); border: none; font-size: 32px; border-radius:5px; font-weight: bold;")
         self.pcClosedButton.setObjectName("pcClosedButton")
+        self.rejectButton = QtWidgets.QPushButton(self.centralWidget)
+        self.rejectButton.setGeometry(QtCore.QRect(290, 340, 220, 70))
+        self.rejectButton.setStyleSheet(
+            "color: white; background-color:rgba(255,0,0,0.5); border-radius: 4px; font-weight: bold; font-size: 20px")
+        self.rejectButton.setObjectName("rejectButton")
         MainWindow.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(MainWindow)
@@ -120,7 +126,7 @@ class Ui_MainWindow(object):
         self.acceptPriceButton.setText(QtWidgets.QApplication.translate(
             "MainWindow", "Accept Price", None, -1))
         self.disconnectButton.setText(QtWidgets.QApplication.translate(
-            "MainWindow", "Disconnect", None, -1))
+            "MainWindow", "End process", None, -1))
         self.ampsLabel.setText(QtWidgets.QApplication.translate(
             "MainWindow", "<html><head/><body><p><span style=\" font-size:18pt;\">TextLabel</span></p></body></html>", None, -1))
         self.hourLabel.setText(QtWidgets.QApplication.translate(
@@ -129,3 +135,5 @@ class Ui_MainWindow(object):
             "MainWindow", "<html><head/><body><p><br/></p></body></html>", None, -1))
         self.pcClosedButton.setText(QtWidgets.QApplication.translate("MainWindow", "Start a new\n"
                                                                      "payment process", None, -1))
+        self.rejectButton.setText(QtWidgets.QApplication.translate(
+            "MainWindow", "Disconnect", None, -1))

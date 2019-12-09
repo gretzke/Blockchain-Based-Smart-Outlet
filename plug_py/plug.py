@@ -1,6 +1,6 @@
 # ui libraries
 from PyQt5.QtGui import QPalette, QFont
-from PyQt5.QtCore import QThread, QObject, pyqtSignal, pyqtSlot, Qt, QEvent
+from PyQt5.QtCore import QThread, QObject, pyqtSignal, pyqtSlot, Qt, QEvent, QSize
 from PyQt5.QtWidgets import QApplication, QMainWindow, QScrollerProperties, QScroller, QListWidgetItem
 
 # ethereum library
@@ -13,7 +13,7 @@ from ui_mainwindow import Ui_MainWindow
 # websockets
 import websockets
 import asyncio
-from socket import socket, AF_INET, SOCK_DGRAM
+from socket import socket, AF_INET, SOCK_DGRAM, SOL_SOCKET, SO_REUSEADDR, timeout
 
 # utility libraries
 import operator
@@ -24,7 +24,7 @@ import json
 from json import JSONDecodeError
 import credentials
 
-DEBUG = True
+DEBUG = False
 
 # credentials
 nodeAddr = credentials.nodeAddr
@@ -72,12 +72,15 @@ class MainWindow(QMainWindow):
         self.ui.startButton.clicked.connect(self.connectWS)
         self.ui.selectButton.clicked.connect(self.getMaxSeconds)
         self.ui.acceptPriceButton.clicked.connect(self.acceptPrice)
-        self.ui.disconnectButton.clicked.connect(self.rejectPrice)
+        self.ui.rejectButton.clicked.connect(self.rejectPrice)
+        self.ui.disconnectButton.clicked.connect(self.disconnect)
         self.ui.pcClosedButton.clicked.connect(self.resetToStart)
 
+        itemHeight = self.ui.hourList.height()/5
         # setup input list scroller
         for i in range(2):
             item = QListWidgetItem("")
+            item.setSizeHint(QSize(80, itemHeight))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
@@ -86,6 +89,7 @@ class MainWindow(QMainWindow):
 
         for i in range(24):
             item = QListWidgetItem(str(i+1))
+            item.setSizeHint(QSize(80, itemHeight))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
@@ -94,6 +98,7 @@ class MainWindow(QMainWindow):
 
         for i in range(2):
             item = QListWidgetItem("")
+            item.setSizeHint(QSize(80, itemHeight))
             fontOptions = QFont()
             fontOptions.setPixelSize(22)
             item.setFont(fontOptions)
@@ -136,11 +141,11 @@ class MainWindow(QMainWindow):
 
     def updateHourList(self, position):
         numItems = 23
-        max = 645
+        max = 646
         position = round(position*numItems/max)
         self.ui.hourList.setCurrentRow(position+2)
         self.ui.hourList.verticalScrollBar().setValue(position*max/numItems)
-        if position == 1:
+        if position == 0:
             self.ui.hourLabel.setText("hour")
         else:
             self.ui.hourLabel.setText("hours")
@@ -171,6 +176,7 @@ class MainWindow(QMainWindow):
 
     def hourSelection(self, show):
         if show:
+            self.ui.hourLabel.setText('hour')
             self.updateInfo(
                 'How long do you want\nto purchase electricity?')
             self.ui.hourList.setVisible(True)
@@ -189,11 +195,11 @@ class MainWindow(QMainWindow):
             self.updateInfo(
                 'Price for ' + str(int(self.ws_thread.maxSeconds / 3600)) + 'h: %.2f€' % round(euroValue, 2))
             self.ui.acceptPriceButton.setVisible(True)
-            self.ui.disconnectButton.setVisible(True)
+            self.ui.rejectButton.setVisible(True)
         else:
-            self.updateInfo('')
             self.ui.acceptPriceButton.setVisible(False)
-            self.ui.disconnectButton.setVisible(False)
+            self.updateInfo('')
+            self.ui.rejectButton.setVisible(False)
 
     def resetToStart(self):
         self.updateInfo('')
@@ -203,27 +209,45 @@ class MainWindow(QMainWindow):
         self.ui.infoCenterLabel.setVisible(False)
         self.ui.selectButton.setVisible(False)
         self.ui.disconnectButton.setVisible(False)
+        self.ui.rejectButton.setVisible(False)
         self.ui.acceptPriceButton.setVisible(False)
         self.ui.ampsLabel.setVisible(False)
         self.ui.pcClosedButton.setVisible(False)
         self.ui.startButton.setVisible(True)
 
+    def disconnect(self):
+        self.ui.disconnectButton.setVisible(False)
+        self.ws_thread.paymentState = State.closed
+
     def closeEvent(self, event):
         # cleanup and end threads
-        self.terminateThread('node_thread')
-        self.terminateThread('ws_thread')
-        self.terminateThread('cm_thread')
+        try:
+            self.node_thread.threadActive = False
+            self.node_thread.wait()
+        except:
+            pass
+        try:
+            self.ws_thread.threadActive = False
+            self.ws_thread.wait()
+        except:
+            pass
+        try:
+            self.cm_thread.threadActive = False
+            self.cm_thread.wait()
+        except:
+            pass
         # GPIO.cleanup()
         event.accept()  # let the window close
 
     def terminateThread(self, process):
         try:
             thread = operator.attrgetter(process)(self)
-            thread.threadActive = False
-            thread.quit()
-            if (thread.wait(1000) == False):
-                thread.terminate()
-                thread.wait()
+            if thread.threadActive:
+                thread.threadActive = False
+                thread.quit()
+                if (thread.wait(1000) == False):
+                    thread.terminate()
+                    thread.wait()
         except AttributeError:
             # thread was not created yet
             pass
@@ -269,7 +293,7 @@ class Node(QThread):
                     "/" + str(syncing.highestBlock)
                 )
 
-            QThread().sleep(1)
+            QThread().sleep(5)
 
 
 class measureCurrent(QThread):
@@ -308,21 +332,29 @@ class WSConnection(QThread):
         PORT = 50000
         ID = "smartsocket"
 
-        s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
-        s.bind(('', PORT))
-        s.settimeout(3.0)
         try:
+            s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
+            s.settimeout(3.0)
+            s.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+            s.bind(('', PORT))
             data, addr = s.recvfrom(1024)  # wait for a packet
-            if data.decode('utf-8') == ID:
+            s.close()
+            received_data = data.decode('utf-8')
+            if received_data == ID:
                 self.IP = 'ws://' + addr[0] + ':1337'
                 window.ui.startButton.setVisible(False)
                 self.loop = asyncio.new_event_loop()
                 asyncio.set_event_loop(self.loop)
                 self.loop.run_until_complete(self.wsConnection())
             else:
-                window.updateInfo('No smart socket found')
-        except:
+                window.updateInfo('Received wrong advertisement ID')
+                window.updateInfoCenter('')
+        except timeout:
             window.updateInfo('No smart socket found')
+            window.updateInfoCenter('')
+        except:
+            window.resetToStart()
+            window.updateInfo('An error occurred')
 
     # disconnect from websocket and display message to user
     def disconnect(self, err_msg):
@@ -397,6 +429,7 @@ class WSConnection(QThread):
         if active:
             expired = self.contract.functions.channelExpired().call()
             if expired:
+                window.updateInfo('')
                 window.updateInfoCenter(
                     'Closing currently active\nPayment Channel...')
 
@@ -485,6 +518,7 @@ class WSConnection(QThread):
                     'Smart Contract verification failed')
                 return
             else:
+                window.ui.acceptPriceButton.setVisible(False)
                 window.updateInfoCenter(
                     "Initializing Payment Channel...")
                 transactionCount = web3.eth.getTransactionCount(
@@ -514,9 +548,9 @@ class WSConnection(QThread):
                     await asyncio.sleep(1)
 
                 if (transactionReceipt.status == 1):
-                    window.updateInfo(
+                    window.updateInfoCenter(
                         'Successfully initialized Payment Channel')
-
+                    QThread().sleep(0.5)
                     await self.websocket.send(json.dumps(
                         {"id": self.paymentState.value, "price": self.pricePerSecond, 'nonce': self.nonce, 'maxValue': self.maxValue}))
                     self.paymentState = State.initialized_S
@@ -530,10 +564,11 @@ class WSConnection(QThread):
         self.transactionCounter = 0
         self.transactionValue = 0
         window.updateInfo('Payment Channel active')
-        QThread().sleep(0.5)
         self.paymentState = State.active_P
 
     async def active_P(self):
+        window.ui.acceptPriceButton.setVisible(False)
+        window.ui.disconnectButton.setVisible(True)
         # send first transaction regardless whether current is flowing or not
         if self.transactionCounter != 0:
             # after first transaction was sent wait until current flows, start timer
@@ -599,6 +634,7 @@ class WSConnection(QThread):
         self.paymentState = State.disconnected
 
         # connect to socket
+        window.updateInfo('')
         window.updateInfoCenter('Connecting...')
         # deactivate close button during connection
         window.ui.closeButton.setVisible(False)

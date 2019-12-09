@@ -133,7 +133,7 @@ Smart Socket</string>
      <string notr="true">color: white; background-color:rgba(255,0,0,0.5); border-radius: 4px; font-weight: bold; font-size: 20px</string>
     </property>
     <property name="text">
-     <string>Disconnect</string>
+     <string>End process</string>
     </property>
    </widget>
    <widget class="QLabel" name="ampsLabel">
@@ -174,9 +174,10 @@ Smart Socket</string>
 }
 QListWidget::item {
     font-size: 22px;
+    color:white;
 }
 QListWidget::item:selected:!active {
-	background: rgb(0,88,208);
+	color:white;
 }
 QListWidget::item:selected:disabled {
 	color:white;
@@ -220,9 +221,9 @@ QListWidget::item:selected:disabled {
    <widget class="QLabel" name="infoCenterLabel">
     <property name="geometry">
      <rect>
-      <x>85</x>
+      <x>20</x>
       <y>195</y>
-      <width>630</width>
+      <width>760</width>
       <height>90</height>
      </rect>
     </property>
@@ -251,6 +252,22 @@ QListWidget::item:selected:disabled {
     <property name="text">
      <string>Start a new
 payment process</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rejectButton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>340</y>
+      <width>220</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; background-color:rgba(255,0,0,0.5); border-radius: 4px; font-weight: bold; font-size: 20px</string>
+    </property>
+    <property name="text">
+     <string>Disconnect</string>
     </property>
    </widget>
   </widget>
