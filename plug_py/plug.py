@@ -567,6 +567,8 @@ class WSConnection(QThread):
         self.paymentState = State.active_P
 
     async def active_P(self):
+        window.ui.acceptPriceButton.setVisible(False)
+        window.ui.disconnectButton.setVisible(True)
         # send first transaction regardless whether current is flowing or not
         if self.transactionCounter != 0:
             # after first transaction was sent wait until current flows, start timer
@@ -575,7 +577,6 @@ class WSConnection(QThread):
                     window.cm_thread = measureCurrent()
                     window.cm_thread.start()
                     self.startTimestamp = time()
-                    window.ui.disconnectButton.setVisible(True)
                     return
                 else:
                     # if current measurement thread not running, set up
