@@ -197,14 +197,14 @@ class MainWindow(QMainWindow):
             self.ui.acceptPriceButton.setVisible(True)
             self.ui.rejectButton.setVisible(True)
         else:
-            self.updateInfo('')
             self.ui.acceptPriceButton.setVisible(False)
+            self.updateInfo('')
             self.ui.rejectButton.setVisible(False)
 
     def resetToStart(self):
         self.updateInfo('')
         self.updateInfoCenter('')
-        self.ui.hourList.setVisible(False)
+        self.ui.hourList.setVisible(True)
         self.ui.hourLabel.setVisible(False)
         self.ui.infoCenterLabel.setVisible(False)
         self.ui.selectButton.setVisible(False)
@@ -347,7 +347,7 @@ class WSConnection(QThread):
                 asyncio.set_event_loop(self.loop)
                 self.loop.run_until_complete(self.wsConnection())
             else:
-                window.updateInfo('Error while connecting to smart socket')
+                window.updateInfo('Received wrong advertisement ID')
                 window.updateInfoCenter('')
         except timeout:
             window.updateInfo('No smart socket found')
@@ -518,6 +518,7 @@ class WSConnection(QThread):
                     'Smart Contract verification failed')
                 return
             else:
+                window.ui.acceptPriceButton.setVisible(False)
                 window.updateInfoCenter(
                     "Initializing Payment Channel...")
                 transactionCount = web3.eth.getTransactionCount(
