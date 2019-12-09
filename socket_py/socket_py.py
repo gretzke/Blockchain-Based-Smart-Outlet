@@ -22,7 +22,9 @@ from enum import Enum
 import json
 from json import JSONDecodeError
 import credentials
-from time import sleep
+from time import time
+from threading import Thread
+import math
 
 DEBUG = False
 
@@ -37,6 +39,7 @@ web3.middleware_onion.inject(geth_poa_middleware, layer=0)
 
 privateKey = bytes.fromhex(credentials.privateKey)
 address = web3.toChecksumAddress(credentials.address)
+contractAddr = web3.toChecksumAddress(credentials.contractAddr)
 
 # global thread and ui variables
 window = None
@@ -45,6 +48,7 @@ app = None
 # broadcast port and ID
 PORT = 50000
 ID = "smartsocket"
+
 
 class State(Enum):
     disconnected = 0
@@ -71,20 +75,46 @@ class MainWindow(QMainWindow):
         self.node_thread.start()
 
         # connect button handlers
-        self.ui.closeButton.clicked.connect(self.close)    
+        self.ui.closeButton.clicked.connect(self.close)
+
+        # start websocket
+        self.ws_thread = WSConnection()
+        self.ws_thread.start()
+
+        self.ad_thread = Advertisement()
+        self.ad_thread.start()
+
+        self.updateInfoCenter('Advertising service to customers')
 
     def closeEvent(self, event):
+        print("closing")
         # cleanup and end threads
+        try:
+            self.cs_thread.threadActive = False
+            self.cs_thread.wait()
+        except:
+            pass
+        print("cs_thread deactivated")
+        try:
+            self.ad_thread.threadActive = False
+            self.ad_thread.wait()
+        except:
+            pass
+        print("ad_thread deactivated")
         try:
             self.node_thread.threadActive = False
             self.node_thread.wait()
         except:
             pass
+        print("node_thread deactivated")
         try:
             self.ws_thread.threadActive = False
             self.ws_thread.wait()
+            # stop asyncio loop
+            self.ws_thread.loop.call_soon_threadsafe(self.ws_thread.loop.stop)
         except:
             pass
+        print("ws_thread deactivated")
         # GPIO.cleanup()
         event.accept()  # let the window close
 
@@ -100,6 +130,14 @@ class MainWindow(QMainWindow):
         except AttributeError:
             # thread was not created yet
             pass
+
+    def updateInfoCenter(self, str):
+        if (str == ''):
+            self.ui.infoCenterLabel.setVisible(False)
+            return
+        self.ui.counterLabel.setVisible(False)
+        self.ui.infoCenterLabel.setText(str)
+        self.ui.infoCenterLabel.setVisible(True)
 
 
 # ethereum node functionality
@@ -137,21 +175,282 @@ class Node(QThread):
             QThread().sleep(5)
 
 
+class Counter(QThread):
+    def __init__(self, parent=window):
+        super(Counter, self).__init__(parent)
+        global window
+
+        self.threadActive = True
+        self.timestamp = time()
+
+        window.ui.counterLabel.setVisible(True)
+        window.ui.infoCenterLabel.setVisible(False)
+
+    def run(self):
+        global window
+        while self.threadActive:
+            if window.ui.counterLabel.isVisible() == False:
+                self.threadActive = False
+                break
+            time_passed = time()-self.timestamp
+            hrs = int(time_passed // 3600)
+            mnt = int(time_passed // 60)
+            sec = int(math.floor(time_passed % 60))
+            window.ui.counterLabel.setText("%02d:%02d:%02d" % (hrs, mnt, sec))
+            QThread().msleep(500)
+
+
+# advertise socket service when no plug is connected
+class Advertisement(QThread):
+    def __init__(self, parent=window):
+        super(Advertisement, self).__init__(parent)
+        self.threadActive = True
+
+    def run(self):
+        global window
+
+        # start broadcast of IP
+        s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
+        s.bind(('', 0))
+        s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)  # this is a broadcast socket
+        while self.threadActive:
+            # advertise socket service when no plug is connected
+            if len(window.ws_thread.connected) == 0:
+                data = ID
+                s.sendto(data.encode('utf-8'), ('<broadcast>', PORT))
+            QThread().sleep(1)
+
+
 # websocket thread
 class WSConnection(QThread):
     def __init__(self, parent=window):
         super(WSConnection, self).__init__(parent)
         self.threadActive = False
+        self.paymentState = State.disconnected
+        # websocket connections
+        self.connected = set()
+        self.websocket = None
+        self.secondsPerPayment = 15
+        self.transactionCounter = 0
+        self.transactionValue = 0
+        self.timestamp = 0
+        self.lastSignature = None
+        self.lastSignatureTmp = None
+        self.relayStatus = False
 
     def run(self):
-        s = socket(AF_INET, SOCK_DGRAM)  # create UDP socket
-        s.bind(('', 0))
-        s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)  # this is a broadcast socket
-        while 1:
-            data = ID
-            s.sendto(data.encode('utf-8'), ('<broadcast>', PORT))
-            print("sent service announcement")
-            sleep(1)
+        # start websocket server
+        IP = gethostbyname(gethostname())
+        self.loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(self.loop)
+        start_server = websockets.serve(
+            self.wsServer, IP, 1337, ping_interval=None)
+        asyncio.get_event_loop().run_until_complete(start_server)
+        thread = Thread(target=asyncio.get_event_loop().run_forever)
+        thread.start()
+
+    def switchRelay(self, state):
+        if (state):
+            self.relayStatus = True
+            print('switched relay on')
+        else:
+            self.relayStatus = False
+            print('switched relay off')
+
+    # Websocket handler
+    async def wsServer(self, websocket, path):
+        global window
+
+        # add new user to set of connected users
+        self.connected.add(websocket)
+        self.websocket = websocket
+        # only allow one connected user
+        try:
+            if (len(self.connected) == 1):
+                self.threadActive = True
+                self.paymentState = State.connected_P
+                self.transactionCounter = 0
+                window.updateInfoCenter('New customer connected')
+                QThread().sleep(1)
+                while self.threadActive:
+                    # if relay is active, check if time has run out and shut off relay if necessary
+                    if self.relayStatus:
+                        if self.timestamp < time():
+                            self.switchRelay(False)
+
+                    await self.receiveMessage()
+
+                    if self.paymentState != State.disconnected:
+                        # execute code according to current state
+                        if self.paymentState == State.connected_S:
+                            await self.connected_S()
+
+                        if self.paymentState == State.initialized_S:
+                            await self.initialized_S()
+
+                        if self.paymentState == State.active_S:
+                            await self.active_S()
+
+                        elif self.paymentState == State.closed:
+                            await self.closed()
+
+        finally:
+            self.websocket = None
+            self.connected.remove(websocket)
+
+    async def receiveMessage(self):
+        global window
+        # check for new messages
+        message = None
+        try:
+            # todo what if socket disconnects, test
+            message = await asyncio.wait_for(self.websocket.recv(), timeout=0.05)
+        except websockets.exceptions.ConnectionClosed:
+            self.paymentState = State.closed
+        except asyncio.TimeoutError:
+            # no new message
+            pass
+
+        # received message
+        if message != None:
+            try:
+                # parse JSON of message
+                parsedMessage = json.loads(message)
+                print(parsedMessage)
+
+            except JSONDecodeError:
+                print('Received message could not be parsed: ' + message)
+                pass
+
+            # execute code according to states
+            if parsedMessage['id'] == State.connected_P.value:
+                await self.connected_P(parsedMessage)
+
+            elif parsedMessage['id'] == State.initialized_P.value:
+                await self.initialized_P(parsedMessage)
+
+            elif parsedMessage['id'] == State.active_P.value:
+                await self.active_P(parsedMessage)
+
+            elif parsedMessage['id'] == State.closed.value:
+                await self.closed()
+
+            elif parsedMessage['id'] == State.disconnected.value:
+                self.disconnect('Socket disconnected the connection')
+
+    # save customer address
+    async def connected_P(self, parsedMessage):
+        self.customerAddress = web3.toChecksumAddress(parsedMessage['address'])
+        self.paymentState = State.connected_S
+
+    # send payment information to plug
+    async def connected_S(self):
+        await self.websocket.send(json.dumps({"id": self.paymentState.value, "contract": contractAddr, "owner": address, "secondsPerPayment": self.secondsPerPayment}))
+        # awaiting payment channel initialization from plug
+        window.updateInfoCenter(
+            'Waiting for customer to\ninitialize Payment Channel')
+        self.paymentState = State.initialized_P
+
+    async def initialized_P(self, parsedMessage):
+        self.pricePerSecond = parsedMessage['price']
+        self.nonce = parsedMessage['nonce']
+        self.maxValue = parsedMessage['maxValue']
+        self.paymentState = State.initialized_S
+
+    async def initialized_S(self):
+        window.updateInfoCenter('Verifying Payment Channel initalizeation')
+        QThread().sleep(1)
+        # setup contract
+        self.contract = web3.eth.contract(
+            address=contractAddr, abi=contract_abi)
+        # check whether payment channel was initialized
+        if self.contract.functions.channelActive().call():
+            # verify that channel customer is actually the plug
+            if self.contract.functions.channelCustomer().call() == self.customerAddress:
+                await self.websocket.send(json.dumps({"id": self.paymentState.value}))
+                self.paymentState = State.active_P
+            else:
+                # disconnect
+                self.disconnect('Payment channel customer is not plug')
+        else:
+            # disconnect
+            self.disconnect('Payment channel is not active')
+
+    async def active_P(self, parsedMessage):
+        if self.transactionCounter == 0:
+            window.cs_thread = Counter()
+            window.cs_thread.start()
+        self.transactionCounter += 1
+        self.transactionValue = self.transactionCounter * \
+            self.pricePerSecond * self.secondsPerPayment
+        self.lastSignatureTmp = parsedMessage['signature']
+        self.paymentState = State.active_S
+
+    async def active_S(self):
+        print("Value: " + str(self.transactionValue))
+        hashedMessage = web3.solidityKeccak(['uint256', 'address', 'uint256'], [
+                                            self.transactionValue, contractAddr, self.nonce])
+        print('hash: ' + hashedMessage.hex())
+        prefixedMessage = encode_defunct(hashedMessage)
+        recoveredAddress = web3.eth.account.recover_message(
+            prefixedMessage, signature=self.lastSignatureTmp)
+        # if signature valid save signature
+        if recoveredAddress == self.customerAddress:
+            self.lastSignature = self.lastSignatureTmp
+            # if relay is switched off, init timer and activate relay, else add seconds to timer
+            if not self.relayStatus:
+                self.switchRelay(True)
+                self.timestamp = time() + self.secondsPerPayment
+            else:
+                self.timestamp += self.secondsPerPayment
+            self.paymentState = State.active_P
+
+    async def closed(self):
+        if self.lastSignature is not None:
+            # close payment channel in smart contract
+            window.updateInfoCenter(
+                'Closing Payment Channel...')
+
+            transactionCount = web3.eth.getTransactionCount(
+                address
+            )
+            tx = self.contract.functions.timeOutChannel().buildTransaction({
+                'chainId': 4,
+                'gas': 200000,
+                'gasPrice': web3.toWei('1', 'gwei'),
+                'nonce': transactionCount,
+            })
+            signed_tx = web3.eth.account.sign_transaction(
+                tx, private_key=privateKey
+            )
+
+            transactionHash = web3.eth.sendRawTransaction(
+                signed_tx.rawTransaction
+            ).hex()
+
+            transactionReceipt = None
+            while transactionReceipt == None:
+                if self.threadActive == False:
+                    return
+                try:
+                    transactionReceipt = web3.eth.getTransactionReceipt(
+                        transactionHash)
+                except TransactionNotFound:
+                    pass
+                QThread.sleep(1)
+
+            window.updateInfoCenter('Successfully closed\nPayment Channel')
+            QThread().sleep(10)
+
+        self.disconnect(
+            'Customer disconnected\nAdvertising service to customers')
+
+    # disconnect from websocket and display message to user
+    def disconnect(self, err_msg):
+        print(err_msg)
+        window.updateInfoCenter(err_msg)
+        self.paymentState = State.disconnected
+        self.threadActive = False
 
 
 def main():
@@ -163,7 +462,6 @@ def main():
     window = MainWindow()
 
     # show ui
-    # window.showFullScreen()
     if DEBUG:
         window.show()
     else:
