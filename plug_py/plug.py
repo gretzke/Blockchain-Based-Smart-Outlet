@@ -13,7 +13,7 @@ from ui_mainwindow import Ui_MainWindow
 # websockets
 import websockets
 import asyncio
-from socket import socket, AF_INET, SOCK_DGRAM, SOL_SOCKET, SO_REUSEADDR
+from socket import socket, AF_INET, SOCK_DGRAM, SOL_SOCKET, SO_REUSEADDR, timeout
 
 # utility libraries
 import operator
@@ -347,9 +347,13 @@ class WSConnection(QThread):
                 asyncio.set_event_loop(self.loop)
                 self.loop.run_until_complete(self.wsConnection())
             else:
-                window.updateInfo('No smart socket found')
+                window.updateInfo('Error while connecting to smart socket')
+                window.updateInfoCenter('')
+        except timeout:
+            window.updateInfo('No smart socket found')
+            window.updateInfoCenter('')
         except:
-            window.updateInfo('Error in connecting to smart socket')
+            window.updateInfo('Error while connecting to smart socket')
             window.updateInfoCenter('')
 
     # disconnect from websocket and display message to user
@@ -545,7 +549,7 @@ class WSConnection(QThread):
                 if (transactionReceipt.status == 1):
                     window.updateInfoCenter(
                         'Successfully initialized Payment Channel')
-
+                    QThread().sleep(0.5)
                     await self.websocket.send(json.dumps(
                         {"id": self.paymentState.value, "price": self.pricePerSecond, 'nonce': self.nonce, 'maxValue': self.maxValue}))
                     self.paymentState = State.initialized_S
@@ -559,7 +563,6 @@ class WSConnection(QThread):
         self.transactionCounter = 0
         self.transactionValue = 0
         window.updateInfo('Payment Channel active')
-        QThread().sleep(0.5)
         self.paymentState = State.active_P
 
     async def active_P(self):
