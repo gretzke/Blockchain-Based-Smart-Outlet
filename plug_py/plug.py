@@ -222,35 +222,27 @@ class MainWindow(QMainWindow):
     def closeEvent(self, event):
         # cleanup and end threads
         try:
+            self.ad_thread.threadActive = False
+            self.ad_thread.wait()
+        except:
+            pass
+        print("ad_thread deactivated")
+        try:
             self.node_thread.threadActive = False
             self.node_thread.wait()
         except:
             pass
+        print("node_thread deactivated")
         try:
             self.ws_thread.threadActive = False
             self.ws_thread.wait()
+            # stop asyncio loop
+            self.ws_thread.loop.call_soon_threadsafe(self.ws_thread.loop.stop)
         except:
             pass
-        try:
-            self.cm_thread.threadActive = False
-            self.cm_thread.wait()
-        except:
-            pass
+        print("ws_thread deactivated")
         # GPIO.cleanup()
         event.accept()  # let the window close
-
-    def terminateThread(self, process):
-        try:
-            thread = operator.attrgetter(process)(self)
-            if thread.threadActive:
-                thread.threadActive = False
-                thread.quit()
-                if (thread.wait(1000) == False):
-                    thread.terminate()
-                    thread.wait()
-        except AttributeError:
-            # thread was not created yet
-            pass
 
     def connectWS(self):
         self.updateInfoCenter('')
