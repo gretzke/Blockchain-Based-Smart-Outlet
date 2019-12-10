@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'qt/mainwindow.ui',
 # licensing of 'qt/mainwindow.ui' applies.
 #
-# Created: Mon Dec  9 22:34:02 2019
+# Created: Tue Dec 10 19:12:36 2019
 #      by: pyside2-uic  running on PySide2 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -40,7 +40,8 @@ class Ui_MainWindow(object):
         self.infoCenterLabel.setObjectName("infoCenterLabel")
         self.counterLabel = QtWidgets.QLabel(self.centralWidget)
         self.counterLabel.setGeometry(QtCore.QRect(10, 130, 781, 220))
-        self.counterLabel.setStyleSheet("color:white; font-size:160px")
+        self.counterLabel.setStyleSheet(
+            "color:white; font-size:160px;background:transparent;")
         self.counterLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.counterLabel.setObjectName("counterLabel")
         MainWindow.setCentralWidget(self.centralWidget)
@@ -58,6 +59,6 @@ class Ui_MainWindow(object):
         self.infoLabel.setText(QtWidgets.QApplication.translate(
             "MainWindow", "<html><head/><body><p><span style=\" font-size:40pt; font-weight:600; font-style:italic;\">Blockchain Smart Outlet</span></p></body></html>", None, -1))
         self.infoCenterLabel.setText(QtWidgets.QApplication.translate(
-            "MainWindow", "<html><head/><body><p><br/></p></body></html>", None, -1))
+            "MainWindow", "<html><head/><body><p></p></body></html>", None, -1))
         self.counterLabel.setText(QtWidgets.QApplication.translate(
             "MainWindow", "<html><head/><body><p><span style=\" font-size:160pt;\"></span></p></body></html>", None, -1))

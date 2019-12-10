@@ -113,13 +113,7 @@ class MainWindow(QMainWindow):
         event.accept()  # let the window close
 
     def updateInfoCenter(self, str):
-        if (str == ''):
-            self.ui.infoCenterLabel.setVisible(False)
-            return
-        self.ui.counterLabel.setVisible(False)
-        self.ws_thread.start_timestamp = 0
         self.ui.infoCenterLabel.setText(str)
-        self.ui.infoCenterLabel.setVisible(True)
 
 
 # ethereum node functionality
@@ -241,7 +235,8 @@ class WSConnection(QThread):
                         hrs = int(time_passed // 3600)
                         mnt = int(time_passed // 60)
                         sec = int(math.floor(time_passed % 60))
-                        window.ui.counterLabel.setText("%02d:%02d:%02d" % (hrs, mnt, sec))
+                        window.ui.counterLabel.setText(
+                            "%02d:%02d:%02d" % (hrs, mnt, sec))
 
                     await self.receiveMessage()
 
@@ -351,8 +346,7 @@ class WSConnection(QThread):
     async def active_P(self, parsedMessage):
         if self.transactionCounter == 0:
             self.start_timestamp = time()
-            window.ui.counterLabel.setVisible(True)
-            window.ui.infoCenterLabel.setVisible(False)
+            window.updateInfoCenter('')
         self.transactionCounter += 1
         self.transactionValue = self.transactionCounter * \
             self.pricePerSecond * self.secondsPerPayment
@@ -379,6 +373,8 @@ class WSConnection(QThread):
             self.paymentState = State.active_P
 
     async def closed(self):
+        self.start_timestamp = 0
+        window.ui.counterLabel.setText('')
         if self.lastSignature is not None:
             # close payment channel in smart contract
             window.updateInfoCenter(
