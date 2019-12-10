@@ -244,6 +244,15 @@ contract SocketPaymentChannel {
         return ecrecover(prefixedMessage, v, r, s) == channelCustomer;
     }
 
+    /// @notice determine whether the current payment channel has expired
+    /// @return true if channel has expired
+    function channelExpired() public view returns(bool) {
+        if (channelActive) {
+            return now > expirationDate;
+        }
+        return false;
+    }
+
     /// @notice function to withdraw funds from the smart contract
     /// @return true on success, false on failure
     function withdraw() public returns (bool) {
