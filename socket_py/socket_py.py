@@ -240,11 +240,10 @@ class WSConnection(QThread):
 
     def run(self):
         # start websocket server
-        IP = gethostbyname(gethostname())
         self.loop = asyncio.new_event_loop()
         asyncio.set_event_loop(self.loop)
         start_server = websockets.serve(
-            self.wsServer, IP, 1337, ping_interval=None)
+            self.wsServer, '0.0.0.0', 1337, ping_interval=None)
         asyncio.get_event_loop().run_until_complete(start_server)
         thread = Thread(target=asyncio.get_event_loop().run_forever)
         thread.start()
