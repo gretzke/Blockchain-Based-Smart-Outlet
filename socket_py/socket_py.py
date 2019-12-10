@@ -351,7 +351,7 @@ class WSConnection(QThread):
         self.paymentState = State.initialized_S
 
     async def initialized_S(self):
-        window.updateInfoCenter('Verifying Payment Channel initalizeation')
+        window.updateInfoCenter('Verifying Payment Channel initialization')
         QThread().sleep(1)
         # setup contract
         self.contract = web3.eth.contract(
