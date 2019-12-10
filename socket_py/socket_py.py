@@ -90,12 +90,6 @@ class MainWindow(QMainWindow):
         print("closing")
         # cleanup and end threads
         try:
-            self.cs_thread.threadActive = False
-            self.cs_thread.wait()
-        except:
-            pass
-        print("cs_thread deactivated")
-        try:
             self.ad_thread.threadActive = False
             self.ad_thread.wait()
         except:
@@ -123,6 +117,7 @@ class MainWindow(QMainWindow):
             self.ui.infoCenterLabel.setVisible(False)
             return
         self.ui.counterLabel.setVisible(False)
+        self.ws_thread.start_timestamp = 0
         self.ui.infoCenterLabel.setText(str)
         self.ui.infoCenterLabel.setVisible(True)
 
@@ -162,31 +157,6 @@ class Node(QThread):
             QThread().sleep(5)
 
 
-class Counter(QThread):
-    def __init__(self, parent=window):
-        super(Counter, self).__init__(parent)
-        global window
-
-        self.threadActive = True
-        self.timestamp = time()
-
-        window.ui.counterLabel.setVisible(True)
-        window.ui.infoCenterLabel.setVisible(False)
-
-    def run(self):
-        global window
-        while self.threadActive:
-            if window.ui.counterLabel.isVisible() == False:
-                self.threadActive = False
-                break
-            time_passed = time()-self.timestamp
-            hrs = int(time_passed // 3600)
-            mnt = int(time_passed // 60)
-            sec = int(math.floor(time_passed % 60))
-            window.ui.counterLabel.setText("%02d:%02d:%02d" % (hrs, mnt, sec))
-            QThread().msleep(500)
-
-
 # advertise socket service when no plug is connected
 class Advertisement(QThread):
     def __init__(self, parent=window):
@@ -224,6 +194,7 @@ class WSConnection(QThread):
         self.lastSignature = None
         self.lastSignatureTmp = None
         self.relayStatus = False
+        self.start_timestamp = 0
 
     def run(self):
         # start websocket server
@@ -263,6 +234,14 @@ class WSConnection(QThread):
                     if self.relayStatus:
                         if self.timestamp < time():
                             self.switchRelay(False)
+
+                    # display counter if active
+                    if self.start_timestamp > 0:
+                        time_passed = time()-self.start_timestamp
+                        hrs = int(time_passed // 3600)
+                        mnt = int(time_passed // 60)
+                        sec = int(math.floor(time_passed % 60))
+                        window.ui.counterLabel.setText("%02d:%02d:%02d" % (hrs, mnt, sec))
 
                     await self.receiveMessage()
 
@@ -371,8 +350,9 @@ class WSConnection(QThread):
 
     async def active_P(self, parsedMessage):
         if self.transactionCounter == 0:
-            window.cs_thread = Counter()
-            window.cs_thread.start()
+            self.start_timestamp = time()
+            window.ui.counterLabel.setVisible(True)
+            window.ui.infoCenterLabel.setVisible(False)
         self.transactionCounter += 1
         self.transactionValue = self.transactionCounter * \
             self.pricePerSecond * self.secondsPerPayment
