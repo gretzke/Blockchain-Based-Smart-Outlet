@@ -118,19 +118,6 @@ class MainWindow(QMainWindow):
         # GPIO.cleanup()
         event.accept()  # let the window close
 
-    def terminateThread(self, process):
-        try:
-            thread = operator.attrgetter(process)(self)
-            if thread.threadActive:
-                thread.threadActive = False
-                thread.quit()
-                if (thread.wait(1000) == False):
-                    thread.terminate()
-                    thread.wait()
-        except AttributeError:
-            # thread was not created yet
-            pass
-
     def updateInfoCenter(self, str):
         if (str == ''):
             self.ui.infoCenterLabel.setVisible(False)
@@ -292,7 +279,9 @@ class WSConnection(QThread):
 
                         elif self.paymentState == State.closed:
                             await self.closed()
-
+        except Exception as e:
+            print(e)
+            raise e
         finally:
             self.websocket = None
             self.connected.remove(websocket)
@@ -309,6 +298,9 @@ class WSConnection(QThread):
         except asyncio.TimeoutError:
             # no new message
             pass
+        except Exception as e:
+            print(e)
+            raise e
 
         # received message
         if message != None:
@@ -316,10 +308,12 @@ class WSConnection(QThread):
                 # parse JSON of message
                 parsedMessage = json.loads(message)
                 print(parsedMessage)
-
             except JSONDecodeError:
                 print('Received message could not be parsed: ' + message)
                 pass
+            except Exception as e:
+                print(e)
+                raise e
 
             # execute code according to states
             if parsedMessage['id'] == State.connected_P.value:
@@ -436,6 +430,9 @@ class WSConnection(QThread):
                         transactionHash)
                 except TransactionNotFound:
                     pass
+                except Exception as e:
+                    print(e)
+                    raise e
                 QThread.sleep(1)
 
             window.updateInfoCenter('Successfully closed\nPayment Channel')

@@ -344,7 +344,8 @@ class WSConnection(QThread):
         except timeout:
             window.updateInfo('No smart socket found')
             window.updateInfoCenter('')
-        except:
+        except Exception as e:
+            print(e)
             window.resetToStart()
             window.updateInfo('An error occurred')
 
@@ -373,6 +374,9 @@ class WSConnection(QThread):
         except asyncio.TimeoutError:
             # no new message
             pass
+        except Exception as e:
+            print(e)
+            raise e
 
         # received message
         if message != None:
@@ -380,10 +384,12 @@ class WSConnection(QThread):
                 # parse JSON of message
                 parsedMessage = json.loads(message)
                 print(parsedMessage)
-
             except JSONDecodeError:
                 print('Received message could not be parsed: ' + message)
                 pass
+            except Exception as e:
+                print(e)
+                raise e
 
             # execute code according to states
             if parsedMessage['id'] == State.connected_S.value:
@@ -451,6 +457,9 @@ class WSConnection(QThread):
                             transactionHash)
                     except TransactionNotFound:
                         pass
+                    except Exception as e:
+                        print(e)
+                        raise e
                     QThread.sleep(1)
 
                 if (transactionReceipt.status != 1):
@@ -537,6 +546,9 @@ class WSConnection(QThread):
                             transactionHash)
                     except TransactionNotFound:
                         pass
+                    except Exception as e:
+                        print(e)
+                        raise e
                     await asyncio.sleep(1)
 
                 if (transactionReceipt.status == 1):
@@ -634,7 +646,8 @@ class WSConnection(QThread):
         try:
             # wait until connected to websocket
             self.websocket = await websockets.connect(self.IP)
-        except:
+        except Exception as e:
+            print(e)
             # if connection times out close thread
             window.ui.startButton.setVisible(True)
             window.updateInfoCenter('')
